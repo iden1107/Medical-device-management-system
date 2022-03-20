@@ -14,4 +14,15 @@
             </div>
         </div>
     </div>
+
+    <div id="app">
+        <div id="nav">
+            <router-link to="/dashboard/home">Home</router-link>
+            <router-link to="/dashboard/about">About</router-link>
+        </div>
+        <router-view />
+    </div>
+
+
+
 </x-app-layout>
