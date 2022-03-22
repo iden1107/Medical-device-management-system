@@ -20,7 +20,7 @@
 
 <body class="font-sans antialiased">
     <div id="app">
-        <Layout auth-user="{{ $authUser }}" />
+        <Layout />
     </div>
 </body>
 

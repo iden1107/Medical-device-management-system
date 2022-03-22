@@ -3,23 +3,20 @@
 <div @click="autoLogout">
     <v-app>
         <v-app-bar app height="30" color="#234180">
-            <!-- -->
-
             <span class="white--text mx-auto" height="100%" v-show="(this.user.name ) ? true :  false">ログイン名：{{user.name}}</span>
         </v-app-bar>
 
         <!-- アプリケーションのコンポーネントに基づいてコンテンツのサイズを決定 -->
         <v-main >
-
             <!-- アプリケーションに適切なgutterを提供 -->
             <v-container fluid>
-
             <!-- vue-routerを使用する場合 -->
-            <router-view :user="user"></router-view>
+            
+            <router-view ></router-view>
             </v-container>
         </v-main>
 
-        <v-footer app>
+        <v-footer app color="#234180">
             <!-- -->
         </v-footer>
     </v-app>
@@ -29,21 +26,12 @@
 <script>
 export default {
     name: "login",
-    props:['authUser'],
     data() {
         return {
+            user:'',
             autoLogoutFunctionId:'',
             timeOutMinutes:60000 * 10,
         };
-    },
-    computed:{
-        user(){
-            if(this.authUser !== ''){
-                return JSON.parse(this.authUser)
-            }else{
-                return ''
-            }
-        }
     },
     methods: {
         autoLogout(){
@@ -68,6 +56,12 @@ export default {
         }else{
             this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes );
         }
+    },
+    created(){
+        if(this.$route.path !== '/login')
+            axios.get('/api/authUser').then((res)=>{
+                this.user = res.data
+        })
     }
 };
 </script>

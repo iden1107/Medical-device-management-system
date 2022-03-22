@@ -1,9 +1,9 @@
 <template>
     <div>
-        
+        <router-link to="/home">ホーム</router-link>
+        <router-link to="/admin">admin</router-link>
         <h1>Home Page</h1>
-        <p>{{user.name}}</p>
-        <p>{{user.id}}</p>
+
     </div>
 </template>
 
@@ -11,7 +11,6 @@
 <script>
 export default {
     name: "login",
-    props:['user'],
     data() {
         return {
             id: "",
@@ -26,9 +25,5 @@ export default {
             location.href = '/login'
         },
     },
-    mounted(){
-
-
-    }
 };
 </script>

@@ -2195,17 +2195,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  props: ['xxx'],
-  computed: {
-    yyy: function yyy() {
-      return JSON.parse(this.xxx);
-    }
-  },
   mounted: function mounted() {
     console.log('Component mounted.');
   }
@@ -2264,7 +2254,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
-  props: ['user'],
   data: function data() {
     return {
       formData: {
@@ -2287,7 +2276,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 return axios.post('/logout');
 
               case 2:
-                location.href = '/';
+                location.href = '/login';
 
               case 3:
               case "end":
@@ -2301,23 +2290,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   created: function created() {
     var _this = this;
 
-    return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              _context2.next = 2;
-              return axios.get('/api/user').then(function (res) {
-                _this.staff = res.data;
-              });
-
-            case 2:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2);
-    }))();
+    axios.get('/api/user').then(function (res) {
+      _this.staff = res.data;
+    });
   }
 });
 
@@ -2346,7 +2321,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
-  props: ['user'],
   data: function data() {
     return {
       id: "",
@@ -2360,8 +2334,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.post('/logout');
       location.href = '/login';
     }
-  },
-  mounted: function mounted() {}
+  }
 });
 
 /***/ }),
@@ -2402,26 +2375,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
-  props: ['authUser'],
   data: function data() {
     return {
+      user: '',
       autoLogoutFunctionId: '',
       timeOutMinutes: 60000 * 10
     };
-  },
-  computed: {
-    user: function user() {
-      if (this.authUser !== '') {
-        return JSON.parse(this.authUser);
-      } else {
-        return '';
-      }
-    }
   },
   methods: {
     autoLogout: function autoLogout() {
@@ -2446,6 +2407,13 @@ __webpack_require__.r(__webpack_exports__);
     } else {
       this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes);
     }
+  },
+  created: function created() {
+    var _this = this;
+
+    if (this.$route.path !== '/login') axios.get('/api/authUser').then(function (res) {
+      _this.user = res.data;
+    });
   }
 });
 
@@ -2648,7 +2616,7 @@ __webpack_require__.r(__webpack_exports__);
     name: 'admin',
     component: _views_Admin_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
   }, {
-    path: '/',
+    path: '/login',
     name: 'login',
     component: _views_Login_vue__WEBPACK_IMPORTED_MODULE_2__["default"]
   }]
@@ -21639,22 +21607,20 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
-    _c("div", { staticClass: "row justify-content-center" }, [
-      _c("div", { staticClass: "col-md-8" }, [
-        _c(
-          "div",
-          { staticClass: "card" },
-          [
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8" }, [
+          _c("div", { staticClass: "card" }, [
             _c("div", { staticClass: "card-header" }, [
               _vm._v("Example Component"),
             ]),
-            _vm._v(" "),
-            _c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")]),
-            _vm._v(" "),
-            _c("router-link", { attrs: { to: "/about" } }, [_vm._v("About")]),
-            _vm._v(" "),
-            _c("router-link", { attrs: { to: "/login" } }, [_vm._v("Login")]),
             _vm._v(" "),
             _c("div", { staticClass: "card-body" }, [
               _vm._v(
@@ -21662,21 +21628,13 @@ var render = function () {
               ),
             ]),
             _vm._v(" "),
-            _c("div", [
-              _vm._v(
-                "\n                    " +
-                  _vm._s(_vm.yyy) +
-                  "\n                "
-              ),
-            ]),
-          ],
-          1
-        ),
+            _c("div"),
+          ]),
+        ]),
       ]),
-    ]),
-  ])
-}
-var staticRenderFns = []
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -21813,13 +21771,17 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h1", [_vm._v("Home Page")]),
-    _vm._v(" "),
-    _c("p", [_vm._v(_vm._s(_vm.user.name))]),
-    _vm._v(" "),
-    _c("p", [_vm._v(_vm._s(_vm.user.id))]),
-  ])
+  return _c(
+    "div",
+    [
+      _c("router-link", { attrs: { to: "/home" } }, [_vm._v("ホーム")]),
+      _vm._v(" "),
+      _c("router-link", { attrs: { to: "/admin" } }, [_vm._v("admin")]),
+      _vm._v(" "),
+      _c("h1", [_vm._v("Home Page")]),
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -21880,14 +21842,14 @@ var render = function () {
               _c(
                 "v-container",
                 { attrs: { fluid: "" } },
-                [_c("router-view", { attrs: { user: _vm.user } })],
+                [_c("router-view")],
                 1
               ),
             ],
             1
           ),
           _vm._v(" "),
-          _c("v-footer", { attrs: { app: "" } }),
+          _c("v-footer", { attrs: { app: "", color: "#234180" } }),
         ],
         1
       ),

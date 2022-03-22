@@ -31,7 +31,6 @@
 <script>
 export default {
     name: "login",
-    props:['user'],
     data() {
         return {
             formData:{
@@ -46,11 +45,11 @@ export default {
     methods: {
         async logout(){
             await axios.post('/logout')
-            location.href = '/'
+            location.href = '/login'
         },
     },
-    async created(){
-        await axios.get('/api/user').then((res)=>{
+    created(){
+        axios.get('/api/user').then((res)=>{
             this.staff = res.data
         })
     }
