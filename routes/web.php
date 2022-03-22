@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +14,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('layouts.app');
+// });
+
+Route::get('/{any}', function () {
+    $authUser = Auth::user();
+    return view('layouts.app',compact('authUser'));
+})->where('any', '.*');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
