@@ -14,14 +14,14 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
-// Route::get('/', function () {
-//     return view('layouts.app');
-// });
+Route::get('/', function () {
+    return view('layouts.app');
+});
 
-Route::get('/{any}', function () {
-    $authUser = Auth::user();
-    return view('layouts.app',compact('authUser'));
-})->where('any', '.*');
+// Route::get('/{any}', function () {
+//     $authUser = Auth::user();
+//     return view('layouts.app',compact('authUser'));
+// })->where('any', '.*');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
