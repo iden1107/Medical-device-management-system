@@ -24,14 +24,14 @@ Route::group(['middleware' => 'auth'], function () {
         return Auth::user();
     });
 });
+Route::get('/{any}', function () {
+    return view('layouts.app');
+})->where('any', '.*');
 
 // Route::get('/', function () {
 //     return view('layouts.app');
 // });
 
-Route::get('/{any}', function () {
-    return view('layouts.app');
-})->where('any', '.*');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

@@ -9,9 +9,9 @@
         <!-- アプリケーションのコンポーネントに基づいてコンテンツのサイズを決定 -->
         <v-main >
             <!-- アプリケーションに適切なgutterを提供 -->
-            <v-container fluid>
+            <v-container fluid >
             <!-- vue-routerを使用する場合 -->
-            
+
             <router-view ></router-view>
             </v-container>
         </v-main>
@@ -22,7 +22,11 @@
     </v-app>
 </div>
 </template>
-
+<style scoped>
+.container{
+    max-width: 1500px;
+}
+</style>
 <script>
 export default {
     name: "login",
@@ -36,7 +40,7 @@ export default {
     methods: {
         autoLogout(){
             // 画面上をクリックしてから10分間を再設定して自動ログアウト
-            if(this.$route.path === '/'){
+            if(this.$route.path === '/login'){
                 return
             }else{
                 clearTimeout(this.autoLogoutFunctionId);
@@ -46,22 +50,26 @@ export default {
         logout(){
             // ログアウトする関数
             axios.post('/logout')
-            location.href = '/'
+            location.href = '/login'
         },
     },
     mounted(){
         // 起動してから10分間で自動ログアウト
-        if(this.$route.path === '/'){
+        if(this.$route.path === '/login'){
             return
         }else{
             this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes );
         }
     },
     created(){
-        if(this.$route.path !== '/login')
-            axios.get('/api/authUser').then((res)=>{
-                this.user = res.data
-        })
+        axios.get('/api/authUser')
+            .then(response => {
+                console.log(response)
+                this.user  = response.data
+            })
+            .catch(error => {
+                console.log(error.response)
+            });
     }
 };
 </script>
