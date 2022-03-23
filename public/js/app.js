@@ -2392,18 +2392,23 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   methods: {
     logout: function logout() {
+      axios.post('/logout');
+      location.href = '/login';
+    },
+    staffStore: function staffStore() {
+      var _this = this;
+
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios.post('/logout');
+                return axios.post('/api/register', _this.formData).then(function (res) {
+                  return console.log(res.data);
+                });
 
               case 2:
-                location.href = '/login';
-
-              case 3:
               case "end":
                 return _context.stop();
             }
@@ -2413,10 +2418,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   created: function created() {
-    var _this = this;
+    var _this2 = this;
 
     axios.get('/api/user').then(function (res) {
-      _this.staff = res.data;
+      _this2.staff = res.data;
     });
   }
 });
@@ -2475,6 +2480,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -2611,11 +2617,6 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   methods: {
-    fname: function fname() {
-      axios.get("/api/aaa").then(function (res) {
-        return console.log(res);
-      });
-    },
     login: function login() {
       axios.post("/login", this.formData).then(function (response) {
         location.href = "/admin";
@@ -22204,9 +22205,14 @@ var render = function () {
           _c(
             "v-card-actions",
             [
-              _c("v-btn", { attrs: { outlined: "", tile: "", text: "" } }, [
-                _vm._v("登録"),
-              ]),
+              _c(
+                "v-btn",
+                {
+                  attrs: { outlined: "", tile: "", text: "" },
+                  on: { click: _vm.staffStore },
+                },
+                [_vm._v("登録")]
+              ),
             ],
             1
           ),
@@ -22313,7 +22319,7 @@ var render = function () {
               _c(
                 "v-container",
                 { attrs: { fluid: "" } },
-                [_c("router-view")],
+                [_c("keep-alive", [_c("router-view")], 1)],
                 1
               ),
             ],

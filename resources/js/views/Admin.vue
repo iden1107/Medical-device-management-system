@@ -126,7 +126,7 @@
 
         </v-card-text>
         <v-card-actions>
-            <v-btn outlined tile text >登録</v-btn>
+            <v-btn outlined tile text @click="staffStore">登録</v-btn>
         </v-card-actions>
 
         </v-card>
@@ -168,9 +168,14 @@ export default {
         };
     },
     methods: {
-        async logout(){
-            await axios.post('/logout')
+        logout(){
+            axios.post('/logout')
             location.href = '/login'
+        },
+        async staffStore(){
+            await axios.post('/api/register',this.formData).then(
+                (res)=>console.log(res.data)
+            )
         },
     },
     created(){

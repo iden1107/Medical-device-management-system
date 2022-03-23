@@ -48,9 +48,6 @@ export default {
     };
   },
   methods: {
-    fname() {
-      axios.get("/api/aaa").then((res) => console.log(res));
-    },
     login() {
       axios
         .post("/login", this.formData)
