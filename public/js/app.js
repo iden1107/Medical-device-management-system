@@ -2395,8 +2395,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       axios.post('/logout');
       location.href = '/login';
     },
-    staffStore: function staffStore() {
+    getStaff: function getStaff() {
       var _this = this;
+
+      axios.get('/api/user').then(function (res) {
+        _this.staff = res.data;
+      });
+    },
+    staffStore: function staffStore() {
+      var _this2 = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
         return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
@@ -2404,11 +2411,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             switch (_context.prev = _context.next) {
               case 0:
                 _context.next = 2;
-                return axios.post('/api/register', _this.formData).then(function (res) {
-                  return console.log(res.data);
-                });
+                return axios.post('/api/register', _this2.formData);
 
               case 2:
+                _this2.getStaff();
+
+                _this2.formData = {
+                  id: "",
+                  name: "",
+                  kana: "",
+                  department: "",
+                  employment_date: "",
+                  password: "",
+                  remember: false
+                };
+
+              case 4:
               case "end":
                 return _context.stop();
             }
@@ -2418,11 +2436,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   created: function created() {
-    var _this2 = this;
-
-    axios.get('/api/user').then(function (res) {
-      _this2.staff = res.data;
-    });
+    this.getStaff();
   }
 });
 

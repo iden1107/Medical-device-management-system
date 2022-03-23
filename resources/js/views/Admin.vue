@@ -172,16 +172,27 @@ export default {
             axios.post('/logout')
             location.href = '/login'
         },
+        getStaff(){
+            axios.get('/api/user').then((res)=>{
+                this.staff = res.data
+            })
+        },
         async staffStore(){
-            await axios.post('/api/register',this.formData).then(
-                (res)=>console.log(res.data)
-            )
+            await axios.post('/api/register',this.formData)
+            this.getStaff()
+            this.formData = {
+                id: "",
+                name: "",
+                kana: "",
+                department: "",
+                employment_date	: "",
+                password: "",
+                remember: false,
+            }
         },
     },
     created(){
-        axios.get('/api/user').then((res)=>{
-            this.staff = res.data
-        })
+        this.getStaff()
     }
 };
 </script>
