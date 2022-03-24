@@ -21,6 +21,9 @@ Route::get('/login', function () {
     return view('layouts.app');
 })->where('any', '.*');
 
+Route::get('/{any}', function () {
+    return view('layouts.app');
+})->where('any', '.*');
 
 // api的なエンドポイント
 Route::group(['middleware' => 'auth'], function () {
@@ -30,9 +33,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/api/authUser', function (Request $request) {
         return Auth::user();
     });
-    Route::get('/{any}', function () {
-        return view('layouts.app');
-    })->where('any', '.*');
 });
 
 // Route::get('/', function () {
