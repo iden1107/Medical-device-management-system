@@ -2619,8 +2619,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   props: ["xxx"],
@@ -22463,8 +22461,6 @@ var render = function () {
         ],
         1
       ),
-      _vm._v(" "),
-      _c("Admin"),
     ],
     1
   )

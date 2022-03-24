@@ -21,8 +21,6 @@
         </v-card-actions>
         </v-card>
 
-        <!--  -->
-        <Admin/>
     </v-sheet>
 </template>
 
