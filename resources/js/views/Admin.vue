@@ -129,7 +129,7 @@
             <v-btn outlined tile text @click="staffStore">登録</v-btn>
         </v-card-actions>
 
-        </v-card>
+    </v-card>
     <v-btn @click="logout">ログアウト</v-btn>
 </div>
 

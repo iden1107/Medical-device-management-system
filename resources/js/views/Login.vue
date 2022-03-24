@@ -20,6 +20,9 @@
             <v-btn outlined tile text @click="login"> ログイン </v-btn>
         </v-card-actions>
         </v-card>
+
+        <!--  -->
+        <Admin/>
     </v-sheet>
 </template>
 

@@ -53,6 +53,7 @@ Route::middleware('auth')->group(function () {
                 ->name('logout');
 
     // 新規登録
-    Route::post('/api/register', [RegisteredUserController::class, 'store']);
 
 });
+
+Route::post('/api/register', [RegisteredUserController::class, 'store']);
