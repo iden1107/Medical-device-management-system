@@ -2629,6 +2629,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   props: ["xxx"],
@@ -2847,7 +2856,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\ninput[data-v-12f5395a] {\n    border-style: inset;\n    width: 100%;\n    background-color: #f5f5f5;\n}\ninput[data-v-12f5395a]:focus {\n    outline: none;\n}\nh1[data-v-12f5395a]{\n    font-family: 'Shippori Mincho', serif;\n    font-weight: 900;\n    font-size: 60px;\n    color: #20C4AF;\n}\nh2[data-v-12f5395a]{\n    color: #44D3C0;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\ninput[data-v-12f5395a] {\n    border-style: inset;\n    width: 100%;\n    background-color: #f5f5f5;\n}\ninput[data-v-12f5395a]:focus {\n    outline: none;\n}\nh1[data-v-12f5395a]{\n    font-family: 'Shippori Mincho', serif;\n    font-weight: 900;\n    font-size: 50px;\n    color: #FFF;\n}\nh2[data-v-12f5395a]{\n    color: #FFF;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22386,24 +22395,38 @@ var render = function () {
     "v-sheet",
     {
       staticClass: "d-flex flex-column align-center justify-center",
-      attrs: { height: "100vh" },
+      attrs: { height: "90vh" },
     },
     [
-      _c("div", { staticClass: "mb-6" }, [
-        _c("h2", [_vm._v("医療法人 〇〇")]),
-        _vm._v(" "),
-        _c("h1", [_vm._v("〇〇病院")]),
-      ]),
+      _c(
+        "v-sheet",
+        { staticClass: "mb-6 pa-4", attrs: { color: "#20C4AF", width: "469" } },
+        [
+          _c("div", { staticClass: "d-flex" }, [
+            _c("img", {
+              attrs: { src: "/img/logo_yotuba01.png", width: "110", alt: "" },
+            }),
+            _vm._v(" "),
+            _c("div", [
+              _c("h2", [_vm._v("医療法人 サンプル")]),
+              _vm._v(" "),
+              _c("h1", [_vm._v("サンプル病院")]),
+            ]),
+          ]),
+        ]
+      ),
       _vm._v(" "),
       _c(
         "v-card",
         { attrs: { "max-width": "500", outlined: "" } },
         [
-          _c("v-card-title", [_vm._v("医療機器管理システム")]),
+          _c("v-card-title", { staticStyle: { color: "#20C4AF" } }, [
+            _vm._v("医療機器管理システム"),
+          ]),
           _vm._v(" "),
           _c("v-card-text", [
             _c("label", [
-              _vm._v("\n            職員番号\n            "),
+              _vm._v("\n                職員番号\n                "),
               _c("input", {
                 directives: [
                   {
@@ -22427,7 +22450,7 @@ var render = function () {
             ]),
             _vm._v(" "),
             _c("label", [
-              _vm._v("\n            パスワード\n            "),
+              _vm._v("\n                パスワード\n                "),
               _c("input", {
                 directives: [
                   {
@@ -22468,6 +22491,14 @@ var render = function () {
         ],
         1
       ),
+      _vm._v(" "),
+      _c("v-sheet", { staticClass: "mb-6 pa-4", attrs: { width: "469" } }, [
+        _c("p", [_vm._v("このサイトはポートフォリオのサンプルアプリです")]),
+        _vm._v(" "),
+        _c("a", { attrs: { href: "https://free-materials.com/" } }, [
+          _vm._v("フリー素材から"),
+        ]),
+      ]),
     ],
     1
   )
