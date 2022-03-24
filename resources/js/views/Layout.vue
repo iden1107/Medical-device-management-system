@@ -2,7 +2,7 @@
 <!-- App.vue -->
 <div @click="autoLogout">
     <v-app>
-        <v-app-bar app height="30" color="#234180">
+        <v-app-bar app height="30" color="#20C4AF">
             <span class="white--text mx-auto" height="100%" v-show="(this.user.name ) ? true :  false">ログイン名：{{user.name}}</span>
         </v-app-bar>
 
@@ -17,7 +17,7 @@
             </v-container>
         </v-main>
 
-        <v-footer app color="#234180">
+        <v-footer app color="#20C4AF">
             <!-- -->
         </v-footer>
     </v-app>

@@ -1,7 +1,8 @@
 <template>
     <v-sheet height="100vh" class="d-flex flex-column align-center justify-center" >
         <div class="mb-6">
-            <img src="https://www.rakuyohp.or.jp/files/libs/542/202107291350007667.png?1627534201" alt="">
+            <h2>医療法人 〇〇</h2>
+            <h1>〇〇病院</h1>
         </div>
         <v-card  max-width="500" outlined >
         <v-card-title>医療機器管理システム</v-card-title>
@@ -32,6 +33,15 @@ input {
 }
 input:focus {
     outline: none;
+}
+h1{
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 900;
+    font-size: 60px;
+    color: #20C4AF;
+}
+h2{
+    color: #44D3C0;
 }
 </style>
 

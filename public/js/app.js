@@ -2619,6 +2619,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   props: ["xxx"],
@@ -2837,7 +2847,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\ninput[data-v-12f5395a] {\n    border-style: inset;\n    width: 100%;\n    background-color: #f5f5f5;\n}\ninput[data-v-12f5395a]:focus {\n    outline: none;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\ninput[data-v-12f5395a] {\n    border-style: inset;\n    width: 100%;\n    background-color: #f5f5f5;\n}\ninput[data-v-12f5395a]:focus {\n    outline: none;\n}\nh1[data-v-12f5395a]{\n    font-family: 'Shippori Mincho', serif;\n    font-weight: 900;\n    font-size: 60px;\n    color: #20C4AF;\n}\nh2[data-v-12f5395a]{\n    color: #44D3C0;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22307,7 +22317,7 @@ var render = function () {
         [
           _c(
             "v-app-bar",
-            { attrs: { app: "", height: "30", color: "#234180" } },
+            { attrs: { app: "", height: "30", color: "#20C4AF" } },
             [
               _c(
                 "span",
@@ -22341,7 +22351,7 @@ var render = function () {
             1
           ),
           _vm._v(" "),
-          _c("v-footer", { attrs: { app: "", color: "#234180" } }),
+          _c("v-footer", { attrs: { app: "", color: "#20C4AF" } }),
         ],
         1
       ),
@@ -22380,12 +22390,9 @@ var render = function () {
     },
     [
       _c("div", { staticClass: "mb-6" }, [
-        _c("img", {
-          attrs: {
-            src: "https://www.rakuyohp.or.jp/files/libs/542/202107291350007667.png?1627534201",
-            alt: "",
-          },
-        }),
+        _c("h2", [_vm._v("医療法人 〇〇")]),
+        _vm._v(" "),
+        _c("h1", [_vm._v("〇〇病院")]),
       ]),
       _vm._v(" "),
       _c(
