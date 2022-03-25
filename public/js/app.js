@@ -2372,6 +2372,46 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   data: function data() {
@@ -2453,6 +2493,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -2582,6 +2654,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
 //
 //
 //
@@ -2808,7 +2881,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".v-input[data-v-7abcea40] {\n  border-radius: 0px;\n  padding: 0px;\n}\n.col[data-v-7abcea40] {\n  padding: 3px 15px;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".v-input[data-v-7abcea40] {\n  border-radius: 0px;\n  padding: 0px;\n}\n.col[data-v-7abcea40] {\n  padding: 3px 15px;\n  overflow-y: scroll;\n}\n[data-v-7abcea40]::-webkit-scrollbar {\n  -webkit-appearance: none;\n  width: 7px;\n}\n[data-v-7abcea40]::-webkit-scrollbar-thumb {\n  border-radius: 0px;\n  background-color: rgba(0, 0, 0, 0.5);\n  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".div[data-v-63cd6604] {\n  width: 100px;\n  height: 70px;\n  border: 1px solid black;\n  overflow-y: scroll;\n}\n.ko[data-v-63cd6604] {\n  width: 100px;\n  height: 5px;\n  background-color: aqua;\n  position: fixed;\n}\n[data-v-63cd6604]::-webkit-scrollbar {\n  -webkit-appearance: none;\n  width: 7px;\n}\n[data-v-63cd6604]::-webkit-scrollbar-thumb {\n  border-radius: 0px;\n  background-color: rgba(0, 0, 0, 0.5);\n  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -21152,6 +21249,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_id_63cd6604_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_id_63cd6604_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_id_63cd6604_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Layout.vue?vue&type=style&index=0&id=6a4bdfee&scoped=true&lang=css&":
 /*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Layout.vue?vue&type=style&index=0&id=6a4bdfee&scoped=true&lang=css& ***!
@@ -21582,23 +21709,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=63cd6604& */ "./resources/js/views/Home.vue?vue&type=template&id=63cd6604&");
+/* harmony import */ var _Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Home.vue?vue&type=template&id=63cd6604&scoped=true& */ "./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true&");
 /* harmony import */ var _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Home.vue?vue&type=script&lang=js& */ "./resources/js/views/Home.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Home_vue_vue_type_style_index_0_id_63cd6604_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss& */ "./resources/js/views/Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
+;
 
 
 /* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Home_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__.render,
-  _Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  null,
+  "63cd6604",
   null
   
 )
@@ -21785,6 +21914,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/views/Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/views/Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss& ***!
+  \***********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_style_index_0_id_63cd6604_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=style&index=0&id=63cd6604&scoped=true&lang=scss&");
+
+
+/***/ }),
+
 /***/ "./resources/js/views/Layout.vue?vue&type=style&index=0&id=6a4bdfee&scoped=true&lang=css&":
 /*!************************************************************************************************!*\
   !*** ./resources/js/views/Layout.vue?vue&type=style&index=0&id=6a4bdfee&scoped=true&lang=css& ***!
@@ -21845,19 +21987,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/views/Home.vue?vue&type=template&id=63cd6604&":
-/*!********************************************************************!*\
-  !*** ./resources/js/views/Home.vue?vue&type=template&id=63cd6604& ***!
-  \********************************************************************/
+/***/ "./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true&":
+/*!********************************************************************************!*\
+  !*** ./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true& ***!
+  \********************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=template&id=63cd6604& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=template&id=63cd6604&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Home_vue_vue_type_template_id_63cd6604_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Home.vue?vue&type=template&id=63cd6604&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true&");
 
 
 /***/ }),
@@ -21972,263 +22114,55 @@ var render = function () {
       _c("h1", [_vm._v("管理画面")]),
       _vm._v(" "),
       _c(
-        "div",
-        _vm._l(_vm.staff, function (person) {
-          return _c("p", { key: person.id }, [_vm._v(_vm._s(person.name))])
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _c(
-        "v-card",
-        { attrs: { "max-width": "600", outlined: "" } },
+        "v-low",
         [
-          _c("v-card-title", [_vm._v("職員登録")]),
-          _vm._v(" "),
           _c(
-            "v-card-text",
+            "v-col",
             [
               _c(
-                "v-row",
+                "v-card",
+                { attrs: { height: "200" } },
                 [
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "3" } },
-                    [_c("v-subheader", [_vm._v("職員番号")])],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "9" } },
-                    [
-                      _c("v-text-field", {
-                        attrs: {
-                          height: "10",
-                          "single-line": "",
-                          outlined: "",
-                          dense: "",
-                          color: "#959595",
-                          hint: "例）123456",
-                          "persistent-hint": "",
-                          type: "number",
-                          "hide-spin-buttons": "",
-                          filled: _vm.formData.id === "" ? true : false,
+                  _c("v-simple-table", {
+                    attrs: { dense: "" },
+                    scopedSlots: _vm._u([
+                      {
+                        key: "default",
+                        fn: function () {
+                          return [
+                            _c("thead", [
+                              _c("tr", [
+                                _c("th", { staticClass: "text-left" }, [
+                                  _vm._v(
+                                    "\n                            Name\n                        "
+                                  ),
+                                ]),
+                                _vm._v(" "),
+                                _c("th", { staticClass: "text-left" }, [
+                                  _vm._v(
+                                    "\n                            Calories\n                        "
+                                  ),
+                                ]),
+                              ]),
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "tbody",
+                              _vm._l(_vm.staff, function (person) {
+                                return _c("tr", { key: person.id }, [
+                                  _c("td", [_vm._v(_vm._s(person.name))]),
+                                  _vm._v(" "),
+                                  _c("td", [_vm._v(_vm._s(person.kana))]),
+                                ])
+                              }),
+                              0
+                            ),
+                          ]
                         },
-                        model: {
-                          value: _vm.formData.id,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.formData, "id", $$v)
-                          },
-                          expression: "formData.id",
-                        },
-                      }),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-row",
-                [
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "3" } },
-                    [_c("v-subheader", [_vm._v("氏名")])],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "9" } },
-                    [
-                      _c("v-text-field", {
-                        attrs: {
-                          height: "10",
-                          "single-line": "",
-                          outlined: "",
-                          dense: "",
-                          color: "#959595",
-                          hint: "例）鈴木　一郎",
-                          "persistent-hint": "",
-                          filled: _vm.formData.name === "" ? true : false,
-                        },
-                        model: {
-                          value: _vm.formData.name,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.formData, "name", $$v)
-                          },
-                          expression: "formData.name",
-                        },
-                      }),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-row",
-                [
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "3" } },
-                    [_c("v-subheader", [_vm._v("フリガナ")])],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "9" } },
-                    [
-                      _c("v-text-field", {
-                        attrs: {
-                          height: "10",
-                          "single-line": "",
-                          outlined: "",
-                          dense: "",
-                          color: "#959595",
-                          hint: "例）スズキ　イチロウ",
-                          "persistent-hint": "",
-                          filled: _vm.formData.kana === "" ? true : false,
-                        },
-                        model: {
-                          value: _vm.formData.kana,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.formData, "kana", $$v)
-                          },
-                          expression: "formData.kana",
-                        },
-                      }),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-row",
-                [
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "3" } },
-                    [_c("v-subheader", [_vm._v("所属部署")])],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "9" } },
-                    [
-                      _c("v-text-field", {
-                        attrs: {
-                          height: "10",
-                          "single-line": "",
-                          outlined: "",
-                          dense: "",
-                          color: "#959595",
-                          hint: "例）看護部",
-                          "persistent-hint": "",
-                          filled: _vm.formData.department === "" ? true : false,
-                        },
-                        model: {
-                          value: _vm.formData.department,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.formData, "department", $$v)
-                          },
-                          expression: "formData.department",
-                        },
-                      }),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-row",
-                [
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "3" } },
-                    [_c("v-subheader", [_vm._v("入職日")])],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "9" } },
-                    [
-                      _c("v-text-field", {
-                        attrs: {
-                          height: "10",
-                          "single-line": "",
-                          outlined: "",
-                          dense: "",
-                          color: "#959595",
-                          hint: "例）2020/04/01",
-                          "persistent-hint": "",
-                          type: "date",
-                          filled:
-                            _vm.formData.employment_date === "" ? true : false,
-                        },
-                        model: {
-                          value: _vm.formData.employment_date,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.formData, "employment_date", $$v)
-                          },
-                          expression: "formData.employment_date",
-                        },
-                      }),
-                    ],
-                    1
-                  ),
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "v-row",
-                [
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "3" } },
-                    [_c("v-subheader", [_vm._v("パスワード")])],
-                    1
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "v-col",
-                    { attrs: { cols: "9" } },
-                    [
-                      _c("v-text-field", {
-                        attrs: {
-                          height: "10",
-                          "single-line": "",
-                          outlined: "",
-                          dense: "",
-                          color: "#959595",
-                          hint: "4桁の英数字で入力",
-                          "persistent-hint": "",
-                          type: "password",
-                          filled: _vm.formData.password === "" ? true : false,
-                        },
-                        model: {
-                          value: _vm.formData.password,
-                          callback: function ($$v) {
-                            _vm.$set(_vm.formData, "password", $$v)
-                          },
-                          expression: "formData.password",
-                        },
-                      }),
-                    ],
-                    1
-                  ),
+                        proxy: true,
+                      },
+                    ]),
+                  }),
                 ],
                 1
               ),
@@ -22237,15 +22171,293 @@ var render = function () {
           ),
           _vm._v(" "),
           _c(
-            "v-card-actions",
+            "v-col",
             [
               _c(
-                "v-btn",
-                {
-                  attrs: { outlined: "", tile: "", text: "" },
-                  on: { click: _vm.staffStore },
-                },
-                [_vm._v("登録")]
+                "v-card",
+                { attrs: { "max-width": "600", outlined: "" } },
+                [
+                  _c("v-card-title", [_vm._v("職員登録")]),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    [
+                      _c(
+                        "v-row",
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "3" } },
+                            [_c("v-subheader", [_vm._v("職員番号")])],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "9" } },
+                            [
+                              _c("v-text-field", {
+                                attrs: {
+                                  height: "10",
+                                  "single-line": "",
+                                  outlined: "",
+                                  dense: "",
+                                  color: "#959595",
+                                  hint: "例）123456",
+                                  "persistent-hint": "",
+                                  type: "number",
+                                  "hide-spin-buttons": "",
+                                  filled: _vm.formData.id === "" ? true : false,
+                                },
+                                model: {
+                                  value: _vm.formData.id,
+                                  callback: function ($$v) {
+                                    _vm.$set(_vm.formData, "id", $$v)
+                                  },
+                                  expression: "formData.id",
+                                },
+                              }),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "3" } },
+                            [_c("v-subheader", [_vm._v("氏名")])],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "9" } },
+                            [
+                              _c("v-text-field", {
+                                attrs: {
+                                  height: "10",
+                                  "single-line": "",
+                                  outlined: "",
+                                  dense: "",
+                                  color: "#959595",
+                                  hint: "例）鈴木　一郎",
+                                  "persistent-hint": "",
+                                  filled:
+                                    _vm.formData.name === "" ? true : false,
+                                },
+                                model: {
+                                  value: _vm.formData.name,
+                                  callback: function ($$v) {
+                                    _vm.$set(_vm.formData, "name", $$v)
+                                  },
+                                  expression: "formData.name",
+                                },
+                              }),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "3" } },
+                            [_c("v-subheader", [_vm._v("フリガナ")])],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "9" } },
+                            [
+                              _c("v-text-field", {
+                                attrs: {
+                                  height: "10",
+                                  "single-line": "",
+                                  outlined: "",
+                                  dense: "",
+                                  color: "#959595",
+                                  hint: "例）スズキ　イチロウ",
+                                  "persistent-hint": "",
+                                  filled:
+                                    _vm.formData.kana === "" ? true : false,
+                                },
+                                model: {
+                                  value: _vm.formData.kana,
+                                  callback: function ($$v) {
+                                    _vm.$set(_vm.formData, "kana", $$v)
+                                  },
+                                  expression: "formData.kana",
+                                },
+                              }),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "3" } },
+                            [_c("v-subheader", [_vm._v("所属部署")])],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "9" } },
+                            [
+                              _c("v-text-field", {
+                                attrs: {
+                                  height: "10",
+                                  "single-line": "",
+                                  outlined: "",
+                                  dense: "",
+                                  color: "#959595",
+                                  hint: "例）看護部",
+                                  "persistent-hint": "",
+                                  filled:
+                                    _vm.formData.department === ""
+                                      ? true
+                                      : false,
+                                },
+                                model: {
+                                  value: _vm.formData.department,
+                                  callback: function ($$v) {
+                                    _vm.$set(_vm.formData, "department", $$v)
+                                  },
+                                  expression: "formData.department",
+                                },
+                              }),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "3" } },
+                            [_c("v-subheader", [_vm._v("入職日")])],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "9" } },
+                            [
+                              _c("v-text-field", {
+                                attrs: {
+                                  height: "10",
+                                  "single-line": "",
+                                  outlined: "",
+                                  dense: "",
+                                  color: "#959595",
+                                  hint: "例）2020/04/01",
+                                  "persistent-hint": "",
+                                  type: "date",
+                                  filled:
+                                    _vm.formData.employment_date === ""
+                                      ? true
+                                      : false,
+                                },
+                                model: {
+                                  value: _vm.formData.employment_date,
+                                  callback: function ($$v) {
+                                    _vm.$set(
+                                      _vm.formData,
+                                      "employment_date",
+                                      $$v
+                                    )
+                                  },
+                                  expression: "formData.employment_date",
+                                },
+                              }),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "v-row",
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "3" } },
+                            [_c("v-subheader", [_vm._v("パスワード")])],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "9" } },
+                            [
+                              _c("v-text-field", {
+                                attrs: {
+                                  height: "10",
+                                  "single-line": "",
+                                  outlined: "",
+                                  dense: "",
+                                  color: "#959595",
+                                  hint: "4桁の英数字で入力",
+                                  "persistent-hint": "",
+                                  type: "password",
+                                  filled:
+                                    _vm.formData.password === "" ? true : false,
+                                },
+                                model: {
+                                  value: _vm.formData.password,
+                                  callback: function ($$v) {
+                                    _vm.$set(_vm.formData, "password", $$v)
+                                  },
+                                  expression: "formData.password",
+                                },
+                              }),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-actions",
+                    [
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { outlined: "", tile: "", text: "" },
+                          on: { click: _vm.staffStore },
+                        },
+                        [_vm._v("登録")]
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
               ),
             ],
             1
@@ -22266,10 +22478,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=template&id=63cd6604&":
-/*!***********************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=template&id=63cd6604& ***!
-  \***********************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Home.vue?vue&type=template&id=63cd6604&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -22290,11 +22502,32 @@ var render = function () {
       _c("router-link", { attrs: { to: "/admin" } }, [_vm._v("admin")]),
       _vm._v(" "),
       _c("h1", [_vm._v("Home Page")]),
+      _vm._v(" "),
+      _vm._m(0),
     ],
     1
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function () {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "div" }, [
+      _c("div", { staticClass: "ko" }),
+      _vm._v(" "),
+      _c("p", [_vm._v("hoge")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("hoge")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("hoge")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("hoge")]),
+      _vm._v(" "),
+      _c("p", [_vm._v("hoge")]),
+    ])
+  },
+]
 render._withStripped = true
 
 
@@ -22402,17 +22635,22 @@ var render = function () {
         "v-sheet",
         { staticClass: "mb-6 pa-4", attrs: { color: "#20C4AF", width: "469" } },
         [
-          _c("div", { staticClass: "d-flex" }, [
-            _c("img", {
-              attrs: { src: "/img/logo_yotuba01.png", width: "110", alt: "" },
-            }),
-            _vm._v(" "),
-            _c("div", [
-              _c("h2", [_vm._v("医療法人 サンプル")]),
+          _c(
+            "div",
+            { staticClass: "d-flex" },
+            [
+              _c("v-icon", { attrs: { size: "100", color: "white" } }, [
+                _vm._v("mdi-clover"),
+              ]),
               _vm._v(" "),
-              _c("h1", [_vm._v("サンプル病院")]),
-            ]),
-          ]),
+              _c("div", { staticClass: "pl-4" }, [
+                _c("h2", [_vm._v("医療法人 サンプル")]),
+                _vm._v(" "),
+                _c("h1", [_vm._v("サンプル病院")]),
+              ]),
+            ],
+            1
+          ),
         ]
       ),
       _vm._v(" "),

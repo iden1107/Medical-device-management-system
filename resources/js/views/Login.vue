@@ -2,8 +2,9 @@
     <v-sheet height="90vh" class="d-flex flex-column align-center justify-center" >
         <v-sheet class="mb-6 pa-4" color="#20C4AF" width="469">
             <div class="d-flex">
-                <img :src="'/img/logo_yotuba01.png'" width="110" alt="">
-                <div>
+                <v-icon size="100" color="white">mdi-clover</v-icon>
+                <!-- <img :src="'/img/logo_yotuba01.png'" width="110" alt=""> -->
+                <div class="pl-4">
                     <h2>医療法人 サンプル</h2>
                     <h1>サンプル病院</h1>
                 </div>

@@ -25,7 +25,7 @@ Route::get('/login', function () {
 // api的なエンドポイント
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/api/user', function (Request $request) {
-        return User::all();
+        return User::where('id', '!=', 9999)->get();
     });
     Route::get('/api/authUser', function (Request $request) {
         return Auth::user();
