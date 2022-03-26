@@ -1,15 +1,17 @@
 <template>
     <v-sheet height="90vh" class="d-flex flex-column align-center justify-center" >
-        <v-sheet class="mb-6 pa-4" color="#20C4AF" width="469">
-            <div class="d-flex">
-                <v-icon size="100" color="white">mdi-clover</v-icon>
-                <!-- <img :src="'/img/logo_yotuba01.png'" width="110" alt=""> -->
-                <div class="pl-4">
-                    <h2>医療法人 サンプル</h2>
-                    <h1>サンプル病院</h1>
+        <v-card outlined  class="mb-6 pa-4" color="#20C4AF" max-width="500">
+            <v-card-text>
+                <div class="d-flex">
+                    <v-icon size="100" color="white">mdi-clover</v-icon>
+                    <div class="pl-4">
+                        <h2>医療法人 サンプル</h2>
+                        <br>
+                        <h1>サンプル病院</h1>
+                    </div>
                 </div>
-            </div>
-        </v-sheet>
+            </v-card-text>
+        </v-card>
         <v-card  max-width="500" outlined >
             <v-card-title style="color: #20C4AF;">医療機器管理システム</v-card-title>
             <v-card-text>
@@ -27,7 +29,7 @@
                 <v-btn outlined tile text @click="login"> ログイン </v-btn>
             </v-card-actions>
         </v-card>
-        <v-sheet class="mb-6 pa-4" width="469">
+        <v-sheet class="mb-6 pa-4" max-width="469">
             <p>このサイトはポートフォリオのサンプルアプリです</p>
             <a href="https://free-materials.com/">フリー素材から</a>
         </v-sheet>
@@ -73,7 +75,7 @@ export default {
       axios
         .post("/login", this.formData)
         .then(function (response) {
-          location.href = "/admin";
+          location.href = "/admin/device";
         })
         .catch(function (error) {
             console.log(error)

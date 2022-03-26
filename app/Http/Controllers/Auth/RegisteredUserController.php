@@ -54,4 +54,20 @@ class RegisteredUserController extends Controller
 
         // return redirect(RouteServiceProvider::HOME);
     }
+
+    public function update(Request $request,$id)
+    {
+        $request->validate([
+            'name' => ['required', 'string', 'max:255'],
+        ]);
+        return User::where('id',$id)->update([
+            'id' => $request->id,
+            'name' => $request->name,
+            'kana' => $request->kana,
+            'employment_date' => $request->employment_date,
+            'department' => $request->department,
+            'status' =>1,
+            // 'password' => Hash::make($request->password),
+        ]);
+    }
 }

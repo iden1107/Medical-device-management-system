@@ -22,14 +22,18 @@ Route::get('/login', function () {
 })->where('any', '.*');
 
 
-// api的なエンドポイント
 Route::group(['middleware' => 'auth'], function () {
+    // apiエンドポイント
     Route::get('/api/user', function (Request $request) {
-        return User::where('id', '!=', 9999)->get();
+        return User::where('id', '!=', 9999)->where('status',1)->orderBy('employment_date','asc')->get();
+    });
+    Route::get('/api/edit/user/{id}', function (Request $request,$id) {
+        return User::where('id', $id)->where('status',1)->first();
     });
     Route::get('/api/authUser', function (Request $request) {
         return Auth::user();
     });
+    // spaルーティング
     Route::get('/{any}', function () {
         return view('layouts.app');
     })->where('any', '.*');

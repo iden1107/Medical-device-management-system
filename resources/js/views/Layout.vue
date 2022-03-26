@@ -26,6 +26,7 @@
 <style scoped>
 .container{
     max-width: 1500px;
+    padding-top: 4px;
 }
 </style>
 <script>
@@ -63,14 +64,18 @@ export default {
         }
     },
     created(){
-        axios.get('/api/authUser')
-            .then(response => {
-                console.log(response)
-                this.user  = response.data
-            })
-            .catch(error => {
-                console.log(error.response)
-            });
+        // ログインユーザーの取得
+        if(this.$route.path === 'login'){
+            return
+        }else{
+            axios.get('/api/authUser')
+                .then(response => {
+                    this.user  = response.data
+                })
+                .catch(error => {
+                    console.log(error.response)
+                });
+        }
     }
 };
 </script>

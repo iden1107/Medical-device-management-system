@@ -1,40 +1,7 @@
 <template>
-<div>
-    <router-link to="/home">ホーム</router-link>
-    <router-link to="/admin">admin</router-link>
-    <h1>管理画面</h1>
-
-<v-low>
-    <v-col>
-        <v-card height="200">
-            <v-simple-table dense>
-                <template v-slot:default>
-                    <thead>
-                        <tr>
-                        <th class="text-left">
-                            Name
-                        </th>
-                        <th class="text-left">
-                            Calories
-                        </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr
-                        v-for="person in staff"
-                        :key="person.id"
-                        >
-                        <td>{{ person.name }}</td>
-                        <td>{{ person.kana }}</td>
-                        </tr>
-                    </tbody>
-                </template>
-            </v-simple-table>
-        </v-card>
-    </v-col>
-    <v-col>
-        <v-card  max-width="600" outlined >
-            <v-card-title>職員登録</v-card-title>
+    <v-col cols="12" md="4">
+        <v-card  outlined >
+            <v-card-title>詳細</v-card-title>
             <v-card-text>
                 <v-row>
                     <v-col cols="3">
@@ -47,12 +14,12 @@
                         outlined
                         dense
                         color="#959595"
-                        hint="例）123456"
                         persistent-hint
                         type="number"
                         hide-spin-buttons
-                        v-model="formData.id"
-                        :filled="(formData.id === '') ? true : false"
+                        v-model="editUser.id"
+                        :filled="(editUser.id === '') ? true : false"
+                        disabled
                     ></v-text-field>
                     </v-col>
                 </v-row>
@@ -67,10 +34,9 @@
                         outlined
                         dense
                         color="#959595"
-                        hint="例）鈴木　一郎"
                         persistent-hint
-                        v-model="formData.name"
-                        :filled="(formData.name === '') ? true : false"
+                        v-model="editUser.name"
+                        :filled="(editUser.name === '') ? true : false"
                     ></v-text-field>
                     </v-col>
                 </v-row>
@@ -85,10 +51,9 @@
                         outlined
                         dense
                         color="#959595"
-                        hint="例）スズキ　イチロウ"
                         persistent-hint
-                        v-model="formData.kana"
-                        :filled="(formData.kana === '') ? true : false"
+                        v-model="editUser.kana"
+                        :filled="(editUser.kana === '') ? true : false"
                     ></v-text-field>
                     </v-col>
                 </v-row>
@@ -103,10 +68,9 @@
                         outlined
                         dense
                         color="#959595"
-                        hint="例）看護部"
                         persistent-hint
-                        v-model="formData.department"
-                        :filled="(formData.department === '') ? true : false"
+                        v-model="editUser.department"
+                        :filled="(editUser.department === '') ? true : false"
                     ></v-text-field>
                     </v-col>
                 </v-row>
@@ -121,17 +85,16 @@
                         outlined
                         dense
                         color="#959595"
-                        hint="例）2020/04/01"
                         persistent-hint
                         type="date"
-                        v-model="formData.employment_date"
-                        :filled="(formData.employment_date === '') ? true : false"
+                        v-model="editUser.employment_date"
+                        :filled="(editUser.employment_date === '') ? true : false"
                     ></v-text-field>
                     </v-col>
                 </v-row>
                 <v-row>
                     <v-col cols="3">
-                    <v-subheader>パスワード</v-subheader>
+                    <v-subheader>パスワード(再設定)</v-subheader>
                     </v-col>
                     <v-col cols="9">
                         <v-text-field
@@ -143,28 +106,19 @@
                         hint="4桁の英数字で入力"
                         persistent-hint
                         type="password"
-                        v-model="formData.password"
-                        :filled="(formData.password === '') ? true : false"
+                        v-model="editUser.password"
+                        :filled="(editUser.password === '') ? true : false"
                     ></v-text-field>
                     </v-col>
                 </v-row>
-
-
             </v-card-text>
             <v-card-actions>
-                <v-btn outlined tile text @click="staffStore">登録</v-btn>
+                <v-btn outlined tile text @click="staffUpdate">更新</v-btn>
+                <v-btn outlined tile text @click="staffDelete">削除</v-btn>
             </v-card-actions>
 
         </v-card>
     </v-col>
-</v-low>
-
-    <v-btn @click="logout">ログアウト</v-btn>
-</div>
-
-
-
-
 </template>
 
 <style scoped lang="scss">
@@ -172,19 +126,12 @@
     border-radius: 0px;
     padding: 0px;
 }
+.v-subheader{
+    padding: 0;
+}
 .col{
-    padding: 3px 15px;
-    overflow-y: scroll;
-}
-
-::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 7px;
-}
-::-webkit-scrollbar-thumb {
-    border-radius: 0px;
-    background-color: rgba(0,0,0,.5);
-    box-shadow: 0 0 1px rgba(255,255,255,.5);
+    padding-top: 0;
+    padding-bottom: 0;
 }
 </style>
 
@@ -193,46 +140,45 @@ export default {
     name: "login",
     data() {
         return {
-            formData:{
-                id: "",
-                name: "",
-                kana: "",
-                department: "",
-                employment_date	: "",
-                password: "",
-                remember: false,
-            },
-            staff:[],
-            autoLogoutFunctionId:'',
-            flag:true,
+            user:{},
         };
+    },
+    computed:{
+        editUser(){
+            return this.user
+        }
+    },
+    watch:{
+        $route(){
+            axios.get('/api/edit/user/' + this.$route.params.id).then((res)=>{
+                this.user = res.data
+            })
+        }
     },
     methods: {
         logout(){
             axios.post('/logout')
             location.href = '/login'
         },
-        getStaff(){
-            axios.get('/api/user').then((res)=>{
-                this.staff = res.data
+        async staffUpdate(){
+            await axios.post('/api/update/user/' + this.$route.params.id,this.editUser)
+            .then((res)=>console.log(res))
+            this.getEditUser()
+            this.$emit('emitGetStaff')
+        },
+        async staffDelete(){
+            // await axios.post('/api/delete/user/' + this.$route.params.id,this.editUser)
+            // .then((res)=>console.log(res))
+            this.$router.push({ name: 'user'})
+        },
+        getEditUser(){
+            axios.get('/api/edit/user/' + this.$route.params.id).then((res)=>{
+                this.user = res.data
             })
-        },
-        async staffStore(){
-            await axios.post('/api/register',this.formData)
-            this.getStaff()
-            this.formData = {
-                id: "",
-                name: "",
-                kana: "",
-                department: "",
-                employment_date	: "",
-                password: "",
-                remember: false,
-            }
-        },
+        }
     },
     created(){
-        this.getStaff()
-    }
+        this.getEditUser()
+    },
 };
 </script>
