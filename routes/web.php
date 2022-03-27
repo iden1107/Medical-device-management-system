@@ -24,15 +24,15 @@ Route::get('/login', function () {
 
 Route::group(['middleware' => 'auth'], function () {
     // apiエンドポイント
-    Route::get('/api/user', function (Request $request) {
-        return User::where('id', '!=', 9999)->where('status',1)->orderBy('employment_date','asc')->get();
+    Route::get('/api/user', [RegisteredUserController::class, 'getUsers']);
+    Route::get('/api/authUser', [RegisteredUserController::class, 'getAuthUser']);
+    Route::get('/api/edit/user/{id}', [RegisteredUserController::class, 'getUser']);
+    // Route::post('/api/update/user/{id}', [RegisteredUserController::class, 'updateUser']);
+    Route::post('/api/update/user/{id}', function(){
+        return 'hoge';
     });
-    Route::get('/api/edit/user/{id}', function (Request $request,$id) {
-        return User::where('id', $id)->where('status',1)->first();
-    });
-    Route::get('/api/authUser', function (Request $request) {
-        return Auth::user();
-    });
+    Route::post('/api/delete/user/{id}', [RegisteredUserController::class, 'deleteUser']);
+
     // spaルーティング
     Route::get('/{any}', function () {
         return view('layouts.app');

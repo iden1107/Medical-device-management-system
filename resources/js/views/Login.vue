@@ -59,28 +59,28 @@ h2{
 
 <script>
 export default {
-  name: "login",
-  props: ["xxx"],
-  data() {
-    return {
-        formData:{
-            id: "",
-            password: "",
-            remember: false,
-        }
-    };
-  },
-  methods: {
-    login() {
-      axios
-        .post("/login", this.formData)
-        .then(function (response) {
-          location.href = "/admin/device";
-        })
-        .catch(function (error) {
-            console.log(error)
-        });
+    name: "login",
+    props: ["xxx"],
+    data() {
+        return {
+            formData:{
+                id: "",
+                password: "",
+                remember: false,
+            }
+        };
     },
-  },
+    methods: {
+        login() {
+        axios
+            .post("/login", this.formData)
+            .then(function (response) {
+                location.href = "/admin/device";
+            })
+            .catch(function (error) {
+                console.log(error)
+            });
+        },
+    },
 };
 </script>

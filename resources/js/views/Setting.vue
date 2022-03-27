@@ -1,35 +1,12 @@
 <template>
 <div>
     <AdminToolbar/>
-    <h1>管理画面</h1>
+    <h1>設定</h1>
     <v-row>
         <v-col cols="12" md="8" class="col">
             <v-card outlined >
-                <v-card-title>職員名簿</v-card-title>
                 <v-card-text>
-                    <v-simple-table dense fixed-header>
-                        <template v-slot:default >
-                            <thead>
-                                <tr>
-                                    <th class="text-left">氏名</th>
-                                    <th class="text-left">ﾌﾘｶﾞﾅ</th>
-                                    <th class="text-left">部署</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr
-                                v-for="person in staff"
-                                :key="person.id"
-                                style="cursor: pointer"
-                                @click="link(person.id)"
-                                >
-                                <td>{{ person.name }}</td>
-                                <td>{{ person.kana }}</td>
-                                <td>{{ person.department }}</td>
-                                </tr>
-                            </tbody>
-                        </template>
-                    </v-simple-table>
+                    <input type="text" :value="settingMinutes" @blur="$emit('input', $event.target.value)">
                 </v-card-text>
             </v-card>
         </v-col>
@@ -61,6 +38,7 @@
 <script>
 export default {
     name: "login",
+    props:['settingMinutes'],
     data() {
         return {
             formData:{
@@ -83,7 +61,6 @@ export default {
             location.href = '/login'
         },
         getStaff(){
-            console.log(6)
             axios.get('/api/user').then((res)=>{
                 this.staff = res.data
             })
@@ -102,11 +79,7 @@ export default {
             }
         },
         link(id){
-            if(this.$route.params.id == id){
-                return
-            }else{
-                this.$router.push({ name: 'editUser', params: {id:id}})
-            }
+            this.$router.push({ name: 'editUser', params: {id:id}})
         }
     },
     created(){

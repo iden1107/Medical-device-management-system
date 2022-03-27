@@ -12,11 +12,10 @@
             <v-container fluid >
             <!-- vue-routerを使用する場合 -->
             <keep-alive>
-                <router-view ></router-view>
+                <router-view :settingMinutes="settingMinutes" @input="settingMinutes = $event"></router-view>
             </keep-alive>
             </v-container>
         </v-main>
-
         <v-footer app color="#20C4AF">
             <!-- -->
         </v-footer>
@@ -36,7 +35,8 @@ export default {
         return {
             user:'',
             autoLogoutFunctionId:'',
-            timeOutMinutes:60000 * 10,
+            timeOutMinutes:60000 ,
+            settingMinutes:10,
         };
     },
     methods: {
@@ -46,7 +46,7 @@ export default {
                 return
             }else{
                 clearTimeout(this.autoLogoutFunctionId);
-                this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes );
+                this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes);
             }
         },
         logout(){
@@ -60,7 +60,7 @@ export default {
         if(this.$route.path === '/login'){
             return
         }else{
-            this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes );
+            this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes);
         }
     },
     created(){
