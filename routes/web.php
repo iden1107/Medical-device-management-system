@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Auth;
-use App\Models\User;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\DeviceController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,11 +26,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/api/user', [RegisteredUserController::class, 'getUsers']);
     Route::get('/api/authUser', [RegisteredUserController::class, 'getAuthUser']);
     Route::get('/api/edit/user/{id}', [RegisteredUserController::class, 'getUser']);
-    // Route::post('/api/update/user/{id}', [RegisteredUserController::class, 'updateUser']);
-    Route::post('/api/update/user/{id}', function(){
-        return 'hoge';
-    });
+    Route::post('/api/update/user/{id}', [RegisteredUserController::class, 'updateUser']);
     Route::post('/api/delete/user/{id}', [RegisteredUserController::class, 'deleteUser']);
+
+    Route::get('/api/getDevices', [DeviceController::class ,'getDevices']);
 
     // spaルーティング
     Route::get('/{any}', function () {

@@ -73,19 +73,15 @@ class RegisteredUserController extends Controller
 
     public function updateUser(Request $request,$id)
     {
-        return 'hoge';
-        // $request->validate([
-        //     'name' => ['required', 'string', 'max:255'],
-        // ]);
-        // return User::where('id',$id)->update([
-        //     'id' => $request->id,
-        //     'name' => $request->name,
-        //     'kana' => $request->kana,
-        //     'employment_date' => $request->employment_date,
-        //     'department' => $request->department,
-        //     'status' =>1,
-        //     // 'password' => Hash::make($request->password),
-        // ]);
+        User::where('id',$id)->update([
+            'id' => $request->id,
+            'name' => $request->name,
+            'kana' => $request->kana,
+            'employment_date' => $request->employment_date,
+            'department' => $request->department,
+            'status' =>1,
+            // 'password' => Hash::make($request->password),
+        ]);
     }
 
     public function deleteUser($id)

@@ -162,20 +162,18 @@ export default {
         },
         async staffUpdate(){
             await axios.post('/api/update/user/' + this.$route.params.id,this.editUser)
-            .then((res)=>console.log(res))
-            this.getEditUser()
+            await this.getEditUser()
             this.$emit('emitGetStaff')
         },
         async staffDelete(){
             await axios.post('/api/delete/user/' + this.$route.params.id)
-            .then((res)=>console.log(res))
+            await this.$emit('emitGetStaff')
             this.$router.push({ name: 'user'})
         },
         async getEditUser(){
             await axios.get('/api/edit/user/' + this.$route.params.id).then((res)=>{
                 this.user = res.data
             })
-            this.$emit('emitGetStaff')
         }
     },
     created(){

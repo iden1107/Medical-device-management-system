@@ -83,7 +83,6 @@ export default {
             location.href = '/login'
         },
         getStaff(){
-            console.log(6)
             axios.get('/api/user').then((res)=>{
                 this.staff = res.data
             })
