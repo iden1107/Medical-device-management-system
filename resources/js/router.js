@@ -1,25 +1,38 @@
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import Admin from './views/Admin.vue'
+import Device from './views/Device.vue'
+import User from './views/User.vue'
 import Login from './views/Login.vue'
+import CreateUser from './views/CreateUser.vue'
+import EditUser from './views/EditUser.vue'
+import Setting from './views/Setting.vue'
 
 export default new Router({
     mode: 'history',
     routes: [
         {
-            path: '/home',
-            name: 'home',
-            component: Home
+            path: '/admin/user',
+            component: User,
+            children:[
+                { path: '/', component:CreateUser,name:'user'},
+                { path:'edit/:id',component:EditUser,name:'editUser'},
+                { path: 'device', component:Device},
+            ]
         },
         {
-            path: '/admin',
-            name: 'admin',
-            component: Admin
+            path: '/admin/device',
+            name: 'device',
+            component: Device
+        },
+        {
+            path: '/admin/setting',
+            name: 'setting',
+            component: Setting
         },
         {
             path: '/login',
             name: 'login',
             component: Login
         },
+
     ]
 });

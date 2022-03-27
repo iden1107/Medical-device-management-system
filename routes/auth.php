@@ -54,5 +54,4 @@ Route::middleware('auth')->group(function () {
 
     // 新規登録
     Route::post('/api/register', [RegisteredUserController::class, 'store']);
-
 });

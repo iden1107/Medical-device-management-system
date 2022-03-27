@@ -1,25 +1,39 @@
 <template>
-    <v-sheet height="100vh" class="d-flex flex-column align-center justify-center" >
-        <div class="mb-6">
-            <img src="https://www.rakuyohp.or.jp/files/libs/542/202107291350007667.png?1627534201" alt="">
-        </div>
-        <v-card  max-width="500" outlined >
-        <v-card-title>医療機器管理システム</v-card-title>
-        <v-card-text>
-            <label>
-                職員番号
-                <input type="text" v-model="formData.id"/>
-            </label>
-            <label>
-                パスワード
-                <input type="password" v-model="formData.password"  />
-            </label>
-        </v-card-text>
-
-        <v-card-actions>
-            <v-btn outlined tile text @click="login"> ログイン </v-btn>
-        </v-card-actions>
+    <v-sheet height="90vh" class="d-flex flex-column align-center justify-center" >
+        <v-card outlined  class="mb-6 pa-4" color="#20C4AF" max-width="500">
+            <v-card-text>
+                <div class="d-flex">
+                    <v-icon size="100" color="white">mdi-clover</v-icon>
+                    <div class="pl-4">
+                        <h2>医療法人 サンプル</h2>
+                        <br>
+                        <h1>サンプル病院</h1>
+                    </div>
+                </div>
+            </v-card-text>
         </v-card>
+        <v-card  max-width="500" outlined >
+            <v-card-title style="color: #20C4AF;">医療機器管理システム</v-card-title>
+            <v-card-text>
+                <label>
+                    職員番号
+                    <input type="text" v-model="formData.id"/>
+                </label>
+                <label>
+                    パスワード
+                    <input type="password" v-model="formData.password"  />
+                </label>
+            </v-card-text>
+
+            <v-card-actions>
+                <v-btn outlined tile text @click="login"> ログイン </v-btn>
+            </v-card-actions>
+        </v-card>
+        <v-sheet class="mb-6 pa-4" max-width="469">
+            <p>このサイトはポートフォリオのサンプルアプリです</p>
+            <a href="https://free-materials.com/">フリー素材から</a>
+        </v-sheet>
+
     </v-sheet>
 </template>
 
@@ -32,32 +46,41 @@ input {
 input:focus {
     outline: none;
 }
+h1{
+    font-family: 'Shippori Mincho', serif;
+    font-weight: 900;
+    font-size: 50px;
+    color: #FFF;
+}
+h2{
+    color: #FFF;
+}
 </style>
 
 <script>
 export default {
-  name: "login",
-  props: ["xxx"],
-  data() {
-    return {
-        formData:{
-            id: "",
-            password: "",
-            remember: false,
-        }
-    };
-  },
-  methods: {
-    login() {
-      axios
-        .post("/login", this.formData)
-        .then(function (response) {
-          location.href = "/admin";
-        })
-        .catch(function (error) {
-            console.log(error)
-        });
+    name: "login",
+    props: ["xxx"],
+    data() {
+        return {
+            formData:{
+                id: "",
+                password: "",
+                remember: false,
+            }
+        };
     },
-  },
+    methods: {
+        login() {
+        axios
+            .post("/login", this.formData)
+            .then(function (response) {
+                location.href = "/admin/device";
+            })
+            .catch(function (error) {
+                console.log(error)
+            });
+        },
+    },
 };
 </script>

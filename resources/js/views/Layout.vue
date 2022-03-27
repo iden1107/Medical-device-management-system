@@ -2,7 +2,7 @@
 <!-- App.vue -->
 <div @click="autoLogout">
     <v-app>
-        <v-app-bar app height="30" color="#234180">
+        <v-app-bar app height="30" color="#20C4AF">
             <span class="white--text mx-auto" height="100%" v-show="(this.user.name ) ? true :  false">ログイン名：{{user.name}}</span>
         </v-app-bar>
 
@@ -12,12 +12,11 @@
             <v-container fluid >
             <!-- vue-routerを使用する場合 -->
             <keep-alive>
-                <router-view ></router-view>
+                <router-view :settingMinutes="settingMinutes" @input="settingMinutes = $event"></router-view>
             </keep-alive>
             </v-container>
         </v-main>
-
-        <v-footer app color="#234180">
+        <v-footer app color="#20C4AF">
             <!-- -->
         </v-footer>
     </v-app>
@@ -26,6 +25,7 @@
 <style scoped>
 .container{
     max-width: 1500px;
+    padding-top: 4px;
 }
 </style>
 <script>
@@ -35,7 +35,8 @@ export default {
         return {
             user:'',
             autoLogoutFunctionId:'',
-            timeOutMinutes:60000 * 10,
+            timeOutMinutes:60000 ,
+            settingMinutes:10,
         };
     },
     methods: {
@@ -45,7 +46,7 @@ export default {
                 return
             }else{
                 clearTimeout(this.autoLogoutFunctionId);
-                this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes );
+                this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes);
             }
         },
         logout(){
@@ -59,18 +60,22 @@ export default {
         if(this.$route.path === '/login'){
             return
         }else{
-            this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes );
+            this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes);
         }
     },
     created(){
-        axios.get('/api/authUser')
-            .then(response => {
-                console.log(response)
-                this.user  = response.data
-            })
-            .catch(error => {
-                console.log(error.response)
-            });
+        // ログインユーザーの取得
+        if(this.$route.path === 'login'){
+            return
+        }else{
+            axios.get('/api/authUser')
+                .then(response => {
+                    this.user  = response.data
+                })
+                .catch(error => {
+                    console.log(error.response)
+                });
+        }
     }
 };
 </script>

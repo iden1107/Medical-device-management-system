@@ -31,6 +31,22 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
+
+    public function getUsers(Request $request)
+    {
+        return User::where('id', '!=', 9999)->where('status', 1)->orderBy('employment_date', 'asc')->get();
+    }
+
+    public function getUser(Request $request,$id)
+    {
+        return User::where('id', $id)->where('status', 1)->first();
+    }
+
+    public function getAuthUser()
+    {
+        return Auth::user();
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -53,5 +69,25 @@ class RegisteredUserController extends Controller
         // Auth::login($user);
 
         // return redirect(RouteServiceProvider::HOME);
+    }
+
+    public function updateUser(Request $request,$id)
+    {
+        User::where('id',$id)->update([
+            'id' => $request->id,
+            'name' => $request->name,
+            'kana' => $request->kana,
+            'employment_date' => $request->employment_date,
+            'department' => $request->department,
+            'status' =>1,
+            // 'password' => Hash::make($request->password),
+        ]);
+    }
+
+    public function deleteUser($id)
+    {
+        return User::where('id',$id)->update([
+            'status' =>0,
+        ]);
     }
 }
