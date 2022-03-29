@@ -2731,6 +2731,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   data: function data() {
@@ -2795,6 +2798,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     changeStatus: function changeStatus(val) {
       this.device.status = val;
     },
+    cancel: function cancel() {
+      this.$router.push('/admin/devices');
+    },
     updateDevice: function updateDevice() {
       var _this2 = this;
 
@@ -2803,6 +2809,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context2.prev = _context2.next) {
               case 0:
+                // 廃棄（status = 4)なら配置場所がないのでlocationを空文字にする
                 if (_this2.device.status == 4) {
                   _this2.device.location = '';
                 }
@@ -25217,22 +25224,39 @@ var render = function () {
                                   ),
                                   _vm._v(" "),
                                   _c(
-                                    "v-card-actions",
+                                    "v-col",
                                     [
                                       _c(
-                                        "v-btn",
-                                        {
-                                          staticClass: "mb-6",
-                                          attrs: {
-                                            outlined: "",
-                                            tile: "",
-                                            text: "",
-                                            right: "",
-                                            absolute: "",
-                                          },
-                                          on: { click: _vm.updateDevice },
-                                        },
-                                        [_vm._v("更新")]
+                                        "v-card-actions",
+                                        { staticClass: "justify-end" },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                outlined: "",
+                                                tile: "",
+                                                text: "",
+                                              },
+                                              on: { click: _vm.cancel },
+                                            },
+                                            [_vm._v("キャンセル")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                outlined: "",
+                                                tile: "",
+                                                text: "",
+                                              },
+                                              on: { click: _vm.updateDevice },
+                                            },
+                                            [_vm._v("更新")]
+                                          ),
+                                        ],
+                                        1
                                       ),
                                     ],
                                     1

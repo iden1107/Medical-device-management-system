@@ -177,9 +177,12 @@
                                         </div>
                                     </div>
                                 </v-col>
-                                <v-card-actions>
-                                    <v-btn outlined tile text right absolute  class="mb-6" @click="updateDevice">更新</v-btn>
-                                </v-card-actions>
+                                <v-col>
+                                    <v-card-actions class="justify-end">
+                                        <v-btn outlined tile text @click="cancel">キャンセル</v-btn>
+                                        <v-btn outlined tile text @click="updateDevice">更新</v-btn>
+                                    </v-card-actions>
+                                </v-col>
                             </v-row>
                         </v-col>
                     </v-row>
@@ -320,11 +323,14 @@ export default {
         changeStatus(val){
             this.device.status = val
         },
+        cancel(){
+            this.$router.push('/admin/devices')
+        },
         async updateDevice(){
+            // 廃棄（status = 4)なら配置場所がないのでlocationを空文字にする
             if(this.device.status == 4){
                 this.device.location = ''
             }
-
             await axios.post('/api/updateDevice' , this.device)
             this.$router.push('/admin/devices')
         }
