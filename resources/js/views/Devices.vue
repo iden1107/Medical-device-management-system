@@ -77,7 +77,11 @@ export default {
             this.$router.push('/admin/devices/detail/' + id)
         }
     },
-
+    watch:{
+        $route(){
+            this.getDevices()
+        }
+    },
     filters :{
         zeroPadding(value){
             return ( '000' + value ).slice( -4 );

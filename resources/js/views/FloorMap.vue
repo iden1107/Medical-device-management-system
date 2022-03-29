@@ -2,8 +2,6 @@
 <div>
     <h1>配置図</h1>
     <div class="map">
-
-
         <img src="/img/img03.png" alt="" width="100%">
         <div class="ce subject">
             <p v-for="device in devices.臨床工学室" :key="device.id" :style="{ color: status[device.status].color }">
@@ -113,12 +111,12 @@ p{
     padding-bottom: 0.2vw;
     animation: flash 3s linear infinite;
 }
+// 各科目の位置
 .map{
     overflow: scroll;
     position: relative;
     // border: 1px solid black;
 }
-// 各科目の位置
 .subject{
     position: absolute;
     box-sizing: border-box;

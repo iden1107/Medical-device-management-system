@@ -2602,6 +2602,135 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   data: function data() {
@@ -2623,11 +2752,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }, {
         label: '廃棄',
         color: 'gray'
-      }]
+      }],
+      currentLocation: '',
+      location: ['臨床工学室', '整形外科', '眼科', '内視鏡センター', '生理検査室', '皮膚科', '産婦人科', 'リハビリテーション室', '外科', '処置室', '内科', '泌尿器科', '小児科'],
+      color: ['#80E368', '#6B9CE4', '#E3DD68', '#E36868', 'gray']
     };
   },
   methods: {
-    getDevices: function getDevices() {
+    getDevice: function getDevice() {
       var _this = this;
 
       return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
@@ -2648,7 +2780,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this.src = '/img/device2.jpeg';
                 }
 
-              case 4:
+                if (_this.$route.params.id) {
+                  _this.currentLocation = _this.device.location.slice();
+                }
+
+              case 5:
               case "end":
                 return _context.stop();
             }
@@ -2658,15 +2794,37 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     changeStatus: function changeStatus(val) {
       this.device.status = val;
+    },
+    updateDevice: function updateDevice() {
+      var _this2 = this;
 
-      if (val === 4) {
-        this.device.location = "";
-      }
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                if (_this2.device.status == 4) {
+                  _this2.device.location = '';
+                }
+
+                _context2.next = 3;
+                return axios.post('/api/updateDevice', _this2.device);
+
+              case 3:
+                _this2.$router.push('/admin/devices');
+
+              case 4:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
     }
   },
   watch: {
     $route: function $route() {
-      this.getDevices();
+      this.getDevice();
     }
   },
   filters: {
@@ -2675,7 +2833,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     }
   },
   created: function created() {
-    this.getDevices();
+    this.getDevice();
   }
 });
 
@@ -2779,6 +2937,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     link: function link(id) {
       this.$router.push('/admin/devices/detail/' + id);
+    }
+  },
+  watch: {
+    $route: function $route() {
+      this.getDevices();
     }
   },
   filters: {
@@ -3077,8 +3240,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
-//
 //
 //
 //
@@ -4006,7 +4167,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".device-img[data-v-7cf4f766] {\n  width: 40vh;\n  height: 40vh;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".device-img[data-v-7cf4f766] {\n  width: 40vh;\n  height: 40vh;\n}\n.v-input[data-v-7cf4f766] {\n  border-radius: 0px;\n  padding: 0px;\n}\n.v-subheader[data-v-7cf4f766] {\n  padding: 0 0 0 5px;\n}\np[data-v-7cf4f766] {\n  font-size: 0.11vw;\n  margin: 0;\n  padding: 0;\n}\n.current-location-textarea[data-v-7cf4f766] {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.map[data-v-7cf4f766] {\n  overflow: scroll;\n  position: relative;\n  padding: 10px;\n}\n.subject[data-v-7cf4f766] {\n  position: absolute;\n  box-sizing: border-box;\n}\n.ce[data-v-7cf4f766] {\n  left: 13.5%;\n  bottom: 76%;\n}\n.orthopedics[data-v-7cf4f766] {\n  left: 38%;\n  bottom: 80%;\n}\n.ophthalmology[data-v-7cf4f766] {\n  left: 49%;\n  bottom: 80%;\n}\n.endoscope[data-v-7cf4f766] {\n  left: 58%;\n  bottom: 79%;\n}\n.physiological-laboratory[data-v-7cf4f766] {\n  left: 67%;\n  bottom: 76.5%;\n}\n.dermatology[data-v-7cf4f766] {\n  left: 73.5%;\n  bottom: 69%;\n}\n.gynecology[data-v-7cf4f766] {\n  left: 85%;\n  bottom: 41%;\n}\n.rehabilitation[data-v-7cf4f766] {\n  left: 15%;\n  bottom: 35.5%;\n}\n.surgery[data-v-7cf4f766] {\n  left: 22%;\n  bottom: 17%;\n}\n.treatment-room[data-v-7cf4f766] {\n  left: 40%;\n  bottom: 21%;\n}\n.internal-medicine[data-v-7cf4f766] {\n  left: 48.3%;\n  bottom: 10%;\n}\n.urology[data-v-7cf4f766] {\n  left: 68%;\n  bottom: 10%;\n}\n.pediatrics[data-v-7cf4f766] {\n  left: 80.8%;\n  bottom: 10%;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -24271,7 +24432,15 @@ var render = function () {
       _vm._v(" "),
       _c("h1", [_vm._v("詳細")]),
       _vm._v(" "),
-      _c("p", [_vm._v(_vm._s(_vm.device))]),
+      _c(
+        "div",
+        [
+          _c("router-link", { attrs: { to: "/admin/devices" } }, [
+            _vm._v("一覧に戻る"),
+          ]),
+        ],
+        1
+      ),
       _vm._v(" "),
       _c(
         "v-row",
@@ -24318,7 +24487,7 @@ var render = function () {
                                   _vm._v(" "),
                                   _c(
                                     "v-col",
-                                    { attrs: { cols: "7" } },
+                                    { attrs: { cols: "8" } },
                                     [
                                       _c("v-text-field", {
                                         attrs: {
@@ -24332,6 +24501,7 @@ var render = function () {
                                           "hide-spin-buttons": "",
                                           filled:
                                             _vm.device.id === "" ? true : false,
+                                          disabled: "",
                                         },
                                         model: {
                                           value: _vm.device.id,
@@ -24354,7 +24524,7 @@ var render = function () {
                                   _vm._v(" "),
                                   _c(
                                     "v-col",
-                                    { attrs: { cols: "7" } },
+                                    { attrs: { cols: "8" } },
                                     [
                                       _c("v-text-field", {
                                         attrs: {
@@ -24392,7 +24562,7 @@ var render = function () {
                                   _vm._v(" "),
                                   _c(
                                     "v-col",
-                                    { attrs: { cols: "7" } },
+                                    { attrs: { cols: "8" } },
                                     [
                                       _c("v-text-field", {
                                         attrs: {
@@ -24424,20 +24594,7 @@ var render = function () {
                                     ],
                                     1
                                   ),
-                                ],
-                                1
-                              ),
-                            ],
-                            1
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "v-col",
-                            { attrs: { cols: "12", md: "6" } },
-                            [
-                              _c(
-                                "v-row",
-                                [
+                                  _vm._v(" "),
                                   _c(
                                     "v-col",
                                     { attrs: { cols: "12" } },
@@ -24476,11 +24633,24 @@ var render = function () {
                                     ],
                                     2
                                   ),
-                                  _vm._v(" "),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "12", md: "6" } },
+                            [
+                              _c(
+                                "v-row",
+                                [
                                   _c(
                                     "v-col",
                                     { attrs: { cols: "3" } },
-                                    [_c("v-subheader", [_vm._v("管理番号")])],
+                                    [_c("v-subheader", [_vm._v("次回点検日")])],
                                     1
                                   ),
                                   _vm._v(" "),
@@ -24496,99 +24666,574 @@ var render = function () {
                                           dense: "",
                                           color: "#959595",
                                           "persistent-hint": "",
-                                          type: "number",
+                                          type: "date",
                                           "hide-spin-buttons": "",
                                           filled:
-                                            _vm.device.id === "" ? true : false,
-                                        },
-                                        model: {
-                                          value: _vm.device.id,
-                                          callback: function ($$v) {
-                                            _vm.$set(_vm.device, "id", $$v)
-                                          },
-                                          expression: "device.id",
-                                        },
-                                      }),
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-col",
-                                    { attrs: { cols: "3" } },
-                                    [_c("v-subheader", [_vm._v("製品名")])],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-col",
-                                    { attrs: { cols: "7" } },
-                                    [
-                                      _c("v-text-field", {
-                                        attrs: {
-                                          height: "10",
-                                          "single-line": "",
-                                          outlined: "",
-                                          dense: "",
-                                          color: "#959595",
-                                          "persistent-hint": "",
-                                          type: "text",
-                                          "hide-spin-buttons": "",
-                                          filled:
-                                            _vm.device.name === ""
+                                            _vm.device.inspection_date === ""
                                               ? true
                                               : false,
                                         },
                                         model: {
-                                          value: _vm.device.name,
-                                          callback: function ($$v) {
-                                            _vm.$set(_vm.device, "name", $$v)
-                                          },
-                                          expression: "device.name",
-                                        },
-                                      }),
-                                    ],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-col",
-                                    { attrs: { cols: "3" } },
-                                    [_c("v-subheader", [_vm._v("メーカー")])],
-                                    1
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "v-col",
-                                    { attrs: { cols: "7" } },
-                                    [
-                                      _c("v-text-field", {
-                                        attrs: {
-                                          height: "10",
-                                          "single-line": "",
-                                          outlined: "",
-                                          dense: "",
-                                          color: "#959595",
-                                          "persistent-hint": "",
-                                          type: "text",
-                                          "hide-spin-buttons": "",
-                                          filled:
-                                            _vm.device.manufacturer === ""
-                                              ? true
-                                              : false,
-                                        },
-                                        model: {
-                                          value: _vm.device.manufacturer,
+                                          value: _vm.device.inspection_date,
                                           callback: function ($$v) {
                                             _vm.$set(
                                               _vm.device,
-                                              "manufacturer",
+                                              "inspection_date",
                                               $$v
                                             )
                                           },
-                                          expression: "device.manufacturer",
+                                          expression: "device.inspection_date",
                                         },
                                       }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "12" } },
+                                    [
+                                      _c("v-subheader", [_vm._v("現在配置")]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-row",
+                                        [
+                                          _c(
+                                            "v-col",
+                                            { attrs: { cols: "5" } },
+                                            [
+                                              _c("v-text-field", {
+                                                staticClass:
+                                                  "current-location-textarea",
+                                                attrs: {
+                                                  height: "10",
+                                                  "single-line": "",
+                                                  outlined: "",
+                                                  dense: "",
+                                                  color: "#959595",
+                                                  type: "text",
+                                                  "hide-spin-buttons": "",
+                                                  value: _vm.currentLocation,
+                                                  filled:
+                                                    _vm.device
+                                                      .inspection_date === ""
+                                                      ? true
+                                                      : false,
+                                                  readonly: "",
+                                                },
+                                              }),
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-icon",
+                                            {
+                                              staticClass: "pb-6",
+                                              attrs: { size: "30" },
+                                            },
+                                            [_vm._v("mdi-arrow-right-bold")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-col",
+                                            { attrs: { cols: "5" } },
+                                            [
+                                              _c("v-select", {
+                                                attrs: {
+                                                  height: "10",
+                                                  "single-line": "",
+                                                  dense: "",
+                                                  outlined: "",
+                                                  color: "#959595",
+                                                  items: _vm.location,
+                                                  label: "移動先",
+                                                },
+                                                model: {
+                                                  value: _vm.device.location,
+                                                  callback: function ($$v) {
+                                                    _vm.$set(
+                                                      _vm.device,
+                                                      "location",
+                                                      $$v
+                                                    )
+                                                  },
+                                                  expression: "device.location",
+                                                },
+                                              }),
+                                            ],
+                                            1
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "map" }, [
+                                        _c("img", {
+                                          attrs: {
+                                            src: "/img/img03.png",
+                                            alt: "",
+                                            width: "100%",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "ce subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      _vm.device.location ===
+                                                      "臨床工学室",
+                                                    expression:
+                                                      "device.location ==='臨床工学室'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "orthopedics subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "整形外科",
+                                                    expression:
+                                                      "this.device.location ==='整形外科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "ophthalmology subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "眼科",
+                                                    expression:
+                                                      "this.device.location ==='眼科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "endoscope subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "内視鏡センター",
+                                                    expression:
+                                                      "this.device.location ==='内視鏡センター'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "physiological-laboratory subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "生理検査室",
+                                                    expression:
+                                                      "this.device.location ==='生理検査室'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "dermatology subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "皮膚科",
+                                                    expression:
+                                                      "this.device.location ==='皮膚科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "gynecology subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "産婦人科",
+                                                    expression:
+                                                      "this.device.location ==='産婦人科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "rehabilitation subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "リハビリテーション室",
+                                                    expression:
+                                                      "this.device.location ==='リハビリテーション室'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "surgery subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "外科",
+                                                    expression:
+                                                      "this.device.location ==='外科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "treatment-room subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "処置室",
+                                                    expression:
+                                                      "this.device.location ==='処置室'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "internal-medicine subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "内科",
+                                                    expression:
+                                                      "this.device.location ==='内科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "urology subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "泌尿器科",
+                                                    expression:
+                                                      "this.device.location ==='泌尿器科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "pediatrics subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "小児科",
+                                                    expression:
+                                                      "this.device.location ==='小児科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                      ]),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-card-actions",
+                                    [
+                                      _c(
+                                        "v-btn",
+                                        {
+                                          staticClass: "mb-6",
+                                          attrs: {
+                                            outlined: "",
+                                            tile: "",
+                                            text: "",
+                                            right: "",
+                                            absolute: "",
+                                          },
+                                          on: { click: _vm.updateDevice },
+                                        },
+                                        [_vm._v("更新")]
+                                      ),
                                     ],
                                     1
                                   ),

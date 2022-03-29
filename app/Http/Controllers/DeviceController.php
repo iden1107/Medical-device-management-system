@@ -22,4 +22,14 @@ class DeviceController extends Controller
         $devices =  Device::all();
         return $devices->groupBy('location');;
     }
+    public function updateDevice(Request $request)
+    {
+        Device::where('id',$request->id)->update([
+            'name' => $request->name,
+            'manufacturer' => $request->manufacturer,
+            'status' => $request->status,
+            'inspection_date' => $request->inspection_date,
+            'location' => $request->location
+        ]);
+    }
 }
