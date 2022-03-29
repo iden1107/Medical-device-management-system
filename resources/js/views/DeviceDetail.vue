@@ -5,71 +5,134 @@
         <p>{{device}}</p>
         <v-row>
         <v-col cols="12">
-            <v-card outlined height="80vh">
-                <v-card-title>機器管理台帳</v-card-title>
+            <v-card outlined>
                 <v-card-text>
                     <v-row>
                         <v-col cols="12" md="6">
-                            <v-card-text>
-                                <v-row>
-                                    <v-col cols="12">
-                                        <div class="device-img">
-                                            <img :src="src" alt="" width="100%">
-                                        </div>
-                                    </v-col>
-                                    <v-col cols="3" >
-                                    <v-subheader>管理番号</v-subheader>
-                                    </v-col>
-                                    <v-col cols="7" >
-                                        <v-text-field
-                                        height="10"
-                                        single-line
-                                        outlined
-                                        dense
-                                        color="#959595"
-                                        persistent-hint
-                                        type="number"
-                                        hide-spin-buttons
-                                        v-model="device.id"
-                                        :filled="(device.id === '') ? true : false"
-                                    ></v-text-field>
-                                    </v-col>
-                                    <v-col cols="3" >
-                                    <v-subheader>製品名</v-subheader>
-                                    </v-col>
-                                    <v-col cols="7" >
-                                        <v-text-field
-                                        height="10"
-                                        single-line
-                                        outlined
-                                        dense
-                                        color="#959595"
-                                        persistent-hint
-                                        type="text"
-                                        hide-spin-buttons
-                                        v-model="device.name"
-                                        :filled="(device.name === '') ? true : false"
-                                    ></v-text-field>
-                                    </v-col>
-                                    <v-col cols="3" >
-                                    <v-subheader>メーカー</v-subheader>
-                                    </v-col>
-                                    <v-col cols="7" >
-                                        <v-text-field
-                                        height="10"
-                                        single-line
-                                        outlined
-                                        dense
-                                        color="#959595"
-                                        persistent-hint
-                                        type="text"
-                                        hide-spin-buttons
-                                        v-model="device.manufacturer"
-                                        :filled="(device.manufacturer === '') ? true : false"
-                                    ></v-text-field>
-                                    </v-col>
-                                </v-row>
-                            </v-card-text>
+                            <v-row>
+                                <v-col cols="12">
+                                    <div class="device-img">
+                                        <img :src="src" alt="" width="100%">
+                                    </div>
+                                </v-col>
+                                <v-col cols="3" >
+                                <v-subheader>管理番号</v-subheader>
+                                </v-col>
+                                <v-col cols="7" >
+                                    <v-text-field
+                                    height="10"
+                                    single-line
+                                    outlined
+                                    dense
+                                    color="#959595"
+                                    persistent-hint
+                                    type="number"
+                                    hide-spin-buttons
+                                    v-model="device.id"
+                                    :filled="(device.id === '') ? true : false"
+                                ></v-text-field>
+                                </v-col>
+                                <v-col cols="3" >
+                                <v-subheader>製品名</v-subheader>
+                                </v-col>
+                                <v-col cols="7" >
+                                    <v-text-field
+                                    height="10"
+                                    single-line
+                                    outlined
+                                    dense
+                                    color="#959595"
+                                    persistent-hint
+                                    type="text"
+                                    hide-spin-buttons
+                                    v-model="device.name"
+                                    :filled="(device.name === '') ? true : false"
+                                ></v-text-field>
+                                </v-col>
+                                <v-col cols="3" >
+                                <v-subheader>メーカー</v-subheader>
+                                </v-col>
+                                <v-col cols="7" >
+                                    <v-text-field
+                                    height="10"
+                                    single-line
+                                    outlined
+                                    dense
+                                    color="#959595"
+                                    persistent-hint
+                                    type="text"
+                                    hide-spin-buttons
+                                    v-model="device.manufacturer"
+                                    :filled="(device.manufacturer === '') ? true : false"
+                                ></v-text-field>
+                                </v-col>
+                            </v-row>
+                        </v-col>
+                        <v-col cols="12" md="6">
+                            <v-row>
+                                <v-col cols="12">
+                                    <v-subheader>状態</v-subheader>
+                                    <v-btn
+                                        v-for="(item,index) in status"
+                                        :key="item.label" elevation="0"
+                                        :color="item.color" tile class="ma-2"
+                                        :outlined="index !== device.status"
+                                        @click="changeStatus(index)"
+                                    ><span >{{item.label}}</span>
+                                    </v-btn>
+                                </v-col>
+                                <v-col cols="3" >
+                                <v-subheader>管理番号</v-subheader>
+                                </v-col>
+                                <v-col cols="7" >
+                                    <v-text-field
+                                    height="10"
+                                    single-line
+                                    outlined
+                                    dense
+                                    color="#959595"
+                                    persistent-hint
+                                    type="number"
+                                    hide-spin-buttons
+                                    v-model="device.id"
+                                    :filled="(device.id === '') ? true : false"
+                                ></v-text-field>
+                                </v-col>
+                                <v-col cols="3" >
+                                <v-subheader>製品名</v-subheader>
+                                </v-col>
+                                <v-col cols="7" >
+                                    <v-text-field
+                                    height="10"
+                                    single-line
+                                    outlined
+                                    dense
+                                    color="#959595"
+                                    persistent-hint
+                                    type="text"
+                                    hide-spin-buttons
+                                    v-model="device.name"
+                                    :filled="(device.name === '') ? true : false"
+                                ></v-text-field>
+                                </v-col>
+                                <v-col cols="3" >
+                                <v-subheader>メーカー</v-subheader>
+                                </v-col>
+                                <v-col cols="7" >
+                                    <v-text-field
+                                    height="10"
+                                    single-line
+                                    outlined
+                                    dense
+                                    color="#959595"
+                                    persistent-hint
+                                    type="text"
+                                    hide-spin-buttons
+                                    v-model="device.manufacturer"
+                                    :filled="(device.manufacturer === '') ? true : false"
+                                ></v-text-field>
+                                </v-col>
+                            </v-row>
                         </v-col>
                     </v-row>
                 </v-card-text>
@@ -99,11 +162,11 @@ export default {
             src:'',
             device:{},
             status:[
-                {label:'廃棄',color:'gray'},
                 {label:'稼働中',color:'#80E368'},
                 {label:'待機中',color:'#6B9CE4'},
                 {label:'点検中',color:'#E3DD68'},
                 {label:'修理中',color:'#E36868'},
+                {label:'廃棄',color:'gray'},
             ]
         };
     },
@@ -119,6 +182,12 @@ export default {
                 this.src = '/img/device2.jpeg'
             }
         },
+        changeStatus(val){
+            this.device.status = val
+            if(val === 4){
+                this.device.location = ""
+            }
+        }
     },
     watch:{
         $route(){

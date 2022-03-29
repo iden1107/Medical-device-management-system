@@ -2539,6 +2539,69 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   data: function data() {
@@ -2546,9 +2609,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       src: '',
       device: {},
       status: [{
-        label: '廃棄',
-        color: 'gray'
-      }, {
         label: '稼働中',
         color: '#80E368'
       }, {
@@ -2560,6 +2620,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }, {
         label: '修理中',
         color: '#E36868'
+      }, {
+        label: '廃棄',
+        color: 'gray'
       }]
     };
   },
@@ -2592,6 +2655,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }, _callee);
       }))();
+    },
+    changeStatus: function changeStatus(val) {
+      this.device.status = val;
+
+      if (val === 4) {
+        this.device.location = "";
+      }
     }
   },
   watch: {
@@ -2682,9 +2752,6 @@ __webpack_require__.r(__webpack_exports__);
     return {
       devices: [],
       status: [{
-        label: '廃棄',
-        color: 'gray'
-      }, {
         label: '稼働中',
         color: '#80E368'
       }, {
@@ -2696,6 +2763,9 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         label: '修理中',
         color: '#E36868'
+      }, {
+        label: '廃棄',
+        color: 'gray'
       }]
     };
   },
@@ -3206,9 +3276,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   data: function data() {
     return {
       status: [{
-        label: '廃棄',
-        color: 'gray'
-      }, {
         label: '稼働中',
         color: '#80E368'
       }, {
@@ -3220,6 +3287,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }, {
         label: '修理中',
         color: '#E36868'
+      }, {
+        label: '廃棄',
+        color: 'gray'
       }],
       devices: []
     };
@@ -24212,10 +24282,8 @@ var render = function () {
             [
               _c(
                 "v-card",
-                { attrs: { outlined: "", height: "80vh" } },
+                { attrs: { outlined: "" } },
                 [
-                  _c("v-card-title", [_vm._v("機器管理台帳")]),
-                  _vm._v(" "),
                   _c(
                     "v-card-text",
                     [
@@ -24227,156 +24295,300 @@ var render = function () {
                             { attrs: { cols: "12", md: "6" } },
                             [
                               _c(
-                                "v-card-text",
+                                "v-row",
+                                [
+                                  _c("v-col", { attrs: { cols: "12" } }, [
+                                    _c("div", { staticClass: "device-img" }, [
+                                      _c("img", {
+                                        attrs: {
+                                          src: _vm.src,
+                                          alt: "",
+                                          width: "100%",
+                                        },
+                                      }),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("管理番号")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "7" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "number",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.id === "" ? true : false,
+                                        },
+                                        model: {
+                                          value: _vm.device.id,
+                                          callback: function ($$v) {
+                                            _vm.$set(_vm.device, "id", $$v)
+                                          },
+                                          expression: "device.id",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("製品名")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "7" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "text",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.name === ""
+                                              ? true
+                                              : false,
+                                        },
+                                        model: {
+                                          value: _vm.device.name,
+                                          callback: function ($$v) {
+                                            _vm.$set(_vm.device, "name", $$v)
+                                          },
+                                          expression: "device.name",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("メーカー")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "7" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "text",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.manufacturer === ""
+                                              ? true
+                                              : false,
+                                        },
+                                        model: {
+                                          value: _vm.device.manufacturer,
+                                          callback: function ($$v) {
+                                            _vm.$set(
+                                              _vm.device,
+                                              "manufacturer",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "device.manufacturer",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "12", md: "6" } },
+                            [
+                              _c(
+                                "v-row",
                                 [
                                   _c(
-                                    "v-row",
+                                    "v-col",
+                                    { attrs: { cols: "12" } },
                                     [
-                                      _c("v-col", { attrs: { cols: "12" } }, [
-                                        _c(
-                                          "div",
-                                          { staticClass: "device-img" },
-                                          [
-                                            _c("img", {
+                                      _c("v-subheader", [_vm._v("状態")]),
+                                      _vm._v(" "),
+                                      _vm._l(
+                                        _vm.status,
+                                        function (item, index) {
+                                          return _c(
+                                            "v-btn",
+                                            {
+                                              key: item.label,
+                                              staticClass: "ma-2",
                                               attrs: {
-                                                src: _vm.src,
-                                                alt: "",
-                                                width: "100%",
+                                                elevation: "0",
+                                                color: item.color,
+                                                tile: "",
+                                                outlined:
+                                                  index !== _vm.device.status,
                                               },
-                                            }),
-                                          ]
-                                        ),
-                                      ]),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-col",
-                                        { attrs: { cols: "3" } },
-                                        [
-                                          _c("v-subheader", [
-                                            _vm._v("管理番号"),
-                                          ]),
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-col",
-                                        { attrs: { cols: "7" } },
-                                        [
-                                          _c("v-text-field", {
-                                            attrs: {
-                                              height: "10",
-                                              "single-line": "",
-                                              outlined: "",
-                                              dense: "",
-                                              color: "#959595",
-                                              "persistent-hint": "",
-                                              type: "number",
-                                              "hide-spin-buttons": "",
-                                              filled:
-                                                _vm.device.id === ""
-                                                  ? true
-                                                  : false,
-                                            },
-                                            model: {
-                                              value: _vm.device.id,
-                                              callback: function ($$v) {
-                                                _vm.$set(_vm.device, "id", $$v)
+                                              on: {
+                                                click: function ($event) {
+                                                  return _vm.changeStatus(index)
+                                                },
                                               },
-                                              expression: "device.id",
                                             },
-                                          }),
-                                        ],
-                                        1
+                                            [
+                                              _c("span", [
+                                                _vm._v(_vm._s(item.label)),
+                                              ]),
+                                            ]
+                                          )
+                                        }
                                       ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-col",
-                                        { attrs: { cols: "3" } },
-                                        [_c("v-subheader", [_vm._v("製品名")])],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-col",
-                                        { attrs: { cols: "7" } },
-                                        [
-                                          _c("v-text-field", {
-                                            attrs: {
-                                              height: "10",
-                                              "single-line": "",
-                                              outlined: "",
-                                              dense: "",
-                                              color: "#959595",
-                                              "persistent-hint": "",
-                                              type: "text",
-                                              "hide-spin-buttons": "",
-                                              filled:
-                                                _vm.device.name === ""
-                                                  ? true
-                                                  : false,
-                                            },
-                                            model: {
-                                              value: _vm.device.name,
-                                              callback: function ($$v) {
-                                                _vm.$set(
-                                                  _vm.device,
-                                                  "name",
-                                                  $$v
-                                                )
-                                              },
-                                              expression: "device.name",
-                                            },
-                                          }),
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-col",
-                                        { attrs: { cols: "3" } },
-                                        [
-                                          _c("v-subheader", [
-                                            _vm._v("メーカー"),
-                                          ]),
-                                        ],
-                                        1
-                                      ),
-                                      _vm._v(" "),
-                                      _c(
-                                        "v-col",
-                                        { attrs: { cols: "7" } },
-                                        [
-                                          _c("v-text-field", {
-                                            attrs: {
-                                              height: "10",
-                                              "single-line": "",
-                                              outlined: "",
-                                              dense: "",
-                                              color: "#959595",
-                                              "persistent-hint": "",
-                                              type: "text",
-                                              "hide-spin-buttons": "",
-                                              filled:
-                                                _vm.device.manufacturer === ""
-                                                  ? true
-                                                  : false,
-                                            },
-                                            model: {
-                                              value: _vm.device.manufacturer,
-                                              callback: function ($$v) {
-                                                _vm.$set(
-                                                  _vm.device,
-                                                  "manufacturer",
-                                                  $$v
-                                                )
-                                              },
-                                              expression: "device.manufacturer",
-                                            },
-                                          }),
-                                        ],
-                                        1
-                                      ),
+                                    ],
+                                    2
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("管理番号")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "7" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "number",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.id === "" ? true : false,
+                                        },
+                                        model: {
+                                          value: _vm.device.id,
+                                          callback: function ($$v) {
+                                            _vm.$set(_vm.device, "id", $$v)
+                                          },
+                                          expression: "device.id",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("製品名")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "7" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "text",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.name === ""
+                                              ? true
+                                              : false,
+                                        },
+                                        model: {
+                                          value: _vm.device.name,
+                                          callback: function ($$v) {
+                                            _vm.$set(_vm.device, "name", $$v)
+                                          },
+                                          expression: "device.name",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("メーカー")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "7" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "text",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.manufacturer === ""
+                                              ? true
+                                              : false,
+                                        },
+                                        model: {
+                                          value: _vm.device.manufacturer,
+                                          callback: function ($$v) {
+                                            _vm.$set(
+                                              _vm.device,
+                                              "manufacturer",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "device.manufacturer",
+                                        },
+                                      }),
                                     ],
                                     1
                                   ),
