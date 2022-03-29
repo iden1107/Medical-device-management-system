@@ -10,8 +10,6 @@
                 </v-card-text>
             </v-card>
         </v-col>
-        <!-- 管理画面切替 -->
-        <router-view @emitGetStaff="getStaff()"></router-view>
     </v-row>
 
 
@@ -33,6 +31,7 @@
 .router-link-exact-active{
     background-color: #20C4AF;
 }
+
 </style>
 
 <script>
@@ -60,30 +59,6 @@ export default {
             axios.post('/logout')
             location.href = '/login'
         },
-        getStaff(){
-            axios.get('/api/user').then((res)=>{
-                this.staff = res.data
-            })
-        },
-        async staffStore(){
-            await axios.post('/api/register',this.formData)
-            this.getStaff()
-            this.formData = {
-                id: "",
-                name: "",
-                kana: "",
-                department: "",
-                employment_date	: "",
-                password: "",
-                remember: false,
-            }
-        },
-        link(id){
-            this.$router.push({ name: 'editUser', params: {id:id}})
-        }
-    },
-    created(){
-        this.getStaff()
     }
 };
 </script>

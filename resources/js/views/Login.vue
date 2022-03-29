@@ -72,14 +72,19 @@ export default {
     },
     methods: {
         login() {
-        axios
-            .post("/login", this.formData)
-            .then(function (response) {
-                location.href = "/admin/device";
-            })
-            .catch(function (error) {
-                console.log(error)
-            });
+            const self = this
+            axios
+                .post("/login", self.formData)
+                .then(function (response) {
+                    if(self.formData.id == 9999){
+                        location.href = "/admin/devices";
+                    }else{
+                        location.href = "/floormap";
+                    }
+                })
+                .catch(function (error) {
+                    console.log(error)
+                });
         },
     },
 };

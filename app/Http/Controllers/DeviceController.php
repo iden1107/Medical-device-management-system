@@ -11,4 +11,15 @@ class DeviceController extends Controller
     {
         return Device::all();
     }
+
+    public function getDevice($id)
+    {
+        return Device::where('id',$id)->first();
+    }
+
+    public function getDevicesByLocation()
+    {
+        $devices =  Device::all();
+        return $devices->groupBy('location');;
+    }
 }

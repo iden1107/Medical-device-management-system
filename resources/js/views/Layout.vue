@@ -65,7 +65,7 @@ export default {
     },
     created(){
         // ログインユーザーの取得
-        if(this.$route.path === 'login'){
+        if(this.$route.path === '/login'){
             return
         }else{
             axios.get('/api/authUser')
@@ -73,7 +73,7 @@ export default {
                     this.user  = response.data
                 })
                 .catch(error => {
-                    console.log(error.response)
+                    console.log(error.response.status)
                 });
         }
     }

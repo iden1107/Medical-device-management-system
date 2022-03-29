@@ -24,7 +24,7 @@
                                 v-for="device in devices"
                                 :key="device.id"
                                 style="cursor: pointer"
-                                @click="link(person.id)"
+                                @click="link(device.id)"
                                 >
                                 <td>{{ device.id | zeroPadding}}</td>
                                 <td>{{ device.name }}</td>
@@ -73,6 +73,9 @@ export default {
                 this.devices = res.data
             })
         },
+        link(id){
+            this.$router.push('/admin/devices/detail/' + id)
+        }
     },
 
     filters :{

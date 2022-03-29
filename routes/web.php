@@ -30,6 +30,8 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('/api/delete/user/{id}', [RegisteredUserController::class, 'deleteUser']);
 
     Route::get('/api/getDevices', [DeviceController::class ,'getDevices']);
+    Route::get('/api/getDevice/{id}', [DeviceController::class ,'getDevice']);
+    Route::get('/api/getDevicesByLocation', [DeviceController::class ,'getDevicesByLocation']);
 
     // spaルーティング
     Route::get('/{any}', function () {
