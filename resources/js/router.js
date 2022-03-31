@@ -1,19 +1,26 @@
 import Router from 'vue-router'
-import Devices from './views/Devices.vue'
-import DeviceDetail from './views/DeviceDetail.vue'
-import User from './views/User.vue'
-import Login from './views/Login.vue'
+
+import AdminToolBar from './components/AdminToolbar.vue'
 import CreateUser from './views/CreateUser.vue'
-import EditUser from './views/EditUser.vue'
-import Setting from './views/Setting.vue'
+import Devices from './views/Devices.vue'
+import DeviceCreate from './views/DeviceCreate.vue'
+import DeviceDetail from './views/DeviceDetail.vue'
 import FloorMap from './views/FloorMap.vue'
+import EditUser from './views/EditUser.vue'
+import Login from './views/Login.vue'
+import Setting from './views/Setting.vue'
+import ToolBar from './components/Toolbar.vue'
+import User from './views/User.vue'
 
 export default new Router({
     mode: 'history',
     routes: [
         {
             path: '/admin/user',
-            component: User,
+            components: {
+                default: User,
+                AdminToolBar: AdminToolBar
+            },
             children:[
                 { path: '/', component:CreateUser,name:'user'},
                 { path:'edit/:id',component:EditUser,name:'editUser'},
@@ -22,17 +29,34 @@ export default new Router({
         {
             path: '/admin/devices',
             name: 'devices',
-            component: Devices
+            components: {
+                default: Devices,
+                AdminToolBar: AdminToolBar
+            },
+        },
+        {
+            path: '/admin/devices/create',
+            name: 'deviceCreate',
+            components: {
+                default: DeviceCreate,
+                AdminToolBar: AdminToolBar
+            },
         },
         {
             path: '/admin/devices/detail/:id',
             name: 'deviceDetail',
-            component: DeviceDetail
+            components: {
+                default: DeviceDetail,
+                AdminToolBar: AdminToolBar
+            },
         },
         {
             path: '/admin/setting',
             name: 'setting',
-            component: Setting
+            components: {
+                default: Setting,
+                AdminToolBar: AdminToolBar
+            },
         },
         {
             path: '/login',
@@ -42,7 +66,10 @@ export default new Router({
         {
             path: '/floormap',
             name: 'floormap',
-            component: FloorMap
+            components: {
+                default: FloorMap,
+                ToolBar: ToolBar
+            },
         },
 
     ]

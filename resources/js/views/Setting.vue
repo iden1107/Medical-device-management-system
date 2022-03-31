@@ -1,7 +1,5 @@
 <template>
 <div>
-    <AdminToolbar/>
-    <h1>設定</h1>
     <v-row>
         <v-col cols="12" md="8" class="col">
             <v-card outlined >
@@ -11,9 +9,6 @@
             </v-card>
         </v-col>
     </v-row>
-
-
-<v-btn @click="logout">ログアウト</v-btn>
 </div>
 
 
@@ -22,15 +17,7 @@
 </template>
 
 <style scoped lang="scss">
-.v-application a{
-    text-decoration: none;
-    line-height: 30px;
-    padding: 0 5px;
-    color: #FFF;
-}
-.router-link-exact-active{
-    background-color: #20C4AF;
-}
+
 
 </style>
 
@@ -55,10 +42,7 @@ export default {
         };
     },
     methods: {
-        logout(){
-            axios.post('/logout')
-            location.href = '/login'
-        },
+        
     }
 };
 </script>

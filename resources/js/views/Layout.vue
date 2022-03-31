@@ -2,22 +2,28 @@
 <!-- App.vue -->
 <div @click="autoLogout">
     <v-app>
-        <v-app-bar app height="30" color="#20C4AF">
-            <span class="white--text mx-auto" height="100%" v-show="(this.user.name ) ? true :  false">ログイン名：{{user.name}}</span>
+        <v-app-bar app  height="30" color="#20C4AF">
+            <v-container>
+                <div class="d-flex justify-center">
+                    <div class="space"></div>
+                    <v-spacer></v-spacer>
+                    <div class="white--text text-center mt-1" height="100%"  v-show="(this.user.name ) ? true :  false">ログイン名：{{user.name}}</div>
+                    <v-spacer></v-spacer>
+                    <v-btn height="26" tile text  v-show="(this.user.name ) ? true :  false" @click="logout">ログアウト</v-btn>
+                </div>
+            </v-container>
         </v-app-bar>
-
-        <!-- アプリケーションのコンポーネントに基づいてコンテンツのサイズを決定 -->
-        <v-main >
-            <!-- アプリケーションに適切なgutterを提供 -->
-            <v-container fluid >
-            <!-- vue-routerを使用する場合 -->
-            <keep-alive>
-                <router-view :settingMinutes="settingMinutes" @input="settingMinutes = $event"></router-view>
-            </keep-alive>
+        <!-- ツールバー 名前付きビューで切替 -->
+        <router-view name="AdminToolBar"></router-view>
+        <router-view name="ToolBar"></router-view>
+        <v-main>
+            <v-container>
+                <keep-alive>
+                    <router-view :settingMinutes="settingMinutes" @input="settingMinutes = $event"></router-view>
+                </keep-alive>
             </v-container>
         </v-main>
         <v-footer app color="#20C4AF">
-            <!-- -->
         </v-footer>
     </v-app>
 </div>
@@ -25,7 +31,20 @@
 <style scoped>
 .container{
     max-width: 1500px;
-    padding-top: 4px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+.space{
+    width: 110px;
+}
+.v-btn{
+    padding: 0 10px 0;
+    margin-top: 2px;
+    background-color: #FFF;
+    color: #20C4AF;
+}
+.v-main{
+    margin-top: 80px;
 }
 </style>
 <script>

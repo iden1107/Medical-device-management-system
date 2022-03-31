@@ -2202,7 +2202,114 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({});
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    activeIcon: function activeIcon(val) {
+      if (this.$route.path.indexOf(val) !== -1) {
+        return 'active-icon';
+      } else {
+        return 'inactive-icon';
+      }
+    }
+  },
+  created: function created() {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  methods: {
+    activeIcon: function activeIcon(val) {
+      if (this.$route.path.indexOf(val) !== -1) {
+        return 'active-icon';
+      } else {
+        return 'inactive-icon';
+      }
+    }
+  },
+  created: function created() {}
+});
 
 /***/ }),
 
@@ -2427,9 +2534,9 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
-/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetail.vue?vue&type=script&lang=js&":
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=script&lang=js&":
 /*!**************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetail.vue?vue&type=script&lang=js& ***!
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=script&lang=js& ***!
   \**************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -2457,6 +2564,374 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "DeviceCreate",
+  data: function data() {
+    return {
+      src: '',
+      device: {
+        id: '',
+        name: '',
+        manufacturer: '',
+        status: 1,
+        inspection_date: '',
+        location: ''
+      },
+      status: [{
+        label: '稼働中',
+        color: '#80E368'
+      }, {
+        label: '待機中',
+        color: '#6B9CE4'
+      }, {
+        label: '点検中',
+        color: '#E3DD68'
+      }, {
+        label: '修理中',
+        color: '#E36868'
+      }, {
+        label: '廃棄',
+        color: 'gray'
+      }],
+      currentLocation: '',
+      location: ['臨床工学室', '整形外科', '眼科', '内視鏡センター', '生理検査室', '皮膚科', '産婦人科', 'リハビリテーション室', '外科', '処置室', '内科', '泌尿器科', '小児科'],
+      color: ['#80E368', '#6B9CE4', '#E3DD68', '#E36868', 'gray']
+    };
+  },
+  methods: {
+    selectImg: function selectImg() {
+      if (this.device.name === '点滴ポンプ') {
+        this.src = '/img/device1.jpeg';
+      } else if (this.device.name === '心電図モニター') {
+        this.src = '/img/device2.jpeg';
+      } else {
+        this.src = '';
+      }
+    },
+    changeStatus: function changeStatus(val) {
+      this.device.status = val;
+    },
+    cancel: function cancel() {
+      this.device = {
+        id: '',
+        name: '',
+        manufacturer: '',
+        status: 1,
+        inspection_date: '',
+        location: ''
+      };
+      this.$router.push('/admin/devices');
+    },
+    createDevice: function createDevice() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                // 廃棄（status = 4)なら配置場所がないのでlocationを空文字にする
+                if (_this.device.status == 4) {
+                  _this.device.location = '';
+                }
+
+                _context.next = 3;
+                return axios.post('/api/createDevice', _this.device).then(function (res) {
+                  return console.log(res);
+                });
+
+              case 3:
+                _this.device = {
+                  id: '',
+                  name: '',
+                  manufacturer: '',
+                  status: 1,
+                  inspection_date: '',
+                  location: ''
+                };
+
+                _this.$router.push('/admin/devices');
+
+              case 5:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetail.vue?vue&type=script&lang=js&":
+/*!**************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetail.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
 //
 //
 //
@@ -2857,13 +3332,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -3437,7 +3905,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   props: ['settingMinutes'],
@@ -3556,6 +4023,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3772,19 +4258,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   props: ['settingMinutes'],
@@ -3804,12 +4277,7 @@ __webpack_require__.r(__webpack_exports__);
       flag: true
     };
   },
-  methods: {
-    logout: function logout() {
-      axios.post('/logout');
-      location.href = '/login';
-    }
-  }
+  methods: {}
 });
 
 /***/ }),
@@ -3876,23 +4344,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   data: function data() {
@@ -3906,16 +4357,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         password: "",
         remember: false
       },
-      staff: [],
-      autoLogoutFunctionId: '',
-      flag: true
+      staff: []
     };
   },
   methods: {
-    logout: function logout() {
-      axios.post('/logout');
-      location.href = '/login';
-    },
     getStaff: function getStaff() {
       var _this = this;
 
@@ -4076,15 +4521,18 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
-/* harmony import */ var _views_Devices_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./views/Devices.vue */ "./resources/js/views/Devices.vue");
-/* harmony import */ var _views_DeviceDetail_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/DeviceDetail.vue */ "./resources/js/views/DeviceDetail.vue");
-/* harmony import */ var _views_User_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/User.vue */ "./resources/js/views/User.vue");
-/* harmony import */ var _views_Login_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/Login.vue */ "./resources/js/views/Login.vue");
-/* harmony import */ var _views_CreateUser_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/CreateUser.vue */ "./resources/js/views/CreateUser.vue");
-/* harmony import */ var _views_EditUser_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/EditUser.vue */ "./resources/js/views/EditUser.vue");
-/* harmony import */ var _views_Setting_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/Setting.vue */ "./resources/js/views/Setting.vue");
-/* harmony import */ var _views_FloorMap_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/FloorMap.vue */ "./resources/js/views/FloorMap.vue");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var _components_AdminToolbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/AdminToolbar.vue */ "./resources/js/components/AdminToolbar.vue");
+/* harmony import */ var _views_CreateUser_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/CreateUser.vue */ "./resources/js/views/CreateUser.vue");
+/* harmony import */ var _views_Devices_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/Devices.vue */ "./resources/js/views/Devices.vue");
+/* harmony import */ var _views_DeviceCreate_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/DeviceCreate.vue */ "./resources/js/views/DeviceCreate.vue");
+/* harmony import */ var _views_DeviceDetail_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/DeviceDetail.vue */ "./resources/js/views/DeviceDetail.vue");
+/* harmony import */ var _views_FloorMap_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/FloorMap.vue */ "./resources/js/views/FloorMap.vue");
+/* harmony import */ var _views_EditUser_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/EditUser.vue */ "./resources/js/views/EditUser.vue");
+/* harmony import */ var _views_Login_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/Login.vue */ "./resources/js/views/Login.vue");
+/* harmony import */ var _views_Setting_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/Setting.vue */ "./resources/js/views/Setting.vue");
+/* harmony import */ var _components_Toolbar_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Toolbar.vue */ "./resources/js/components/Toolbar.vue");
+/* harmony import */ var _views_User_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./views/User.vue */ "./resources/js/views/User.vue");
 
 
 
@@ -4094,40 +4542,65 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vue_router__WEBPACK_IMPORTED_MODULE_8__["default"]({
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vue_router__WEBPACK_IMPORTED_MODULE_11__["default"]({
   mode: 'history',
   routes: [{
     path: '/admin/user',
-    component: _views_User_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+    components: {
+      "default": _views_User_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
+      AdminToolBar: _components_AdminToolbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    },
     children: [{
       path: '/',
-      component: _views_CreateUser_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+      component: _views_CreateUser_vue__WEBPACK_IMPORTED_MODULE_1__["default"],
       name: 'user'
     }, {
       path: 'edit/:id',
-      component: _views_EditUser_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+      component: _views_EditUser_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
       name: 'editUser'
     }]
   }, {
     path: '/admin/devices',
     name: 'devices',
-    component: _views_Devices_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    components: {
+      "default": _views_Devices_vue__WEBPACK_IMPORTED_MODULE_2__["default"],
+      AdminToolBar: _components_AdminToolbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    }
+  }, {
+    path: '/admin/devices/create',
+    name: 'deviceCreate',
+    components: {
+      "default": _views_DeviceCreate_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
+      AdminToolBar: _components_AdminToolbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    }
   }, {
     path: '/admin/devices/detail/:id',
     name: 'deviceDetail',
-    component: _views_DeviceDetail_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    components: {
+      "default": _views_DeviceDetail_vue__WEBPACK_IMPORTED_MODULE_4__["default"],
+      AdminToolBar: _components_AdminToolbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    }
   }, {
     path: '/admin/setting',
     name: 'setting',
-    component: _views_Setting_vue__WEBPACK_IMPORTED_MODULE_6__["default"]
+    components: {
+      "default": _views_Setting_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+      AdminToolBar: _components_AdminToolbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    }
   }, {
     path: '/login',
     name: 'login',
-    component: _views_Login_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
+    component: _views_Login_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
   }, {
     path: '/floormap',
     name: 'floormap',
-    component: _views_FloorMap_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+    components: {
+      "default": _views_FloorMap_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+      ToolBar: _components_Toolbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+    }
   }]
 }));
 
@@ -4157,6 +4630,30 @@ ___CSS_LOADER_EXPORT___.push([module.id, ".v-input[data-v-4d2515c6] {\n  border-
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".device-img[data-v-0c563291] {\n  width: 40vh;\n  height: 40vh;\n}\n.v-input[data-v-0c563291] {\n  border-radius: 0px;\n  padding: 0px;\n}\n.v-subheader[data-v-0c563291] {\n  padding: 0 0 0 5px;\n}\np[data-v-0c563291] {\n  font-size: 0.11vw;\n  margin: 0;\n  padding: 0;\n}\n.current-location-textarea[data-v-0c563291] {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.map[data-v-0c563291] {\n  overflow: scroll;\n  position: relative;\n  padding: 10px;\n}\n.subject[data-v-0c563291] {\n  position: absolute;\n  box-sizing: border-box;\n}\n.ce[data-v-0c563291] {\n  left: 12.8%;\n  bottom: 76%;\n}\n.orthopedics[data-v-0c563291] {\n  left: 36%;\n  bottom: 79%;\n}\n.ophthalmology[data-v-0c563291] {\n  left: 47%;\n  bottom: 79%;\n}\n.endoscope[data-v-0c563291] {\n  left: 56%;\n  bottom: 78%;\n}\n.physiological-laboratory[data-v-0c563291] {\n  left: 64.5%;\n  bottom: 76.5%;\n}\n.dermatology[data-v-0c563291] {\n  left: 70.5%;\n  bottom: 68%;\n}\n.gynecology[data-v-0c563291] {\n  left: 83%;\n  bottom: 41%;\n}\n.rehabilitation[data-v-0c563291] {\n  left: 15%;\n  bottom: 35.5%;\n}\n.surgery[data-v-0c563291] {\n  left: 21%;\n  bottom: 18%;\n}\n.treatment-room[data-v-0c563291] {\n  left: 38.5%;\n  bottom: 23%;\n}\n.internal-medicine[data-v-0c563291] {\n  left: 46%;\n  bottom: 12%;\n}\n.urology[data-v-0c563291] {\n  left: 65.5%;\n  bottom: 12%;\n}\n.pediatrics[data-v-0c563291] {\n  left: 77.8%;\n  bottom: 12%;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
 /***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetail.vue?vue&type=style&index=0&id=7cf4f766&scoped=true&lang=scss&":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetail.vue?vue&type=style&index=0&id=7cf4f766&scoped=true&lang=scss& ***!
@@ -4174,7 +4671,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".device-img[data-v-7cf4f766] {\n  width: 40vh;\n  height: 40vh;\n}\n.v-input[data-v-7cf4f766] {\n  border-radius: 0px;\n  padding: 0px;\n}\n.v-subheader[data-v-7cf4f766] {\n  padding: 0 0 0 5px;\n}\np[data-v-7cf4f766] {\n  font-size: 0.11vw;\n  margin: 0;\n  padding: 0;\n}\n.current-location-textarea[data-v-7cf4f766] {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.map[data-v-7cf4f766] {\n  overflow: scroll;\n  position: relative;\n  padding: 10px;\n}\n.subject[data-v-7cf4f766] {\n  position: absolute;\n  box-sizing: border-box;\n}\n.ce[data-v-7cf4f766] {\n  left: 13.5%;\n  bottom: 76%;\n}\n.orthopedics[data-v-7cf4f766] {\n  left: 38%;\n  bottom: 80%;\n}\n.ophthalmology[data-v-7cf4f766] {\n  left: 49%;\n  bottom: 80%;\n}\n.endoscope[data-v-7cf4f766] {\n  left: 58%;\n  bottom: 79%;\n}\n.physiological-laboratory[data-v-7cf4f766] {\n  left: 67%;\n  bottom: 76.5%;\n}\n.dermatology[data-v-7cf4f766] {\n  left: 73.5%;\n  bottom: 69%;\n}\n.gynecology[data-v-7cf4f766] {\n  left: 85%;\n  bottom: 41%;\n}\n.rehabilitation[data-v-7cf4f766] {\n  left: 15%;\n  bottom: 35.5%;\n}\n.surgery[data-v-7cf4f766] {\n  left: 22%;\n  bottom: 17%;\n}\n.treatment-room[data-v-7cf4f766] {\n  left: 40%;\n  bottom: 21%;\n}\n.internal-medicine[data-v-7cf4f766] {\n  left: 48.3%;\n  bottom: 10%;\n}\n.urology[data-v-7cf4f766] {\n  left: 68%;\n  bottom: 10%;\n}\n.pediatrics[data-v-7cf4f766] {\n  left: 80.8%;\n  bottom: 10%;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".device-img[data-v-7cf4f766] {\n  width: 40vh;\n  height: 40vh;\n}\n.v-input[data-v-7cf4f766] {\n  border-radius: 0px;\n  padding: 0px;\n}\n.v-subheader[data-v-7cf4f766] {\n  padding: 0 0 0 5px;\n}\np[data-v-7cf4f766] {\n  font-size: 0.11vw;\n  margin: 0;\n  padding: 0;\n}\n.current-location-textarea[data-v-7cf4f766] {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.map[data-v-7cf4f766] {\n  overflow: scroll;\n  position: relative;\n  padding: 10px;\n}\n.subject[data-v-7cf4f766] {\n  position: absolute;\n  box-sizing: border-box;\n}\n.ce[data-v-7cf4f766] {\n  left: 12.8%;\n  bottom: 76%;\n}\n.orthopedics[data-v-7cf4f766] {\n  left: 36%;\n  bottom: 79%;\n}\n.ophthalmology[data-v-7cf4f766] {\n  left: 47%;\n  bottom: 79%;\n}\n.endoscope[data-v-7cf4f766] {\n  left: 56%;\n  bottom: 78%;\n}\n.physiological-laboratory[data-v-7cf4f766] {\n  left: 64.5%;\n  bottom: 76.5%;\n}\n.dermatology[data-v-7cf4f766] {\n  left: 70.5%;\n  bottom: 68%;\n}\n.gynecology[data-v-7cf4f766] {\n  left: 83%;\n  bottom: 41%;\n}\n.rehabilitation[data-v-7cf4f766] {\n  left: 15%;\n  bottom: 35.5%;\n}\n.surgery[data-v-7cf4f766] {\n  left: 21%;\n  bottom: 18%;\n}\n.treatment-room[data-v-7cf4f766] {\n  left: 38.5%;\n  bottom: 23%;\n}\n.internal-medicine[data-v-7cf4f766] {\n  left: 46%;\n  bottom: 12%;\n}\n.urology[data-v-7cf4f766] {\n  left: 65.5%;\n  bottom: 12%;\n}\n.pediatrics[data-v-7cf4f766] {\n  left: 77.8%;\n  bottom: 12%;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4222,55 +4719,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".v-application a[data-v-393da9cf] {\n  text-decoration: none;\n  line-height: 30px;\n  padding: 0 5px;\n}\n.router-link-exact-active[data-v-393da9cf] {\n  background-color: #20C4AF;\n}\np[data-v-393da9cf] {\n  font-size: 1vw;\n  margin: 0;\n}\n.v-icon[data-v-393da9cf] {\n  padding-bottom: 0.2vw;\n  -webkit-animation: flash-data-v-393da9cf 3s linear infinite;\n          animation: flash-data-v-393da9cf 3s linear infinite;\n}\n.map[data-v-393da9cf] {\n  overflow: scroll;\n  position: relative;\n}\n.subject[data-v-393da9cf] {\n  position: absolute;\n  box-sizing: border-box;\n}\n.ce[data-v-393da9cf] {\n  left: 13.5%;\n  bottom: 76%;\n}\n.orthopedics[data-v-393da9cf] {\n  left: 38%;\n  bottom: 80%;\n}\n.ophthalmology[data-v-393da9cf] {\n  left: 49%;\n  bottom: 80%;\n}\n.endoscope[data-v-393da9cf] {\n  left: 58%;\n  bottom: 79%;\n}\n.physiological-laboratory[data-v-393da9cf] {\n  left: 67%;\n  bottom: 76.5%;\n}\n.dermatology[data-v-393da9cf] {\n  left: 73.5%;\n  bottom: 69%;\n}\n.gynecology[data-v-393da9cf] {\n  left: 85%;\n  bottom: 41%;\n}\n.rehabilitation[data-v-393da9cf] {\n  left: 15%;\n  bottom: 35.5%;\n}\n.surgery[data-v-393da9cf] {\n  left: 22%;\n  bottom: 17%;\n}\n.treatment-room[data-v-393da9cf] {\n  left: 40%;\n  bottom: 21%;\n}\n.internal-medicine[data-v-393da9cf] {\n  left: 48.3%;\n  bottom: 10%;\n}\n.urology[data-v-393da9cf] {\n  left: 68%;\n  bottom: 10%;\n}\n.pediatrics[data-v-393da9cf] {\n  left: 80.8%;\n  bottom: 10%;\n}\n@-webkit-keyframes flash-data-v-393da9cf {\n0% {\n    opacity: 1;\n}\n90% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}\n@keyframes flash-data-v-393da9cf {\n0% {\n    opacity: 1;\n}\n90% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss&":
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss& ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".v-application a[data-v-13d8fa81] {\n  text-decoration: none;\n  line-height: 30px;\n  padding: 0 5px;\n  color: #FFF;\n}\n.router-link-exact-active[data-v-13d8fa81] {\n  background-color: #20C4AF;\n}", ""]);
-// Exports
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
-
-
-/***/ }),
-
-/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss&":
-/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss& ***!
-  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
-/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
-// Imports
-
-var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
-// Module
-___CSS_LOADER_EXPORT___.push([module.id, ".v-application a[data-v-499c242c] {\n  text-decoration: none;\n  line-height: 30px;\n  padding: 0 5px;\n  color: #FFF;\n}\n.router-link-exact-active[data-v-499c242c] {\n  background-color: #20C4AF;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".v-application a[data-v-393da9cf] {\n  text-decoration: none;\n  padding: 0;\n}\n.router-link-exact-active[data-v-393da9cf] {\n  background-color: #20C4AF;\n}\np[data-v-393da9cf] {\n  font-size: 1vw;\n  margin: 0;\n}\n.v-icon[data-v-393da9cf] {\n  padding-bottom: 0.2vw;\n  -webkit-animation: flash-data-v-393da9cf 3s linear infinite;\n          animation: flash-data-v-393da9cf 3s linear infinite;\n}\n.map[data-v-393da9cf] {\n  overflow: scroll;\n  position: relative;\n}\n.subject[data-v-393da9cf] {\n  position: absolute;\n  box-sizing: border-box;\n}\n.ce[data-v-393da9cf] {\n  left: 13.5%;\n  bottom: 76%;\n}\n.orthopedics[data-v-393da9cf] {\n  left: 38%;\n  bottom: 80%;\n}\n.ophthalmology[data-v-393da9cf] {\n  left: 49%;\n  bottom: 80%;\n}\n.endoscope[data-v-393da9cf] {\n  left: 58%;\n  bottom: 79%;\n}\n.physiological-laboratory[data-v-393da9cf] {\n  left: 67%;\n  bottom: 76.5%;\n}\n.dermatology[data-v-393da9cf] {\n  left: 73.5%;\n  bottom: 69%;\n}\n.gynecology[data-v-393da9cf] {\n  left: 85%;\n  bottom: 41%;\n}\n.rehabilitation[data-v-393da9cf] {\n  left: 15%;\n  bottom: 35.5%;\n}\n.surgery[data-v-393da9cf] {\n  left: 22%;\n  bottom: 17%;\n}\n.treatment-room[data-v-393da9cf] {\n  left: 40%;\n  bottom: 21%;\n}\n.internal-medicine[data-v-393da9cf] {\n  left: 48.3%;\n  bottom: 10%;\n}\n.urology[data-v-393da9cf] {\n  left: 68%;\n  bottom: 10%;\n}\n.pediatrics[data-v-393da9cf] {\n  left: 80.8%;\n  bottom: 10%;\n}\n@-webkit-keyframes flash-data-v-393da9cf {\n0% {\n    opacity: 1;\n}\n90% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}\n@keyframes flash-data-v-393da9cf {\n0% {\n    opacity: 1;\n}\n90% {\n    opacity: 1;\n}\n100% {\n    opacity: 0;\n}\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4294,7 +4743,31 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.v-application a[data-v-19ec9717]{\n    width: 120px;\n    text-decoration: none;\n    line-height: 30px;\n    padding: 0 10px;\n    color: #FFF;\n}\n.active[data-v-19ec9717]{\n    background-color: #20C4AF;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.toolbar[data-v-19ec9717]{\n    position: fixed;\n    z-index: 4;\n    width: 100%;\n    height: 70px;\n    background-color: #20BFBF;\n}\n.container[data-v-19ec9717]{\n    max-width: 1500px;\n    padding: 40px 0 0 0 ;\n}\n.v-application a[data-v-19ec9717]{\n    display: inline-block;\n    width: 120px;\n    text-decoration: none;\n    line-height: 30px;\n    padding: 0 10px;\n    color: #FFF;\n}\n.active[data-v-19ec9717]{\n    border-radius: 5px 5px 0 0;\n    color: #20C4AF !important;\n    background-color: #FFF;\n}\n.inactive[data-v-19ec9717]{\n    color: #FFF ;\n}\n.active-icon[data-v-19ec9717]{\n    color: #20BFBF;\n}\n.inactive-icon[data-v-19ec9717]{\n    color: #FFF ;\n}\n", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css&":
+/*!**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css& ***!
+  \**********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, "\n.toolbar[data-v-43b87f60]{\n    position: fixed;\n    z-index: 4;\n    width: 100%;\n    height: 70px;\n    background-color: #20BFBF;\n}\n.container[data-v-43b87f60]{\n    max-width: 1500px;\n    padding: 40px 0 0 0 ;\n}\n.v-application a[data-v-43b87f60]{\n    display: inline-block;\n    width: 120px;\n    text-decoration: none;\n    line-height: 30px;\n    padding: 0 10px;\n    color: #FFF;\n}\n.active[data-v-43b87f60]{\n    border-radius: 5px 5px 0 0;\n    color: #20C4AF !important;\n    background-color: #FFF;\n}\n.inactive[data-v-43b87f60]{\n    color: #FFF ;\n}\n.active-icon[data-v-43b87f60]{\n    color: #20BFBF;\n}\n.inactive-icon[data-v-43b87f60]{\n    color: #FFF ;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4318,7 +4791,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.container[data-v-6a4bdfee]{\n    max-width: 1500px;\n    padding-top: 4px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.container[data-v-6a4bdfee]{\n    max-width: 1500px;\n    padding-top: 0px;\n    padding-bottom: 0px;\n}\n.space[data-v-6a4bdfee]{\n    width: 110px;\n}\n.v-btn[data-v-6a4bdfee]{\n    padding: 0 10px 0;\n    margin-top: 2px;\n    background-color: #FFF;\n    color: #20C4AF;\n}\n.v-main[data-v-6a4bdfee]{\n    margin-top: 80px;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -22638,6 +23111,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceCreate_vue_vue_type_style_index_0_id_0c563291_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceCreate_vue_vue_type_style_index_0_id_0c563291_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceCreate_vue_vue_type_style_index_0_id_0c563291_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetail.vue?vue&type=style&index=0&id=7cf4f766&scoped=true&lang=scss&":
 /*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetail.vue?vue&type=style&index=0&id=7cf4f766&scoped=true&lang=scss& ***!
@@ -22728,66 +23231,6 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss&":
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss& ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Setting_vue_vue_type_style_index_0_id_13d8fa81_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss&");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Setting_vue_vue_type_style_index_0_id_13d8fa81_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"], options);
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Setting_vue_vue_type_style_index_0_id_13d8fa81_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
-
-/***/ }),
-
-/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss&":
-/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss& ***!
-  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
-/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_style_index_0_id_499c242c_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss&");
-
-            
-
-var options = {};
-
-options.insert = "head";
-options.singleton = false;
-
-var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_style_index_0_id_499c242c_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"], options);
-
-
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_style_index_0_id_499c242c_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
-
-/***/ }),
-
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AdminToolbar.vue?vue&type=style&index=0&id=19ec9717&scoped=true&lang=css&":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AdminToolbar.vue?vue&type=style&index=0&id=19ec9717&scoped=true&lang=css& ***!
@@ -22815,6 +23258,36 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AdminToolbar_vue_vue_type_style_index_0_id_19ec9717_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css&":
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css& ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Toolbar_vue_vue_type_style_index_0_id_43b87f60_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Toolbar_vue_vue_type_style_index_0_id_43b87f60_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Toolbar_vue_vue_type_style_index_0_id_43b87f60_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
 
 /***/ }),
 
@@ -23198,6 +23671,47 @@ component.options.__file = "resources/js/components/AdminToolbar.vue"
 
 /***/ }),
 
+/***/ "./resources/js/components/Toolbar.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/components/Toolbar.vue ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Toolbar_vue_vue_type_template_id_43b87f60_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Toolbar.vue?vue&type=template&id=43b87f60&scoped=true& */ "./resources/js/components/Toolbar.vue?vue&type=template&id=43b87f60&scoped=true&");
+/* harmony import */ var _Toolbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Toolbar.vue?vue&type=script&lang=js& */ "./resources/js/components/Toolbar.vue?vue&type=script&lang=js&");
+/* harmony import */ var _Toolbar_vue_vue_type_style_index_0_id_43b87f60_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css& */ "./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _Toolbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Toolbar_vue_vue_type_template_id_43b87f60_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Toolbar_vue_vue_type_template_id_43b87f60_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "43b87f60",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Toolbar.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/views/CreateUser.vue":
 /*!*******************************************!*\
   !*** ./resources/js/views/CreateUser.vue ***!
@@ -23235,6 +23749,47 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/views/CreateUser.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/DeviceCreate.vue":
+/*!*********************************************!*\
+  !*** ./resources/js/views/DeviceCreate.vue ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _DeviceCreate_vue_vue_type_template_id_0c563291_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DeviceCreate.vue?vue&type=template&id=0c563291&scoped=true& */ "./resources/js/views/DeviceCreate.vue?vue&type=template&id=0c563291&scoped=true&");
+/* harmony import */ var _DeviceCreate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DeviceCreate.vue?vue&type=script&lang=js& */ "./resources/js/views/DeviceCreate.vue?vue&type=script&lang=js&");
+/* harmony import */ var _DeviceCreate_vue_vue_type_style_index_0_id_0c563291_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss& */ "./resources/js/views/DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _DeviceCreate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DeviceCreate_vue_vue_type_template_id_0c563291_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _DeviceCreate_vue_vue_type_template_id_0c563291_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "0c563291",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/DeviceCreate.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -23496,17 +24051,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Setting_vue_vue_type_template_id_13d8fa81_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Setting.vue?vue&type=template&id=13d8fa81&scoped=true& */ "./resources/js/views/Setting.vue?vue&type=template&id=13d8fa81&scoped=true&");
 /* harmony import */ var _Setting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Setting.vue?vue&type=script&lang=js& */ "./resources/js/views/Setting.vue?vue&type=script&lang=js&");
-/* harmony import */ var _Setting_vue_vue_type_style_index_0_id_13d8fa81_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss& */ "./resources/js/views/Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
-;
 
 
 /* normalize component */
-
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _Setting_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Setting_vue_vue_type_template_id_13d8fa81_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
   _Setting_vue_vue_type_template_id_13d8fa81_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
@@ -23537,17 +24090,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _User_vue_vue_type_template_id_499c242c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./User.vue?vue&type=template&id=499c242c&scoped=true& */ "./resources/js/views/User.vue?vue&type=template&id=499c242c&scoped=true&");
 /* harmony import */ var _User_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./User.vue?vue&type=script&lang=js& */ "./resources/js/views/User.vue?vue&type=script&lang=js&");
-/* harmony import */ var _User_vue_vue_type_style_index_0_id_499c242c_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss& */ "./resources/js/views/User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
-;
 
 
 /* normalize component */
-
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _User_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _User_vue_vue_type_template_id_499c242c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
   _User_vue_vue_type_template_id_499c242c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
@@ -23581,6 +24132,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Toolbar.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/components/Toolbar.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Toolbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Toolbar.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Toolbar_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/views/CreateUser.vue?vue&type=script&lang=js&":
 /*!********************************************************************!*\
   !*** ./resources/js/views/CreateUser.vue?vue&type=script&lang=js& ***!
@@ -23594,6 +24161,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateUser_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CreateUser.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/CreateUser.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateUser_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/DeviceCreate.vue?vue&type=script&lang=js&":
+/*!**********************************************************************!*\
+  !*** ./resources/js/views/DeviceCreate.vue?vue&type=script&lang=js& ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceCreate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DeviceCreate.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceCreate_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -23738,6 +24321,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/views/DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss&":
+/*!*******************************************************************************************************!*\
+  !*** ./resources/js/views/DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss& ***!
+  \*******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceCreate_vue_vue_type_style_index_0_id_0c563291_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=style&index=0&id=0c563291&scoped=true&lang=scss&");
+
+
+/***/ }),
+
 /***/ "./resources/js/views/DeviceDetail.vue?vue&type=style&index=0&id=7cf4f766&scoped=true&lang=scss&":
 /*!*******************************************************************************************************!*\
   !*** ./resources/js/views/DeviceDetail.vue?vue&type=style&index=0&id=7cf4f766&scoped=true&lang=scss& ***!
@@ -23777,32 +24373,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/views/Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss&":
-/*!**************************************************************************************************!*\
-  !*** ./resources/js/views/Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss& ***!
-  \**************************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Setting_vue_vue_type_style_index_0_id_13d8fa81_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Setting.vue?vue&type=style&index=0&id=13d8fa81&scoped=true&lang=scss&");
-
-
-/***/ }),
-
-/***/ "./resources/js/views/User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss&":
-/*!***********************************************************************************************!*\
-  !*** ./resources/js/views/User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss& ***!
-  \***********************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_style_index_0_id_499c242c_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=style&index=0&id=499c242c&scoped=true&lang=scss&");
-
-
-/***/ }),
-
 /***/ "./resources/js/components/AdminToolbar.vue?vue&type=style&index=0&id=19ec9717&scoped=true&lang=css&":
 /*!***********************************************************************************************************!*\
   !*** ./resources/js/components/AdminToolbar.vue?vue&type=style&index=0&id=19ec9717&scoped=true&lang=css& ***!
@@ -23812,6 +24382,19 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_AdminToolbar_vue_vue_type_style_index_0_id_19ec9717_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./AdminToolbar.vue?vue&type=style&index=0&id=19ec9717&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/AdminToolbar.vue?vue&type=style&index=0&id=19ec9717&scoped=true&lang=css&");
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css&":
+/*!******************************************************************************************************!*\
+  !*** ./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css& ***!
+  \******************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_9_0_rules_0_use_2_node_modules_vue_loader_lib_index_js_vue_loader_options_Toolbar_vue_vue_type_style_index_0_id_43b87f60_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-9[0].rules[0].use[2]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=style&index=0&id=43b87f60&scoped=true&lang=css&");
 
 
 /***/ }),
@@ -23859,6 +24442,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/components/Toolbar.vue?vue&type=template&id=43b87f60&scoped=true&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/components/Toolbar.vue?vue&type=template&id=43b87f60&scoped=true& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Toolbar_vue_vue_type_template_id_43b87f60_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Toolbar_vue_vue_type_template_id_43b87f60_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Toolbar_vue_vue_type_template_id_43b87f60_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Toolbar.vue?vue&type=template&id=43b87f60&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=template&id=43b87f60&scoped=true&");
+
+
+/***/ }),
+
 /***/ "./resources/js/views/CreateUser.vue?vue&type=template&id=4d2515c6&scoped=true&":
 /*!**************************************************************************************!*\
   !*** ./resources/js/views/CreateUser.vue?vue&type=template&id=4d2515c6&scoped=true& ***!
@@ -23872,6 +24472,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateUser_vue_vue_type_template_id_4d2515c6_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_CreateUser_vue_vue_type_template_id_4d2515c6_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./CreateUser.vue?vue&type=template&id=4d2515c6&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/CreateUser.vue?vue&type=template&id=4d2515c6&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/views/DeviceCreate.vue?vue&type=template&id=0c563291&scoped=true&":
+/*!****************************************************************************************!*\
+  !*** ./resources/js/views/DeviceCreate.vue?vue&type=template&id=0c563291&scoped=true& ***!
+  \****************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceCreate_vue_vue_type_template_id_0c563291_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceCreate_vue_vue_type_template_id_0c563291_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceCreate_vue_vue_type_template_id_0c563291_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DeviceCreate.vue?vue&type=template&id=0c563291&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=template&id=0c563291&scoped=true&");
 
 
 /***/ }),
@@ -24029,27 +24646,22 @@ var render = function () {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "v-toolbar",
-    { attrs: { color: "#6FE6D6", height: "30" } },
+    "div",
+    { staticClass: "toolbar" },
     [
       _c(
-        "v-toolbar-items",
+        "v-container",
         [
           _c(
             "router-link",
-            {
-              attrs: {
-                text: "",
-                to: "/admin/devices",
-                "active-class": "active",
-              },
-            },
+            { attrs: { to: "/admin/devices", "active-class": "active" } },
             [
               _c(
                 "v-icon",
                 {
-                  staticClass: "pr-1 pb-0.5",
-                  attrs: { color: "white", size: "20" },
+                  staticClass: "pb-1 pr-1",
+                  class: _vm.activeIcon("/admin/devices"),
+                  attrs: { size: "20" },
                 },
                 [_vm._v("mdi-medical-bag")]
               ),
@@ -24060,15 +24672,14 @@ var render = function () {
           _vm._v(" "),
           _c(
             "router-link",
-            {
-              attrs: { text: "", to: "/admin/user", "active-class": "active" },
-            },
+            { attrs: { to: "/admin/user", "active-class": "active" } },
             [
               _c(
                 "v-icon",
                 {
-                  staticClass: "pr-1 pb-0.5",
-                  attrs: { color: "white", size: "20" },
+                  staticClass: "pb-1 pr-1",
+                  class: _vm.activeIcon("/admin/user"),
+                  attrs: { size: "20" },
                 },
                 [_vm._v("mdi-account-circle")]
               ),
@@ -24079,23 +24690,98 @@ var render = function () {
           _vm._v(" "),
           _c(
             "router-link",
-            {
-              attrs: {
-                text: "",
-                to: "/admin/setting",
-                "active-class": "active",
-              },
-            },
+            { attrs: { to: "/admin/setting", "active-class": "active" } },
             [
-              _c("img", {
-                staticStyle: {
-                  "vertical-align": "-2px",
-                  "padding-right": "4px",
-                },
-                attrs: { src: "/img/gear.png", alt: "", width: "20px" },
-              }),
+              _c("v-icon", { class: _vm.activeIcon("/admin/setting") }, [
+                _vm._v("mdi-account-cog"),
+              ]),
               _vm._v(" 設定"),
-            ]
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=template&id=43b87f60&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/components/Toolbar.vue?vue&type=template&id=43b87f60&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "toolbar" },
+    [
+      _c(
+        "v-container",
+        [
+          _c(
+            "router-link",
+            { attrs: { to: "/floormap", "active-class": "active" } },
+            [
+              _c(
+                "v-icon",
+                {
+                  staticClass: "pb-1 pr-1",
+                  class: _vm.activeIcon("/floormap"),
+                  attrs: { size: "20" },
+                },
+                [_vm._v("mdi-map-marker")]
+              ),
+              _vm._v("配置図"),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            { attrs: { to: "/admin/user", "active-class": "active" } },
+            [
+              _c(
+                "v-icon",
+                {
+                  staticClass: "pb-1 pr-1",
+                  class: _vm.activeIcon("/admin/user"),
+                  attrs: { size: "20" },
+                },
+                [_vm._v("mdi-account-circle")]
+              ),
+              _vm._v("職員管理"),
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            { attrs: { to: "/admin/setting", "active-class": "active" } },
+            [
+              _c("v-icon", { class: _vm.activeIcon("/admin/setting") }, [
+                _vm._v("mdi-account-cog"),
+              ]),
+              _vm._v(" 設定"),
+            ],
+            1
           ),
         ],
         1
@@ -24416,6 +25102,788 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=template&id=0c563291&scoped=true&":
+/*!*******************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceCreate.vue?vue&type=template&id=0c563291&scoped=true& ***!
+  \*******************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-row",
+        [
+          _c(
+            "v-col",
+            { attrs: { cols: "12" } },
+            [
+              _c(
+                "v-card",
+                { attrs: { outlined: "" } },
+                [
+                  _c("v-card-title", [_vm._v("新規登録")]),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    [
+                      _c(
+                        "v-row",
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "12", md: "6" } },
+                            [
+                              _c(
+                                "v-row",
+                                [
+                                  _c("v-col", { attrs: { cols: "12" } }, [
+                                    _c("div", { staticClass: "device-img" }, [
+                                      _c("img", {
+                                        attrs: {
+                                          src: _vm.src,
+                                          alt: "",
+                                          width: "100%",
+                                        },
+                                      }),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("管理番号")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "8" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "number",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.id === "" ? true : false,
+                                        },
+                                        model: {
+                                          value: _vm.device.id,
+                                          callback: function ($$v) {
+                                            _vm.$set(_vm.device, "id", $$v)
+                                          },
+                                          expression: "device.id ",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("製品名")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "8" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "text",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.name === ""
+                                              ? true
+                                              : false,
+                                        },
+                                        on: { input: _vm.selectImg },
+                                        model: {
+                                          value: _vm.device.name,
+                                          callback: function ($$v) {
+                                            _vm.$set(_vm.device, "name", $$v)
+                                          },
+                                          expression: "device.name",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("メーカー")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "8" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "text",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.manufacturer === ""
+                                              ? true
+                                              : false,
+                                        },
+                                        model: {
+                                          value: _vm.device.manufacturer,
+                                          callback: function ($$v) {
+                                            _vm.$set(
+                                              _vm.device,
+                                              "manufacturer",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "device.manufacturer",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "12" } },
+                                    [
+                                      _c("v-subheader", [_vm._v("状態")]),
+                                      _vm._v(" "),
+                                      _vm._l(
+                                        _vm.status,
+                                        function (item, index) {
+                                          return _c(
+                                            "v-btn",
+                                            {
+                                              key: item.label,
+                                              staticClass: "ma-2",
+                                              attrs: {
+                                                elevation: "0",
+                                                color: item.color,
+                                                tile: "",
+                                                outlined:
+                                                  index !== _vm.device.status,
+                                              },
+                                              on: {
+                                                click: function ($event) {
+                                                  return _vm.changeStatus(index)
+                                                },
+                                              },
+                                            },
+                                            [
+                                              _c("span", [
+                                                _vm._v(_vm._s(item.label)),
+                                              ]),
+                                            ]
+                                          )
+                                        }
+                                      ),
+                                    ],
+                                    2
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "12", md: "6" } },
+                            [
+                              _c(
+                                "v-row",
+                                [
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("次回点検日")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "7" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "date",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.inspection_date === ""
+                                              ? true
+                                              : false,
+                                        },
+                                        model: {
+                                          value: _vm.device.inspection_date,
+                                          callback: function ($$v) {
+                                            _vm.$set(
+                                              _vm.device,
+                                              "inspection_date",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "device.inspection_date",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("配置先")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "7" } },
+                                    [
+                                      _c("v-select", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          dense: "",
+                                          outlined: "",
+                                          color: "#959595",
+                                          items: _vm.location,
+                                          filled:
+                                            _vm.device.location === ""
+                                              ? true
+                                              : false,
+                                        },
+                                        model: {
+                                          value: _vm.device.location,
+                                          callback: function ($$v) {
+                                            _vm.$set(
+                                              _vm.device,
+                                              "location",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "device.location",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "map" }, [
+                                    _c("img", {
+                                      attrs: {
+                                        src: "/img/img03.png",
+                                        alt: "",
+                                        width: "100%",
+                                      },
+                                    }),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "ce subject" },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  _vm.device.location ===
+                                                  "臨床工学室",
+                                                expression:
+                                                  "device.location ==='臨床工学室'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "orthopedics subject" },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "整形外科",
+                                                expression:
+                                                  "this.device.location ==='整形外科'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "ophthalmology subject" },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "眼科",
+                                                expression:
+                                                  "this.device.location ==='眼科'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "endoscope subject" },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "内視鏡センター",
+                                                expression:
+                                                  "this.device.location ==='内視鏡センター'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "physiological-laboratory subject",
+                                      },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "生理検査室",
+                                                expression:
+                                                  "this.device.location ==='生理検査室'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "dermatology subject" },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "皮膚科",
+                                                expression:
+                                                  "this.device.location ==='皮膚科'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "gynecology subject" },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "産婦人科",
+                                                expression:
+                                                  "this.device.location ==='産婦人科'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "rehabilitation subject" },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "リハビリテーション室",
+                                                expression:
+                                                  "this.device.location ==='リハビリテーション室'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "surgery subject" },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "外科",
+                                                expression:
+                                                  "this.device.location ==='外科'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "treatment-room subject" },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "処置室",
+                                                expression:
+                                                  "this.device.location ==='処置室'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      {
+                                        staticClass:
+                                          "internal-medicine subject",
+                                      },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "内科",
+                                                expression:
+                                                  "this.device.location ==='内科'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "urology subject" },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "泌尿器科",
+                                                expression:
+                                                  "this.device.location ==='泌尿器科'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "pediatrics subject" },
+                                      [
+                                        _c(
+                                          "v-icon",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value:
+                                                  this.device.location ===
+                                                  "小児科",
+                                                expression:
+                                                  "this.device.location ==='小児科'",
+                                              },
+                                            ],
+                                            attrs: {
+                                              size: "5vh",
+                                              color:
+                                                _vm.color[_vm.device.status],
+                                            },
+                                          },
+                                          [_vm._v("mdi-map-marker")]
+                                        ),
+                                      ],
+                                      1
+                                    ),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    [
+                                      _c(
+                                        "v-card-actions",
+                                        { staticClass: "justify-end" },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                tile: "",
+                                                elevation: "1",
+                                              },
+                                              on: { click: _vm.cancel },
+                                            },
+                                            [_vm._v("キャンセル")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                tile: "",
+                                                elevation: "1",
+                                              },
+                                              on: { click: _vm.createDevice },
+                                            },
+                                            [_vm._v("登録")]
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                    ],
+                                    1
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetail.vue?vue&type=template&id=7cf4f766&scoped=true&":
 /*!*******************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetail.vue?vue&type=template&id=7cf4f766&scoped=true& ***!
@@ -24435,20 +25903,6 @@ var render = function () {
   return _c(
     "div",
     [
-      _c("AdminToolbar"),
-      _vm._v(" "),
-      _c("h1", [_vm._v("詳細")]),
-      _vm._v(" "),
-      _c(
-        "div",
-        [
-          _c("router-link", { attrs: { to: "/admin/devices" } }, [
-            _vm._v("一覧に戻る"),
-          ]),
-        ],
-        1
-      ),
-      _vm._v(" "),
       _c(
         "v-row",
         [
@@ -25234,9 +26688,8 @@ var render = function () {
                                             "v-btn",
                                             {
                                               attrs: {
-                                                outlined: "",
                                                 tile: "",
-                                                text: "",
+                                                elevation: "1",
                                               },
                                               on: { click: _vm.cancel },
                                             },
@@ -25247,9 +26700,8 @@ var render = function () {
                                             "v-btn",
                                             {
                                               attrs: {
-                                                outlined: "",
                                                 tile: "",
-                                                text: "",
+                                                elevation: "1",
                                               },
                                               on: { click: _vm.updateDevice },
                                             },
@@ -25312,10 +26764,6 @@ var render = function () {
   return _c(
     "div",
     [
-      _c("AdminToolbar"),
-      _vm._v(" "),
-      _c("h1", [_vm._v("機器管理")]),
-      _vm._v(" "),
       _c(
         "v-row",
         [
@@ -25327,7 +26775,26 @@ var render = function () {
                 "v-card",
                 { attrs: { outlined: "", height: "80vh" } },
                 [
-                  _c("v-card-title", [_vm._v("機器管理台帳")]),
+                  _c(
+                    "v-card-title",
+                    [
+                      _vm._v("機器管理台帳 "),
+                      _c("v-spacer"),
+                      _vm._v(" "),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: {
+                            tile: "",
+                            elevation: "1",
+                            to: "/admin/devices/create",
+                          },
+                        },
+                        [_vm._v("台帳追加")]
+                      ),
+                    ],
+                    1
+                  ),
                   _vm._v(" "),
                   _c(
                     "v-card-text",
@@ -25785,8 +27252,6 @@ var render = function () {
   return _c(
     "div",
     [
-      _c("h1", [_vm._v("配置図")]),
-      _vm._v(" "),
       _c("div", { staticClass: "map" }, [
         _c("img", { attrs: { src: "/img/img03.png", alt: "", width: "100%" } }),
         _vm._v(" "),
@@ -26289,11 +27754,33 @@ var render = function () {
         return _c(
           "router-link",
           { key: device.id, attrs: { to: "/admin/setting/" + device.id } },
-          [_vm._v(_vm._s(device))]
+          [
+            _c(
+              "p",
+              { style: { color: _vm.status[device.status].color } },
+              [
+                _vm._v(_vm._s(_vm._f("zeroPadding")(device.id)) + "\n        "),
+                _c(
+                  "v-icon",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.judgeExpired(device.inspection_date),
+                        expression: "judgeExpired(device.inspection_date)",
+                      },
+                    ],
+                    attrs: { color: "#FFFF00", size: "1vw" },
+                  },
+                  [_vm._v("mdi-hammer-wrench")]
+                ),
+              ],
+              1
+            ),
+          ]
         )
       }),
-      _vm._v(" "),
-      _c("v-btn", { on: { click: _vm.logout } }, [_vm._v("ログアウト")]),
     ],
     2
   )
@@ -26332,31 +27819,67 @@ var render = function () {
             "v-app-bar",
             { attrs: { app: "", height: "30", color: "#20C4AF" } },
             [
-              _c(
-                "span",
-                {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: this.user.name ? true : false,
-                      expression: "(this.user.name ) ? true :  false",
-                    },
+              _c("v-container", [
+                _c(
+                  "div",
+                  { staticClass: "d-flex justify-center" },
+                  [
+                    _c("div", { staticClass: "space" }),
+                    _vm._v(" "),
+                    _c("v-spacer"),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: this.user.name ? true : false,
+                            expression: "(this.user.name ) ? true :  false",
+                          },
+                        ],
+                        staticClass: "white--text text-center mt-1",
+                        attrs: { height: "100%" },
+                      },
+                      [_vm._v("ログイン名：" + _vm._s(_vm.user.name))]
+                    ),
+                    _vm._v(" "),
+                    _c("v-spacer"),
+                    _vm._v(" "),
+                    _c(
+                      "v-btn",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: this.user.name ? true : false,
+                            expression: "(this.user.name ) ? true :  false",
+                          },
+                        ],
+                        attrs: { height: "26", tile: "", text: "" },
+                        on: { click: _vm.logout },
+                      },
+                      [_vm._v("ログアウト")]
+                    ),
                   ],
-                  staticClass: "white--text mx-auto",
-                  attrs: { height: "100%" },
-                },
-                [_vm._v("ログイン名：" + _vm._s(_vm.user.name))]
-              ),
-            ]
+                  1
+                ),
+              ]),
+            ],
+            1
           ),
+          _vm._v(" "),
+          _c("router-view", { attrs: { name: "AdminToolBar" } }),
+          _vm._v(" "),
+          _c("router-view", { attrs: { name: "ToolBar" } }),
           _vm._v(" "),
           _c(
             "v-main",
             [
               _c(
                 "v-container",
-                { attrs: { fluid: "" } },
                 [
                   _c(
                     "keep-alive",
@@ -26512,7 +28035,7 @@ var render = function () {
               _c(
                 "v-btn",
                 {
-                  attrs: { outlined: "", tile: "", text: "" },
+                  attrs: { tile: "", elevation: "1" },
                   on: { click: _vm.login },
                 },
                 [_vm._v(" ログイン ")]
@@ -26565,10 +28088,6 @@ var render = function () {
   return _c(
     "div",
     [
-      _c("AdminToolbar"),
-      _vm._v(" "),
-      _c("h1", [_vm._v("設定")]),
-      _vm._v(" "),
       _c(
         "v-row",
         [
@@ -26600,8 +28119,6 @@ var render = function () {
         ],
         1
       ),
-      _vm._v(" "),
-      _c("v-btn", { on: { click: _vm.logout } }, [_vm._v("ログアウト")]),
     ],
     1
   )
@@ -26632,10 +28149,6 @@ var render = function () {
   return _c(
     "div",
     [
-      _c("AdminToolbar"),
-      _vm._v(" "),
-      _c("h1", [_vm._v("管理画面")]),
-      _vm._v(" "),
       _c(
         "v-row",
         [
@@ -26728,8 +28241,6 @@ var render = function () {
         ],
         1
       ),
-      _vm._v(" "),
-      _c("v-btn", { on: { click: _vm.logout } }, [_vm._v("ログアウト")]),
     ],
     1
   )
@@ -88122,7 +89633,9 @@ module.exports = __WEBPACK_EXTERNAL_MODULE_vue__;
 
 var map = {
 	"./components/AdminToolbar.vue": "./resources/js/components/AdminToolbar.vue",
+	"./components/Toolbar.vue": "./resources/js/components/Toolbar.vue",
 	"./views/CreateUser.vue": "./resources/js/views/CreateUser.vue",
+	"./views/DeviceCreate.vue": "./resources/js/views/DeviceCreate.vue",
 	"./views/DeviceDetail.vue": "./resources/js/views/DeviceDetail.vue",
 	"./views/Devices.vue": "./resources/js/views/Devices.vue",
 	"./views/EditUser.vue": "./resources/js/views/EditUser.vue",

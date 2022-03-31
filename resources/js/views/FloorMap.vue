@@ -1,6 +1,5 @@
 <template>
 <div>
-    <h1>配置図</h1>
     <div class="map">
         <img src="/img/img03.png" alt="" width="100%">
         <div class="ce subject">
@@ -82,22 +81,22 @@
             </p>
         </div>
     </div>
-    <router-link  v-for="device in devices.外科" :key="device.id" :to="'/admin/setting/' + device.id">{{device}}</router-link>
 
-<v-btn @click="logout">ログアウト</v-btn>
+
+
+
+    <router-link  v-for="device in devices.外科" :key="device.id" :to="'/admin/setting/' + device.id">
+        <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+        <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+    </router-link>
 </div>
-
-
-
-
 </template>
 
 <style scoped lang="scss">
 
 .v-application a{
     text-decoration: none;
-    line-height: 30px;
-    padding: 0 5px;
+    padding: 0 ;
 }
 .router-link-exact-active{
     background-color: #20C4AF;

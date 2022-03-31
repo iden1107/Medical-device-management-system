@@ -1,7 +1,5 @@
 <template>
 <div>
-    <AdminToolbar/>
-    <h1>管理画面</h1>
     <v-row>
         <v-col cols="12" md="8" class="col">
             <v-card outlined >
@@ -33,29 +31,14 @@
                 </v-card-text>
             </v-card>
         </v-col>
-        <!-- 管理画面切替 -->
         <router-view @emitGetStaff="getStaff()"></router-view>
     </v-row>
-
-
-<v-btn @click="logout">ログアウト</v-btn>
 </div>
-
-
-
-
 </template>
 
 <style scoped lang="scss">
-.v-application a{
-    text-decoration: none;
-    line-height: 30px;
-    padding: 0 5px;
-    color: #FFF;
-}
-.router-link-exact-active{
-    background-color: #20C4AF;
-}
+
+
 </style>
 
 <script>
@@ -73,15 +56,9 @@ export default {
                 remember: false,
             },
             staff:[],
-            autoLogoutFunctionId:'',
-            flag:true,
         };
     },
     methods: {
-        logout(){
-            axios.post('/logout')
-            location.href = '/login'
-        },
         getStaff(){
             axios.get('/api/user').then((res)=>{
                 this.staff = res.data

@@ -26,7 +26,7 @@
             </v-card-text>
 
             <v-card-actions>
-                <v-btn outlined tile text @click="login"> ログイン </v-btn>
+                <v-btn tile elevation="1" @click="login"> ログイン </v-btn>
             </v-card-actions>
         </v-card>
         <v-sheet class="mb-6 pa-4" max-width="469">
