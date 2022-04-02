@@ -9,7 +9,8 @@
                     <v-spacer></v-spacer>
                     <div class="white--text text-center mt-1" height="100%"  v-show="(this.user.name ) ? true :  false">ログイン名：{{user.name}}</div>
                     <v-spacer></v-spacer>
-                    <v-btn height="26" tile text  v-show="(this.user.name ) ? true :  false" @click="logout">ログアウト</v-btn>
+                    <v-btn height="26" tile text class="py-0 px-1 d-sm-none icon" v-show="(this.user.name ) ? true :  false" @click="logout"> <v-icon>mdi-logout</v-icon></v-btn>
+                    <v-btn height="26" tile text class="py-0 px-1 d-none" :class="showLogoutText" @click="logout">ログアウト</v-btn>
                 </div>
             </v-container>
         </v-app-bar>
@@ -38,13 +39,16 @@
     width: 110px;
 }
 .v-btn{
-    padding: 0 10px 0;
     margin-top: 2px;
     background-color: #FFF;
     color: #20C4AF;
 }
 .v-main{
     margin-top: 80px;
+}
+.icon{
+    color: #FFF;
+    background-color: #20C4AF;
 }
 </style>
 <script>
@@ -73,6 +77,15 @@ export default {
             axios.post('/logout')
             location.href = '/login'
         },
+    },
+    computed:{
+        showLogoutText(){
+            if(this.user.name ){
+                return 'd-sm-block'
+            }else{
+                return ''
+            } 
+        }
     },
     mounted(){
         // 起動してから10分間で自動ログアウト

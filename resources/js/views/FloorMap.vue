@@ -3,97 +3,88 @@
     <div class="map">
         <img src="/img/img03.png" alt="" width="100%">
         <div class="ce subject">
-            <p v-for="device in devices.臨床工学室" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.臨床工学室" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="orthopedics subject">
-            <p v-for="device in devices.整形外科" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.整形外科" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="ophthalmology subject">
-            <p v-for="device in devices.眼科" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.眼科" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="endoscope subject">
-            <p v-for="device in devices.内視鏡センター" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.内視鏡センター" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="physiological-laboratory subject">
-            <p v-for="device in devices.生理検査室" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.生理検査室" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="dermatology subject">
-            <p v-for="device in devices.皮膚科" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.皮膚科" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="gynecology subject">
-            <p v-for="device in devices.産婦人科" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.産婦人科" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="rehabilitation subject">
-            <p v-for="device in devices.リハビリテーション室" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.リハビリテーション室" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="surgery subject">
-            <p v-for="device in devices.外科" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.外科" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="treatment-room subject">
-            <p v-for="device in devices.処置室" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.処置室" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="internal-medicine subject">
-            <p v-for="device in devices.内科" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.内科" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="urology subject">
-            <p v-for="device in devices.泌尿器科" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.泌尿器科" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
         <div class="pediatrics subject">
-            <p v-for="device in devices.小児科" :key="device.id" :style="{ color: status[device.status].color }">
-                {{device.id | zeroPadding}}
-                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon>
-            </p>
+            <router-link  v-for="device in devices.小児科" :key="device.id" :to="'/floormap/DeviceDetailEdit/' + device.id">
+                <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
+                <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
+            </router-link>
         </div>
     </div>
-
-
-
-
-    <router-link  v-for="device in devices.外科" :key="device.id" :to="'/admin/setting/' + device.id">
-        <p :style="{ color: status[device.status].color }">{{device.id | zeroPadding}}
-        <v-icon color="#FFFF00" v-show="judgeExpired(device.inspection_date)" size="1vw">mdi-hammer-wrench</v-icon></p>
-    </router-link>
 </div>
 </template>
 
 <style scoped lang="scss">
-
 .v-application a{
     text-decoration: none;
     padding: 0 ;
@@ -191,7 +182,6 @@ p{
 <script>
 export default {
     name: "login",
-    props:['settingMinutes'],
     data() {
         return {
             status:[
@@ -248,7 +238,11 @@ export default {
             })
         },
     },
-
+    watch:{
+        $route(){
+            this.getDevices()
+        }
+    },
     filters :{
         zeroPadding(value){
             return ( '000' + value ).slice( -4 );

@@ -43,4 +43,13 @@ class DeviceController extends Controller
             'location' => $request->location
         ]);
     }
+    public function updateLocation(Request $request)
+    {
+        $data =  $request->all();
+        foreach ($data as $key => $val) {
+            Device::where('id', $data[$key]['id'])->update([
+                'location' => $data[$key]['location']
+            ]);
+        }
+    }
 }

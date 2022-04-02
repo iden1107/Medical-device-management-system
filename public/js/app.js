@@ -2297,7 +2297,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   methods: {
     activeIcon: function activeIcon(val) {
@@ -2884,9 +2883,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                 }
 
                 _context.next = 3;
-                return axios.post('/api/createDevice', _this.device).then(function (res) {
-                  return console.log(res);
-                });
+                return axios.post('/api/createDevice', _this.device);
 
               case 3:
                 _this.device = {
@@ -3260,6 +3257,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
                 if (_this.$route.params.id) {
                   _this.currentLocation = _this.device.location.slice();
+                  _this.device.id = ('000' + _this.device.id).slice(-4);
                 }
 
               case 5:
@@ -3321,6 +3319,417 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/regenerator */ "./node_modules/@babel/runtime/regenerator/index.js");
+/* harmony import */ var _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0__);
+
+
+function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { Promise.resolve(value).then(_next, _throw); } }
+
+function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "login",
+  data: function data() {
+    return {
+      src: '',
+      device: {},
+      status: [{
+        label: '稼働中',
+        color: '#80E368'
+      }, {
+        label: '待機中',
+        color: '#6B9CE4'
+      }, {
+        label: '点検中',
+        color: '#E3DD68'
+      }, {
+        label: '修理中',
+        color: '#E36868'
+      }, {
+        label: '廃棄',
+        color: 'gray'
+      }],
+      currentLocation: '',
+      location: ['臨床工学室', '整形外科', '眼科', '内視鏡センター', '生理検査室', '皮膚科', '産婦人科', 'リハビリテーション室', '外科', '処置室', '内科', '泌尿器科', '小児科'],
+      color: ['#80E368', '#6B9CE4', '#E3DD68', '#E36868', 'gray']
+    };
+  },
+  methods: {
+    getDevice: function getDevice() {
+      var _this = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
+          while (1) {
+            switch (_context.prev = _context.next) {
+              case 0:
+                _this.src = '';
+                _context.next = 3;
+                return axios.get('/api/getDevice/' + _this.$route.params.id).then(function (res) {
+                  _this.device = res.data;
+                });
+
+              case 3:
+                if (_this.device.name === '点滴ポンプ') {
+                  _this.src = '/img/device1.jpeg';
+                } else {
+                  _this.src = '/img/device2.jpeg';
+                }
+
+                if (_this.$route.params.id) {
+                  _this.currentLocation = _this.device.location.slice();
+                  _this.device.id = ('000' + _this.device.id).slice(-4);
+                }
+
+              case 5:
+              case "end":
+                return _context.stop();
+            }
+          }
+        }, _callee);
+      }))();
+    },
+    changeStatus: function changeStatus(val) {
+      this.device.status = val;
+    },
+    cancel: function cancel() {
+      this.$router.push('/floormap');
+    },
+    updateDevice: function updateDevice() {
+      var _this2 = this;
+
+      return _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
+          while (1) {
+            switch (_context2.prev = _context2.next) {
+              case 0:
+                // 廃棄（status = 4)なら配置場所がないのでlocationを空文字にする
+                if (_this2.device.status == 4) {
+                  _this2.device.location = '';
+                }
+
+                _context2.next = 3;
+                return axios.post('/api/updateDevice', _this2.device);
+
+              case 3:
+                _this2.$router.push('/floormap');
+
+              case 4:
+              case "end":
+                return _context2.stop();
+            }
+          }
+        }, _callee2);
+      }))();
+    }
+  },
+  watch: {
+    $route: function $route() {
+      this.getDevice();
+    }
+  },
+  filters: {
+    zeroPadding: function zeroPadding(value) {
+      return ('000' + value).slice(-4);
+    }
+  },
+  created: function created() {
+    this.getDevice();
+  }
+});
+
+/***/ }),
+
 /***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Devices.vue?vue&type=script&lang=js&":
 /*!*********************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Devices.vue?vue&type=script&lang=js& ***!
@@ -3332,6 +3741,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3450,7 +3864,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
 //
 //
 //
@@ -3896,18 +4309,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
-  props: ['settingMinutes'],
   data: function data() {
     return {
       status: [{
@@ -4000,6 +4403,164 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       });
     }
   },
+  watch: {
+    $route: function $route() {
+      this.getDevices();
+    }
+  },
+  filters: {
+    zeroPadding: function zeroPadding(value) {
+      return ('000' + value).slice(-4);
+    }
+  },
+  created: function created() {
+    this.getDevices();
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Inventory.vue?vue&type=script&lang=js&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Inventory.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  name: "Inventory",
+  data: function data() {
+    return {
+      updateData: {},
+      status: [{
+        label: '稼働中',
+        color: '#80E368'
+      }, {
+        label: '待機中',
+        color: '#6B9CE4'
+      }, {
+        label: '点検中',
+        color: '#E3DD68'
+      }, {
+        label: '修理中',
+        color: '#E36868'
+      }, {
+        label: '廃棄',
+        color: 'gray'
+      }],
+      devices: [],
+      order: ['臨床工学室', '整形外科', '眼科', '内視鏡センター', '生理検査室', '皮膚科', '産婦人科', 'リハビリテーション室', '外科', '処置室', '内科', '泌尿器科', '小児科']
+    };
+  },
+  computed: {},
+  methods: {
+    getDevices: function getDevices() {
+      var _this = this;
+
+      axios.get('/api/getDevicesByLocation').then(function (res) {
+        _this.devices = res.data;
+      });
+    },
+    changeFile: function changeFile(e) {
+      var obj = {};
+      var self = this;
+      var reader = new FileReader();
+
+      reader.onload = function () {
+        var s1 = reader.result.split(/\n/);
+
+        for (var i = 0; i < s1.length; i++) {
+          var s2 = s1[i].split(',');
+          var key = s2.slice(0, 1);
+          var val = s2.slice(1).map(Number);
+          obj[key] = val;
+        }
+
+        self.updateData = obj;
+      };
+
+      reader.readAsText(e);
+    },
+    updateLocation: function updateLocation() {
+      // 変更後のオブジェクトに変換する処理 
+      var self = this;
+      var arr = [];
+      Object.keys(this.updateData).forEach(function (key) {
+        self.updateData[key].forEach(function (val) {
+          var obj = {
+            id: '',
+            location: ''
+          };
+          obj.id = val;
+          obj.location = key;
+          arr.push(obj);
+        });
+      });
+      axios.post('/api/updateLocation', arr);
+    }
+  },
+  watch: {
+    $route: function $route() {
+      this.getDevices();
+    },
+    file: function file() {
+      console.log('change');
+    }
+  },
   filters: {
     zeroPadding: function zeroPadding(value) {
       return ('000' + value).slice(-4);
@@ -4023,6 +4584,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+//
+//
+//
+//
 //
 //
 //
@@ -4096,6 +4661,15 @@ __webpack_require__.r(__webpack_exports__);
       // ログアウトする関数
       axios.post('/logout');
       location.href = '/login';
+    }
+  },
+  computed: {
+    showLogoutText: function showLogoutText() {
+      if (this.user.name) {
+        return 'd-sm-block';
+      } else {
+        return '';
+      }
     }
   },
   mounted: function mounted() {
@@ -4193,10 +4767,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
-  props: ["xxx"],
   data: function data() {
     return {
       formData: {
@@ -4218,6 +4790,26 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         console.log(error);
       });
+    }
+  },
+  computed: {
+    size: function size() {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs':
+          return 60;
+
+        case 'sm':
+          return 100;
+
+        case 'md':
+          return 100;
+
+        case 'lg':
+          return 100;
+
+        case 'xl':
+          return 100;
+      }
     }
   }
 });
@@ -4521,18 +5113,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
+/* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var _components_AdminToolbar_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/AdminToolbar.vue */ "./resources/js/components/AdminToolbar.vue");
 /* harmony import */ var _views_CreateUser_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./views/CreateUser.vue */ "./resources/js/views/CreateUser.vue");
 /* harmony import */ var _views_Devices_vue__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./views/Devices.vue */ "./resources/js/views/Devices.vue");
 /* harmony import */ var _views_DeviceCreate_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/DeviceCreate.vue */ "./resources/js/views/DeviceCreate.vue");
 /* harmony import */ var _views_DeviceDetail_vue__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/DeviceDetail.vue */ "./resources/js/views/DeviceDetail.vue");
-/* harmony import */ var _views_FloorMap_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/FloorMap.vue */ "./resources/js/views/FloorMap.vue");
-/* harmony import */ var _views_EditUser_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/EditUser.vue */ "./resources/js/views/EditUser.vue");
-/* harmony import */ var _views_Login_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/Login.vue */ "./resources/js/views/Login.vue");
-/* harmony import */ var _views_Setting_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/Setting.vue */ "./resources/js/views/Setting.vue");
-/* harmony import */ var _components_Toolbar_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Toolbar.vue */ "./resources/js/components/Toolbar.vue");
-/* harmony import */ var _views_User_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./views/User.vue */ "./resources/js/views/User.vue");
+/* harmony import */ var _views_DeviceDetailEdit_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/DeviceDetailEdit.vue */ "./resources/js/views/DeviceDetailEdit.vue");
+/* harmony import */ var _views_FloorMap_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/FloorMap.vue */ "./resources/js/views/FloorMap.vue");
+/* harmony import */ var _views_EditUser_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./views/EditUser.vue */ "./resources/js/views/EditUser.vue");
+/* harmony import */ var _views_Inventory_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./views/Inventory.vue */ "./resources/js/views/Inventory.vue");
+/* harmony import */ var _views_Login_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./views/Login.vue */ "./resources/js/views/Login.vue");
+/* harmony import */ var _views_Setting_vue__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./views/Setting.vue */ "./resources/js/views/Setting.vue");
+/* harmony import */ var _components_Toolbar_vue__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/Toolbar.vue */ "./resources/js/components/Toolbar.vue");
+/* harmony import */ var _views_User_vue__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./views/User.vue */ "./resources/js/views/User.vue");
 
 
 
@@ -4545,12 +5139,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vue_router__WEBPACK_IMPORTED_MODULE_11__["default"]({
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (new vue_router__WEBPACK_IMPORTED_MODULE_13__["default"]({
   mode: 'history',
   routes: [{
     path: '/admin/user',
     components: {
-      "default": _views_User_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
+      "default": _views_User_vue__WEBPACK_IMPORTED_MODULE_12__["default"],
       AdminToolBar: _components_AdminToolbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
     },
     children: [{
@@ -4559,7 +5155,7 @@ __webpack_require__.r(__webpack_exports__);
       name: 'user'
     }, {
       path: 'edit/:id',
-      component: _views_EditUser_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+      component: _views_EditUser_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
       name: 'editUser'
     }]
   }, {
@@ -4587,19 +5183,33 @@ __webpack_require__.r(__webpack_exports__);
     path: '/admin/setting',
     name: 'setting',
     components: {
-      "default": _views_Setting_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+      "default": _views_Setting_vue__WEBPACK_IMPORTED_MODULE_10__["default"],
       AdminToolBar: _components_AdminToolbar_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
     }
   }, {
     path: '/login',
     name: 'login',
-    component: _views_Login_vue__WEBPACK_IMPORTED_MODULE_7__["default"]
+    component: _views_Login_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
   }, {
     path: '/floormap',
     name: 'floormap',
     components: {
-      "default": _views_FloorMap_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
-      ToolBar: _components_Toolbar_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
+      "default": _views_FloorMap_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
+      ToolBar: _components_Toolbar_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
+    }
+  }, {
+    path: '/floormap/DeviceDetailEdit/:id',
+    name: 'DeviceDetailEdit',
+    components: {
+      "default": _views_DeviceDetailEdit_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
+      ToolBar: _components_Toolbar_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
+    }
+  }, {
+    path: '/inventory',
+    name: 'Inventory',
+    components: {
+      "default": _views_Inventory_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+      ToolBar: _components_Toolbar_vue__WEBPACK_IMPORTED_MODULE_11__["default"]
     }
   }]
 }));
@@ -4672,6 +5282,54 @@ __webpack_require__.r(__webpack_exports__);
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, ".device-img[data-v-7cf4f766] {\n  width: 40vh;\n  height: 40vh;\n}\n.v-input[data-v-7cf4f766] {\n  border-radius: 0px;\n  padding: 0px;\n}\n.v-subheader[data-v-7cf4f766] {\n  padding: 0 0 0 5px;\n}\np[data-v-7cf4f766] {\n  font-size: 0.11vw;\n  margin: 0;\n  padding: 0;\n}\n.current-location-textarea[data-v-7cf4f766] {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.map[data-v-7cf4f766] {\n  overflow: scroll;\n  position: relative;\n  padding: 10px;\n}\n.subject[data-v-7cf4f766] {\n  position: absolute;\n  box-sizing: border-box;\n}\n.ce[data-v-7cf4f766] {\n  left: 12.8%;\n  bottom: 76%;\n}\n.orthopedics[data-v-7cf4f766] {\n  left: 36%;\n  bottom: 79%;\n}\n.ophthalmology[data-v-7cf4f766] {\n  left: 47%;\n  bottom: 79%;\n}\n.endoscope[data-v-7cf4f766] {\n  left: 56%;\n  bottom: 78%;\n}\n.physiological-laboratory[data-v-7cf4f766] {\n  left: 64.5%;\n  bottom: 76.5%;\n}\n.dermatology[data-v-7cf4f766] {\n  left: 70.5%;\n  bottom: 68%;\n}\n.gynecology[data-v-7cf4f766] {\n  left: 83%;\n  bottom: 41%;\n}\n.rehabilitation[data-v-7cf4f766] {\n  left: 15%;\n  bottom: 35.5%;\n}\n.surgery[data-v-7cf4f766] {\n  left: 21%;\n  bottom: 18%;\n}\n.treatment-room[data-v-7cf4f766] {\n  left: 38.5%;\n  bottom: 23%;\n}\n.internal-medicine[data-v-7cf4f766] {\n  left: 46%;\n  bottom: 12%;\n}\n.urology[data-v-7cf4f766] {\n  left: 65.5%;\n  bottom: 12%;\n}\n.pediatrics[data-v-7cf4f766] {\n  left: 77.8%;\n  bottom: 12%;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss&":
+/*!*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss& ***!
+  \*********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".device-img[data-v-0ab99d90] {\n  width: 40vh;\n  height: 40vh;\n}\n.v-input[data-v-0ab99d90] {\n  border-radius: 0px;\n  padding: 0px;\n}\n.v-subheader[data-v-0ab99d90] {\n  padding: 0 0 0 5px;\n}\np[data-v-0ab99d90] {\n  font-size: 0.11vw;\n  margin: 0;\n  padding: 0;\n}\n.current-location-textarea[data-v-0ab99d90] {\n  -webkit-user-select: none;\n     -moz-user-select: none;\n      -ms-user-select: none;\n          user-select: none;\n}\n.map[data-v-0ab99d90] {\n  overflow: scroll;\n  position: relative;\n  padding: 10px;\n}\n.subject[data-v-0ab99d90] {\n  position: absolute;\n  box-sizing: border-box;\n}\n.ce[data-v-0ab99d90] {\n  left: 12.8%;\n  bottom: 76%;\n}\n.orthopedics[data-v-0ab99d90] {\n  left: 36%;\n  bottom: 79%;\n}\n.ophthalmology[data-v-0ab99d90] {\n  left: 47%;\n  bottom: 79%;\n}\n.endoscope[data-v-0ab99d90] {\n  left: 56%;\n  bottom: 78%;\n}\n.physiological-laboratory[data-v-0ab99d90] {\n  left: 64.5%;\n  bottom: 76.5%;\n}\n.dermatology[data-v-0ab99d90] {\n  left: 70.5%;\n  bottom: 68%;\n}\n.gynecology[data-v-0ab99d90] {\n  left: 83%;\n  bottom: 41%;\n}\n.rehabilitation[data-v-0ab99d90] {\n  left: 15%;\n  bottom: 35.5%;\n}\n.surgery[data-v-0ab99d90] {\n  left: 21%;\n  bottom: 18%;\n}\n.treatment-room[data-v-0ab99d90] {\n  left: 38.5%;\n  bottom: 23%;\n}\n.internal-medicine[data-v-0ab99d90] {\n  left: 46%;\n  bottom: 12%;\n}\n.urology[data-v-0ab99d90] {\n  left: 65.5%;\n  bottom: 12%;\n}\n.pediatrics[data-v-0ab99d90] {\n  left: 77.8%;\n  bottom: 12%;\n}", ""]);
+// Exports
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss&":
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss& ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js");
+/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0__);
+// Imports
+
+var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
+// Module
+___CSS_LOADER_EXPORT___.push([module.id, ".v-card__text[data-v-7f92eae4] {\n  overflow: auto;\n}\n.v-data-table[data-v-7f92eae4] {\n  min-width: 700px;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4791,7 +5449,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\n.container[data-v-6a4bdfee]{\n    max-width: 1500px;\n    padding-top: 0px;\n    padding-bottom: 0px;\n}\n.space[data-v-6a4bdfee]{\n    width: 110px;\n}\n.v-btn[data-v-6a4bdfee]{\n    padding: 0 10px 0;\n    margin-top: 2px;\n    background-color: #FFF;\n    color: #20C4AF;\n}\n.v-main[data-v-6a4bdfee]{\n    margin-top: 80px;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\n.container[data-v-6a4bdfee]{\n    max-width: 1500px;\n    padding-top: 0px;\n    padding-bottom: 0px;\n}\n.space[data-v-6a4bdfee]{\n    width: 110px;\n}\n.v-btn[data-v-6a4bdfee]{\n    margin-top: 2px;\n    background-color: #FFF;\n    color: #20C4AF;\n}\n.v-main[data-v-6a4bdfee]{\n    margin-top: 80px;\n}\n.icon[data-v-6a4bdfee]{\n    color: #FFF;\n    background-color: #20C4AF;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -4815,7 +5473,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\ninput[data-v-12f5395a] {\n    border-style: inset;\n    width: 100%;\n    background-color: #f5f5f5;\n}\ninput[data-v-12f5395a]:focus {\n    outline: none;\n}\nh1[data-v-12f5395a]{\n    font-family: 'Shippori Mincho', serif;\n    font-weight: 900;\n    font-size: 50px;\n    color: #FFF;\n}\nh2[data-v-12f5395a]{\n    color: #FFF;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\ninput[data-v-12f5395a] {\n    border-style: inset;\n    width: 100%;\n    background-color: #f5f5f5;\n}\ninput[data-v-12f5395a]:focus {\n    outline: none;\n}\n.ff[data-v-12f5395a]{\n    font-family: 'Shippori Mincho', serif !important;\n    font-weight: 900;\n    font-size: 50px;\n    color: #FFF;\n}\nh2[data-v-12f5395a]{\n    color: #FFF;\n}\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -23171,6 +23829,66 @@ var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js
 
 /***/ }),
 
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss&":
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss& ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceDetailEdit_vue_vue_type_style_index_0_id_0ab99d90_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceDetailEdit_vue_vue_type_style_index_0_id_0ab99d90_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceDetailEdit_vue_vue_type_style_index_0_id_0ab99d90_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss&":
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss& ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js");
+/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Devices_vue_vue_type_style_index_0_id_7f92eae4_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss& */ "./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss&");
+
+            
+
+var options = {};
+
+options.insert = "head";
+options.singleton = false;
+
+var update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Devices_vue_vue_type_style_index_0_id_7f92eae4_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"], options);
+
+
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Devices_vue_vue_type_style_index_0_id_7f92eae4_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_1__["default"].locals || {});
+
+/***/ }),
+
 /***/ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/EditUser.vue?vue&type=style&index=0&id=5ac38ad8&scoped=true&lang=scss&":
 /*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/EditUser.vue?vue&type=style&index=0&id=5ac38ad8&scoped=true&lang=scss& ***!
@@ -23835,6 +24553,47 @@ component.options.__file = "resources/js/views/DeviceDetail.vue"
 
 /***/ }),
 
+/***/ "./resources/js/views/DeviceDetailEdit.vue":
+/*!*************************************************!*\
+  !*** ./resources/js/views/DeviceDetailEdit.vue ***!
+  \*************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _DeviceDetailEdit_vue_vue_type_template_id_0ab99d90_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DeviceDetailEdit.vue?vue&type=template&id=0ab99d90&scoped=true& */ "./resources/js/views/DeviceDetailEdit.vue?vue&type=template&id=0ab99d90&scoped=true&");
+/* harmony import */ var _DeviceDetailEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DeviceDetailEdit.vue?vue&type=script&lang=js& */ "./resources/js/views/DeviceDetailEdit.vue?vue&type=script&lang=js&");
+/* harmony import */ var _DeviceDetailEdit_vue_vue_type_style_index_0_id_0ab99d90_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss& */ "./resources/js/views/DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+;
+
+
+/* normalize component */
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
+  _DeviceDetailEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _DeviceDetailEdit_vue_vue_type_template_id_0ab99d90_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _DeviceDetailEdit_vue_vue_type_template_id_0ab99d90_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "0ab99d90",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/DeviceDetailEdit.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
 /***/ "./resources/js/views/Devices.vue":
 /*!****************************************!*\
   !*** ./resources/js/views/Devices.vue ***!
@@ -23848,15 +24607,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _Devices_vue_vue_type_template_id_7f92eae4_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Devices.vue?vue&type=template&id=7f92eae4&scoped=true& */ "./resources/js/views/Devices.vue?vue&type=template&id=7f92eae4&scoped=true&");
 /* harmony import */ var _Devices_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Devices.vue?vue&type=script&lang=js& */ "./resources/js/views/Devices.vue?vue&type=script&lang=js&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Devices_vue_vue_type_style_index_0_id_7f92eae4_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss& */ "./resources/js/views/Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
+;
 
 
 /* normalize component */
-;
-var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__["default"])(
   _Devices_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Devices_vue_vue_type_template_id_7f92eae4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
   _Devices_vue_vue_type_template_id_7f92eae4_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
@@ -23952,6 +24713,45 @@ var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__
 /* hot reload */
 if (false) { var api; }
 component.options.__file = "resources/js/views/FloorMap.vue"
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/views/Inventory.vue":
+/*!******************************************!*\
+  !*** ./resources/js/views/Inventory.vue ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _Inventory_vue_vue_type_template_id_81f8c566_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Inventory.vue?vue&type=template&id=81f8c566&scoped=true& */ "./resources/js/views/Inventory.vue?vue&type=template&id=81f8c566&scoped=true&");
+/* harmony import */ var _Inventory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Inventory.vue?vue&type=script&lang=js& */ "./resources/js/views/Inventory.vue?vue&type=script&lang=js&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+;
+var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Inventory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Inventory_vue_vue_type_template_id_81f8c566_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
+  _Inventory_vue_vue_type_template_id_81f8c566_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  false,
+  null,
+  "81f8c566",
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/views/Inventory.vue"
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (component.exports);
 
 /***/ }),
@@ -24196,6 +24996,22 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/views/DeviceDetailEdit.vue?vue&type=script&lang=js&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/views/DeviceDetailEdit.vue?vue&type=script&lang=js& ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceDetailEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DeviceDetailEdit.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceDetailEdit_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
 /***/ "./resources/js/views/Devices.vue?vue&type=script&lang=js&":
 /*!*****************************************************************!*\
   !*** ./resources/js/views/Devices.vue?vue&type=script&lang=js& ***!
@@ -24241,6 +25057,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FloorMap_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FloorMap.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/FloorMap.vue?vue&type=script&lang=js&");
  /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_FloorMap_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/views/Inventory.vue?vue&type=script&lang=js&":
+/*!*******************************************************************!*\
+  !*** ./resources/js/views/Inventory.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Inventory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Inventory.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js??clonedRuleSet-5[0].rules[0].use[0]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Inventory.vue?vue&type=script&lang=js&");
+ /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_babel_loader_lib_index_js_clonedRuleSet_5_0_rules_0_use_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Inventory_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -24343,6 +25175,32 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceDetail_vue_vue_type_style_index_0_id_7cf4f766_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DeviceDetail.vue?vue&type=style&index=0&id=7cf4f766&scoped=true&lang=scss& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetail.vue?vue&type=style&index=0&id=7cf4f766&scoped=true&lang=scss&");
+
+
+/***/ }),
+
+/***/ "./resources/js/views/DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss&":
+/*!***********************************************************************************************************!*\
+  !*** ./resources/js/views/DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss& ***!
+  \***********************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceDetailEdit_vue_vue_type_style_index_0_id_0ab99d90_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=style&index=0&id=0ab99d90&scoped=true&lang=scss&");
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss&":
+/*!**************************************************************************************************!*\
+  !*** ./resources/js/views/Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss& ***!
+  \**************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_style_loader_dist_cjs_js_node_modules_css_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_2_node_modules_sass_loader_dist_cjs_js_clonedRuleSet_12_0_rules_0_use_3_node_modules_vue_loader_lib_index_js_vue_loader_options_Devices_vue_vue_type_style_index_0_id_7f92eae4_scoped_true_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader/dist/cjs.js!../../../node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!../../../node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss& */ "./node_modules/style-loader/dist/cjs.js!./node_modules/css-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[1]!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js??clonedRuleSet-12[0].rules[0].use[3]!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Devices.vue?vue&type=style&index=0&id=7f92eae4&scoped=true&lang=scss&");
 
 
 /***/ }),
@@ -24510,6 +25368,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/views/DeviceDetailEdit.vue?vue&type=template&id=0ab99d90&scoped=true&":
+/*!********************************************************************************************!*\
+  !*** ./resources/js/views/DeviceDetailEdit.vue?vue&type=template&id=0ab99d90&scoped=true& ***!
+  \********************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceDetailEdit_vue_vue_type_template_id_0ab99d90_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceDetailEdit_vue_vue_type_template_id_0ab99d90_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_DeviceDetailEdit_vue_vue_type_template_id_0ab99d90_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./DeviceDetailEdit.vue?vue&type=template&id=0ab99d90&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=template&id=0ab99d90&scoped=true&");
+
+
+/***/ }),
+
 /***/ "./resources/js/views/Devices.vue?vue&type=template&id=7f92eae4&scoped=true&":
 /*!***********************************************************************************!*\
   !*** ./resources/js/views/Devices.vue?vue&type=template&id=7f92eae4&scoped=true& ***!
@@ -24557,6 +25432,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FloorMap_vue_vue_type_template_id_393da9cf_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
 /* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_FloorMap_vue_vue_type_template_id_393da9cf_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./FloorMap.vue?vue&type=template&id=393da9cf&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/FloorMap.vue?vue&type=template&id=393da9cf&scoped=true&");
+
+
+/***/ }),
+
+/***/ "./resources/js/views/Inventory.vue?vue&type=template&id=81f8c566&scoped=true&":
+/*!*************************************************************************************!*\
+  !*** ./resources/js/views/Inventory.vue?vue&type=template&id=81f8c566&scoped=true& ***!
+  \*************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Inventory_vue_vue_type_template_id_81f8c566_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Inventory_vue_vue_type_template_id_81f8c566_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */ });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Inventory_vue_vue_type_template_id_81f8c566_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./Inventory.vue?vue&type=template&id=81f8c566&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Inventory.vue?vue&type=template&id=81f8c566&scoped=true&");
 
 
 /***/ }),
@@ -24756,30 +25648,18 @@ var render = function () {
           _vm._v(" "),
           _c(
             "router-link",
-            { attrs: { to: "/admin/user", "active-class": "active" } },
+            { attrs: { to: "/inventory", "active-class": "active" } },
             [
               _c(
                 "v-icon",
                 {
                   staticClass: "pb-1 pr-1",
-                  class: _vm.activeIcon("/admin/user"),
+                  class: _vm.activeIcon("/inventory"),
                   attrs: { size: "20" },
                 },
-                [_vm._v("mdi-account-circle")]
+                [_vm._v("mdi-barcode")]
               ),
-              _vm._v("職員管理"),
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "router-link",
-            { attrs: { to: "/admin/setting", "active-class": "active" } },
-            [
-              _c("v-icon", { class: _vm.activeIcon("/admin/setting") }, [
-                _vm._v("mdi-account-cog"),
-              ]),
-              _vm._v(" 設定"),
+              _vm._v("在庫管理"),
             ],
             1
           ),
@@ -26745,6 +27625,869 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=template&id=0ab99d90&scoped=true&":
+/*!***********************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/DeviceDetailEdit.vue?vue&type=template&id=0ab99d90&scoped=true& ***!
+  \***********************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    [
+      _c(
+        "v-row",
+        [
+          _c(
+            "v-col",
+            { attrs: { cols: "12" } },
+            [
+              _c(
+                "v-card",
+                { attrs: { outlined: "" } },
+                [
+                  _c(
+                    "v-card-text",
+                    [
+                      _c(
+                        "v-row",
+                        [
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "12", md: "6" } },
+                            [
+                              _c(
+                                "v-row",
+                                [
+                                  _c("v-col", { attrs: { cols: "12" } }, [
+                                    _c("div", { staticClass: "device-img" }, [
+                                      _c("img", {
+                                        attrs: {
+                                          src: _vm.src,
+                                          alt: "",
+                                          width: "100%",
+                                        },
+                                      }),
+                                    ]),
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("管理番号")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "8" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "number",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.id === "" ? true : false,
+                                          disabled: "",
+                                        },
+                                        model: {
+                                          value: _vm.device.id,
+                                          callback: function ($$v) {
+                                            _vm.$set(_vm.device, "id", $$v)
+                                          },
+                                          expression: "device.id",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("製品名")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "8" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "text",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.name === ""
+                                              ? true
+                                              : false,
+                                          disabled: "",
+                                        },
+                                        model: {
+                                          value: _vm.device.name,
+                                          callback: function ($$v) {
+                                            _vm.$set(_vm.device, "name", $$v)
+                                          },
+                                          expression: "device.name",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("メーカー")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "8" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "text",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.manufacturer === ""
+                                              ? true
+                                              : false,
+                                          disabled: "",
+                                        },
+                                        model: {
+                                          value: _vm.device.manufacturer,
+                                          callback: function ($$v) {
+                                            _vm.$set(
+                                              _vm.device,
+                                              "manufacturer",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "device.manufacturer",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "12" } },
+                                    [
+                                      _c("v-subheader", [_vm._v("状態")]),
+                                      _vm._v(" "),
+                                      _vm._l(
+                                        _vm.status,
+                                        function (item, index) {
+                                          return _c(
+                                            "v-btn",
+                                            {
+                                              key: item.label,
+                                              staticClass: "ma-2",
+                                              attrs: {
+                                                elevation: "0",
+                                                color: item.color,
+                                                tile: "",
+                                                outlined:
+                                                  index !== _vm.device.status,
+                                              },
+                                              on: {
+                                                click: function ($event) {
+                                                  return _vm.changeStatus(index)
+                                                },
+                                              },
+                                            },
+                                            [
+                                              _c("span", [
+                                                _vm._v(_vm._s(item.label)),
+                                              ]),
+                                            ]
+                                          )
+                                        }
+                                      ),
+                                    ],
+                                    2
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "v-col",
+                            { attrs: { cols: "12", md: "6" } },
+                            [
+                              _c(
+                                "v-row",
+                                [
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "3" } },
+                                    [_c("v-subheader", [_vm._v("次回点検日")])],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "7" } },
+                                    [
+                                      _c("v-text-field", {
+                                        attrs: {
+                                          height: "10",
+                                          "single-line": "",
+                                          outlined: "",
+                                          dense: "",
+                                          color: "#959595",
+                                          "persistent-hint": "",
+                                          type: "date",
+                                          "hide-spin-buttons": "",
+                                          filled:
+                                            _vm.device.inspection_date === ""
+                                              ? true
+                                              : false,
+                                        },
+                                        model: {
+                                          value: _vm.device.inspection_date,
+                                          callback: function ($$v) {
+                                            _vm.$set(
+                                              _vm.device,
+                                              "inspection_date",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "device.inspection_date",
+                                        },
+                                      }),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    { attrs: { cols: "12" } },
+                                    [
+                                      _c("v-subheader", [_vm._v("現在配置")]),
+                                      _vm._v(" "),
+                                      _c(
+                                        "v-row",
+                                        [
+                                          _c(
+                                            "v-col",
+                                            { attrs: { cols: "5" } },
+                                            [
+                                              _c("v-text-field", {
+                                                staticClass:
+                                                  "current-location-textarea",
+                                                attrs: {
+                                                  height: "10",
+                                                  "single-line": "",
+                                                  outlined: "",
+                                                  dense: "",
+                                                  color: "#959595",
+                                                  type: "text",
+                                                  "hide-spin-buttons": "",
+                                                  value: _vm.currentLocation,
+                                                  filled:
+                                                    _vm.device
+                                                      .inspection_date === ""
+                                                      ? true
+                                                      : false,
+                                                  readonly: "",
+                                                },
+                                              }),
+                                            ],
+                                            1
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-icon",
+                                            {
+                                              staticClass: "pb-6",
+                                              attrs: { size: "30" },
+                                            },
+                                            [_vm._v("mdi-arrow-right-bold")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-col",
+                                            { attrs: { cols: "5" } },
+                                            [
+                                              _c("v-select", {
+                                                attrs: {
+                                                  height: "10",
+                                                  "single-line": "",
+                                                  dense: "",
+                                                  outlined: "",
+                                                  color: "#959595",
+                                                  items: _vm.location,
+                                                  label: "移動先",
+                                                },
+                                                model: {
+                                                  value: _vm.device.location,
+                                                  callback: function ($$v) {
+                                                    _vm.$set(
+                                                      _vm.device,
+                                                      "location",
+                                                      $$v
+                                                    )
+                                                  },
+                                                  expression: "device.location",
+                                                },
+                                              }),
+                                            ],
+                                            1
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "map" }, [
+                                        _c("img", {
+                                          attrs: {
+                                            src: "/img/img03.png",
+                                            alt: "",
+                                            width: "100%",
+                                          },
+                                        }),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "ce subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      _vm.device.location ===
+                                                      "臨床工学室",
+                                                    expression:
+                                                      "device.location ==='臨床工学室'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "orthopedics subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "整形外科",
+                                                    expression:
+                                                      "this.device.location ==='整形外科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "ophthalmology subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "眼科",
+                                                    expression:
+                                                      "this.device.location ==='眼科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "endoscope subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "内視鏡センター",
+                                                    expression:
+                                                      "this.device.location ==='内視鏡センター'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "physiological-laboratory subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "生理検査室",
+                                                    expression:
+                                                      "this.device.location ==='生理検査室'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass: "dermatology subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "皮膚科",
+                                                    expression:
+                                                      "this.device.location ==='皮膚科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "gynecology subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "産婦人科",
+                                                    expression:
+                                                      "this.device.location ==='産婦人科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "rehabilitation subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "リハビリテーション室",
+                                                    expression:
+                                                      "this.device.location ==='リハビリテーション室'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "surgery subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "外科",
+                                                    expression:
+                                                      "this.device.location ==='外科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "treatment-room subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "処置室",
+                                                    expression:
+                                                      "this.device.location ==='処置室'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          {
+                                            staticClass:
+                                              "internal-medicine subject",
+                                          },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "内科",
+                                                    expression:
+                                                      "this.device.location ==='内科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "urology subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "泌尿器科",
+                                                    expression:
+                                                      "this.device.location ==='泌尿器科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                        _vm._v(" "),
+                                        _c(
+                                          "div",
+                                          { staticClass: "pediatrics subject" },
+                                          [
+                                            _c(
+                                              "v-icon",
+                                              {
+                                                directives: [
+                                                  {
+                                                    name: "show",
+                                                    rawName: "v-show",
+                                                    value:
+                                                      this.device.location ===
+                                                      "小児科",
+                                                    expression:
+                                                      "this.device.location ==='小児科'",
+                                                  },
+                                                ],
+                                                attrs: {
+                                                  size: "5vh",
+                                                  color:
+                                                    _vm.color[
+                                                      _vm.device.status
+                                                    ],
+                                                },
+                                              },
+                                              [_vm._v("mdi-map-marker")]
+                                            ),
+                                          ],
+                                          1
+                                        ),
+                                      ]),
+                                    ],
+                                    1
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "v-col",
+                                    [
+                                      _c(
+                                        "v-card-actions",
+                                        { staticClass: "justify-end" },
+                                        [
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                tile: "",
+                                                elevation: "1",
+                                              },
+                                              on: { click: _vm.cancel },
+                                            },
+                                            [_vm._v("キャンセル")]
+                                          ),
+                                          _vm._v(" "),
+                                          _c(
+                                            "v-btn",
+                                            {
+                                              attrs: {
+                                                tile: "",
+                                                elevation: "1",
+                                              },
+                                              on: { click: _vm.updateDevice },
+                                            },
+                                            [_vm._v("更新")]
+                                          ),
+                                        ],
+                                        1
+                                      ),
+                                    ],
+                                    1
+                                  ),
+                                ],
+                                1
+                              ),
+                            ],
+                            1
+                          ),
+                        ],
+                        1
+                      ),
+                    ],
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
+    ],
+    1
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Devices.vue?vue&type=template&id=7f92eae4&scoped=true&":
 /*!**************************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Devices.vue?vue&type=template&id=7f92eae4&scoped=true& ***!
@@ -26773,7 +28516,7 @@ var render = function () {
             [
               _c(
                 "v-card",
-                { attrs: { outlined: "", height: "80vh" } },
+                { attrs: { outlined: "" } },
                 [
                   _c(
                     "v-card-title",
@@ -26800,7 +28543,11 @@ var render = function () {
                     "v-card-text",
                     [
                       _c("v-simple-table", {
-                        attrs: { dense: "", "fixed-header": "" },
+                        attrs: {
+                          dense: "",
+                          "fixed-header": "",
+                          height: "75vh",
+                        },
                         scopedSlots: _vm._u([
                           {
                             key: "default",
@@ -27249,540 +28996,737 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
+  return _c("div", [
+    _c("div", { staticClass: "map" }, [
+      _c("img", { attrs: { src: "/img/img03.png", alt: "", width: "100%" } }),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "ce subject" },
+        _vm._l(_vm.devices.臨床工学室, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "orthopedics subject" },
+        _vm._l(_vm.devices.整形外科, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "ophthalmology subject" },
+        _vm._l(_vm.devices.眼科, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "endoscope subject" },
+        _vm._l(_vm.devices.内視鏡センター, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "physiological-laboratory subject" },
+        _vm._l(_vm.devices.生理検査室, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "dermatology subject" },
+        _vm._l(_vm.devices.皮膚科, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "gynecology subject" },
+        _vm._l(_vm.devices.産婦人科, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "rehabilitation subject" },
+        _vm._l(_vm.devices.リハビリテーション室, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "surgery subject" },
+        _vm._l(_vm.devices.外科, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "treatment-room subject" },
+        _vm._l(_vm.devices.処置室, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "internal-medicine subject" },
+        _vm._l(_vm.devices.内科, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "urology subject" },
+        _vm._l(_vm.devices.泌尿器科, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "pediatrics subject" },
+        _vm._l(_vm.devices.小児科, function (device) {
+          return _c(
+            "router-link",
+            {
+              key: device.id,
+              attrs: { to: "/floormap/DeviceDetailEdit/" + device.id },
+            },
+            [
+              _c(
+                "p",
+                { style: { color: _vm.status[device.status].color } },
+                [
+                  _vm._v(
+                    _vm._s(_vm._f("zeroPadding")(device.id)) +
+                      "\n                "
+                  ),
+                  _c(
+                    "v-icon",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.judgeExpired(device.inspection_date),
+                          expression: "judgeExpired(device.inspection_date)",
+                        },
+                      ],
+                      attrs: { color: "#FFFF00", size: "1vw" },
+                    },
+                    [_vm._v("mdi-hammer-wrench")]
+                  ),
+                ],
+                1
+              ),
+            ]
+          )
+        }),
+        1
+      ),
+    ]),
+  ])
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Inventory.vue?vue&type=template&id=81f8c566&scoped=true&":
+/*!****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/Inventory.vue?vue&type=template&id=81f8c566&scoped=true& ***!
+  \****************************************************************************************************************************************************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "render": () => (/* binding */ render),
+/* harmony export */   "staticRenderFns": () => (/* binding */ staticRenderFns)
+/* harmony export */ });
+var render = function () {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
   return _c(
     "div",
     [
-      _c("div", { staticClass: "map" }, [
-        _c("img", { attrs: { src: "/img/img03.png", alt: "", width: "100%" } }),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "ce subject" },
-          _vm._l(_vm.devices.臨床工学室, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
+      _c(
+        "v-row",
+        [
+          _c(
+            "v-col",
+            { attrs: { cols: "12" } },
+            [
+              _c(
+                "v-card",
+                { attrs: { outlined: "" } },
+                [
+                  _c(
+                    "v-card-title",
+                    [
+                      _vm._v("機器管理台帳  "),
+                      _c("v-spacer"),
+                      _c(
+                        "v-btn",
+                        {
+                          attrs: { tile: "", elevation: "1" },
+                          on: { click: _vm.updateLocation },
+                        },
+                        [_vm._v("更新")]
+                      ),
                     ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "orthopedics subject" },
-          _vm._l(_vm.devices.整形外科, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    [
+                      _c("v-file-input", {
+                        attrs: { accept: ".csv", label: "ファイル名" },
+                        on: { change: _vm.changeFile },
+                      }),
                     ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "ophthalmology subject" },
-          _vm._l(_vm.devices.眼科, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
+                    1
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "v-card-text",
+                    [
+                      _c("v-simple-table", {
+                        attrs: {
+                          dense: "",
+                          "fixed-header": "",
+                          height: "75vh",
+                        },
+                        scopedSlots: _vm._u([
+                          {
+                            key: "default",
+                            fn: function () {
+                              return [
+                                _c("thead", [
+                                  _c("tr", [
+                                    _c("th", { staticClass: "text-left" }, [
+                                      _vm._v("配置場所"),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { staticClass: "text-left" }, [
+                                      _vm._v("更新前"),
+                                    ]),
+                                    _vm._v(" "),
+                                    _c("th", { staticClass: "text-left" }, [
+                                      _vm._v("更新後"),
+                                    ]),
+                                  ]),
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "tbody",
+                                  _vm._l(_vm.order, function (location) {
+                                    return _c("tr", { key: location }, [
+                                      _c(
+                                        "td",
+                                        { attrs: { valign: "baseline" } },
+                                        [_vm._v(_vm._s(location))]
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { attrs: { valign: "baseline" } },
+                                        _vm._l(
+                                          _vm.devices[location],
+                                          function (device) {
+                                            return _c("p", { key: device.id }, [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm._f("zeroPadding")(
+                                                    device.id
+                                                  )
+                                                )
+                                              ),
+                                            ])
+                                          }
+                                        ),
+                                        0
+                                      ),
+                                      _vm._v(" "),
+                                      _c(
+                                        "td",
+                                        { attrs: { valign: "baseline" } },
+                                        _vm._l(
+                                          _vm.updateData[location],
+                                          function (device) {
+                                            return _c("p", { key: device.id }, [
+                                              _vm._v(
+                                                _vm._s(
+                                                  _vm._f("zeroPadding")(device)
+                                                )
+                                              ),
+                                            ])
+                                          }
+                                        ),
+                                        0
+                                      ),
+                                    ])
+                                  }),
+                                  0
+                                ),
+                              ]
+                            },
+                            proxy: true,
+                          },
+                        ]),
+                      }),
                     ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "endoscope subject" },
-          _vm._l(_vm.devices.内視鏡センター, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
-                    ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "physiological-laboratory subject" },
-          _vm._l(_vm.devices.生理検査室, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
-                    ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "dermatology subject" },
-          _vm._l(_vm.devices.皮膚科, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
-                    ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "gynecology subject" },
-          _vm._l(_vm.devices.産婦人科, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
-                    ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "rehabilitation subject" },
-          _vm._l(_vm.devices.リハビリテーション室, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
-                    ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "surgery subject" },
-          _vm._l(_vm.devices.外科, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
-                    ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "treatment-room subject" },
-          _vm._l(_vm.devices.処置室, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
-                    ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "internal-medicine subject" },
-          _vm._l(_vm.devices.内科, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
-                    ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "urology subject" },
-          _vm._l(_vm.devices.泌尿器科, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
-                    ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-        _vm._v(" "),
-        _c(
-          "div",
-          { staticClass: "pediatrics subject" },
-          _vm._l(_vm.devices.小児科, function (device) {
-            return _c(
-              "p",
-              {
-                key: device.id,
-                style: { color: _vm.status[device.status].color },
-              },
-              [
-                _vm._v(
-                  "\n                " +
-                    _vm._s(_vm._f("zeroPadding")(device.id)) +
-                    "\n                "
-                ),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
-                    ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            )
-          }),
-          0
-        ),
-      ]),
-      _vm._v(" "),
-      _vm._l(_vm.devices.外科, function (device) {
-        return _c(
-          "router-link",
-          { key: device.id, attrs: { to: "/admin/setting/" + device.id } },
-          [
-            _c(
-              "p",
-              { style: { color: _vm.status[device.status].color } },
-              [
-                _vm._v(_vm._s(_vm._f("zeroPadding")(device.id)) + "\n        "),
-                _c(
-                  "v-icon",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.judgeExpired(device.inspection_date),
-                        expression: "judgeExpired(device.inspection_date)",
-                      },
-                    ],
-                    attrs: { color: "#FFFF00", size: "1vw" },
-                  },
-                  [_vm._v("mdi-hammer-wrench")]
-                ),
-              ],
-              1
-            ),
-          ]
-        )
-      }),
+                    1
+                  ),
+                ],
+                1
+              ),
+            ],
+            1
+          ),
+        ],
+        1
+      ),
     ],
-    2
+    1
   )
 }
 var staticRenderFns = []
@@ -27858,6 +29802,19 @@ var render = function () {
                             expression: "(this.user.name ) ? true :  false",
                           },
                         ],
+                        staticClass: "py-0 px-1 d-sm-none icon",
+                        attrs: { height: "26", tile: "", text: "" },
+                        on: { click: _vm.logout },
+                      },
+                      [_c("v-icon", [_vm._v("mdi-logout")])],
+                      1
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "v-btn",
+                      {
+                        staticClass: "py-0 px-1 d-none",
+                        class: _vm.showLogoutText,
                         attrs: { height: "26", tile: "", text: "" },
                         on: { click: _vm.logout },
                       },
@@ -27952,16 +29909,18 @@ var render = function () {
               "div",
               { staticClass: "d-flex" },
               [
-                _c("v-icon", { attrs: { size: "100", color: "white" } }, [
+                _c("v-icon", { attrs: { size: _vm.size, color: "white" } }, [
                   _vm._v("mdi-clover"),
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "pl-4" }, [
-                  _c("h2", [_vm._v("医療法人 サンプル")]),
+                  _c("h2", { staticClass: "text-h6 text-sm-h5" }, [
+                    _vm._v("医療法人 サンプル"),
+                  ]),
                   _vm._v(" "),
-                  _c("br"),
-                  _vm._v(" "),
-                  _c("h1", [_vm._v("サンプル病院")]),
+                  _c("h1", { staticClass: "text-h4 text-sm-h3 ff pt-sm-2" }, [
+                    _vm._v("サンプル病院"),
+                  ]),
                 ]),
               ],
               1
@@ -28052,10 +30011,7 @@ var render = function () {
         { staticClass: "mb-6 pa-4", attrs: { "max-width": "469" } },
         [
           _c("p", [_vm._v("このサイトはポートフォリオのサンプルアプリです")]),
-          _vm._v(" "),
-          _c("a", { attrs: { href: "https://free-materials.com/" } }, [
-            _vm._v("フリー素材から"),
-          ]),
+          _vm._v("\n        管理者ログイン\n    "),
         ]
       ),
     ],
@@ -89637,9 +91593,11 @@ var map = {
 	"./views/CreateUser.vue": "./resources/js/views/CreateUser.vue",
 	"./views/DeviceCreate.vue": "./resources/js/views/DeviceCreate.vue",
 	"./views/DeviceDetail.vue": "./resources/js/views/DeviceDetail.vue",
+	"./views/DeviceDetailEdit.vue": "./resources/js/views/DeviceDetailEdit.vue",
 	"./views/Devices.vue": "./resources/js/views/Devices.vue",
 	"./views/EditUser.vue": "./resources/js/views/EditUser.vue",
 	"./views/FloorMap.vue": "./resources/js/views/FloorMap.vue",
+	"./views/Inventory.vue": "./resources/js/views/Inventory.vue",
 	"./views/Layout.vue": "./resources/js/views/Layout.vue",
 	"./views/Login.vue": "./resources/js/views/Login.vue",
 	"./views/Setting.vue": "./resources/js/views/Setting.vue",

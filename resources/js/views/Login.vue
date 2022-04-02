@@ -3,11 +3,10 @@
         <v-card outlined  class="mb-6 pa-4" color="#20C4AF" max-width="500">
             <v-card-text>
                 <div class="d-flex">
-                    <v-icon size="100" color="white">mdi-clover</v-icon>
+                    <v-icon :size="size" color="white">mdi-clover</v-icon>
                     <div class="pl-4">
-                        <h2>医療法人 サンプル</h2>
-                        <br>
-                        <h1>サンプル病院</h1>
+                        <h2 class="text-h6 text-sm-h5">医療法人 サンプル</h2>
+                        <h1  class="text-h4 text-sm-h3 ff pt-sm-2">サンプル病院</h1>
                     </div>
                 </div>
             </v-card-text>
@@ -31,7 +30,7 @@
         </v-card>
         <v-sheet class="mb-6 pa-4" max-width="469">
             <p>このサイトはポートフォリオのサンプルアプリです</p>
-            <a href="https://free-materials.com/">フリー素材から</a>
+            管理者ログイン
         </v-sheet>
 
     </v-sheet>
@@ -46,8 +45,8 @@ input {
 input:focus {
     outline: none;
 }
-h1{
-    font-family: 'Shippori Mincho', serif;
+.ff{
+    font-family: 'Shippori Mincho', serif !important;
     font-weight: 900;
     font-size: 50px;
     color: #FFF;
@@ -60,7 +59,6 @@ h2{
 <script>
 export default {
     name: "login",
-    props: ["xxx"],
     data() {
         return {
             formData:{
@@ -87,5 +85,16 @@ export default {
                 });
         },
     },
+    computed:{
+        size () {
+            switch (this.$vuetify.breakpoint.name) {
+                case 'xs': return 60
+                case 'sm': return 100
+                case 'md': return 100
+                case 'lg': return 100
+                case 'xl': return 100
+            }
+        },
+    }
 };
 </script>

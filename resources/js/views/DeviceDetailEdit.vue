@@ -3,7 +3,6 @@
         <v-row>
         <v-col cols="12">
             <v-card outlined>
-                <v-card-title>新規登録</v-card-title>
                 <v-card-text>
                     <v-row>
                         <v-col cols="12" md="6">
@@ -26,8 +25,9 @@
                                     persistent-hint
                                     type="number"
                                     hide-spin-buttons
-                                    v-model="device.id "
+                                    v-model="device.id"
                                     :filled="(device.id === '') ? true : false"
+                                    disabled
                                 ></v-text-field>
                                 </v-col>
                                 <v-col cols="3" >
@@ -45,7 +45,7 @@
                                     hide-spin-buttons
                                     v-model="device.name"
                                     :filled="(device.name === '') ? true : false"
-                                    @input="selectImg"
+                                    disabled
                                 ></v-text-field>
                                 </v-col>
                                 <v-col cols="3" >
@@ -63,6 +63,7 @@
                                     hide-spin-buttons
                                     v-model="device.manufacturer"
                                     :filled="(device.manufacturer === '') ? true : false"
+                                    disabled
                                 ></v-text-field>
                                 </v-col>
                                 <v-col cols="12">
@@ -97,21 +98,38 @@
                                     :filled="(device.inspection_date === '') ? true : false"
                                 ></v-text-field>
                                 </v-col>
-                                <v-col cols="3" >
-                                    <v-subheader>配置先</v-subheader>
-                                </v-col>
-                                <v-col cols="7">
-                                    <v-select
-                                    height="10"
-                                    single-line
-                                    dense
-                                    outlined
-                                    color="#959595"
-                                    :items="location"
-                                    v-model="device.location"
-                                    :filled="(device.location === '') ? true : false"
-                                    ></v-select>
-                                </v-col>
+                                <v-col cols="12" >
+                                    <v-subheader>現在配置</v-subheader>
+                                    <v-row>
+                                        <v-col cols="5">
+                                            <v-text-field
+                                                height="10"
+                                                single-line
+                                                outlined
+                                                dense
+                                                color="#959595"
+                                                type="text"
+                                                hide-spin-buttons
+                                                :value="currentLocation"
+                                                :filled="(device.inspection_date === '') ? true : false"
+                                                readonly
+                                                class="current-location-textarea"
+                                            ></v-text-field>
+                                        </v-col>
+                                        <v-icon size="30" class="pb-6">mdi-arrow-right-bold</v-icon>
+                                        <v-col cols="5">
+                                            <v-select
+                                            height="10"
+                                            single-line
+                                            dense
+                                            outlined
+                                            color="#959595"
+                                            :items="location"
+                                            label="移動先"
+                                            v-model="device.location"
+                                            ></v-select>
+                                        </v-col>
+                                    </v-row>
                                     <div class="map">
                                         <img src="/img/img03.png" alt="" width="100%">
                                         <div class="ce subject">
@@ -154,10 +172,11 @@
                                             <v-icon size="5vh" v-show="this.device.location ==='小児科'" :color="color[device.status]">mdi-map-marker</v-icon>
                                         </div>
                                     </div>
+                                </v-col>
                                 <v-col>
                                     <v-card-actions class="justify-end">
                                         <v-btn tile elevation="1" @click="cancel">キャンセル</v-btn>
-                                        <v-btn tile elevation="1"  @click="createDevice">登録</v-btn>
+                                        <v-btn tile elevation="1"  @click="updateDevice">更新</v-btn>
                                     </v-card-actions>
                                 </v-col>
                             </v-row>
@@ -186,6 +205,7 @@ p{
     font-size: 0.11vw;
     margin: 0;
     padding: 0;
+    // text-shadow: 1px 1px 1px #FFF;
 }
 .current-location-textarea{
     user-select: none;
@@ -259,11 +279,11 @@ p{
 
 <script>
 export default {
-    name: "DeviceCreate",
+    name: "login",
     data() {
         return {
             src:'',
-            device:{id:'',name:'',manufacturer:'',status:1,inspection_date:'',location:''},
+            device:{},
             status:[
                 {label:'稼働中',color:'#80E368'},
                 {label:'待機中',color:'#6B9CE4'},
@@ -277,32 +297,49 @@ export default {
         };
     },
     methods: {
-        selectImg(){
+        async getDevice(){
+            this.src = ''
+            await axios.get('/api/getDevice/' + this.$route.params.id).then((res)=>{
+                this.device = res.data
+            })
             if(this.device.name === '点滴ポンプ'){
                 this.src = '/img/device1.jpeg'
-            }else if (this.device.name === '心電図モニター'){
-                this.src = '/img/device2.jpeg'
             }else{
-                this.src = ''
+                this.src = '/img/device2.jpeg'
             }
-
+            if(this.$route.params.id){
+                this.currentLocation = this.device.location.slice()
+                this.device.id = ( '000' + this.device.id ).slice( -4 )
+            }
         },
         changeStatus(val){
             this.device.status = val
         },
         cancel(){
-            this.device = {id:'',name:'',manufacturer:'',status:1,inspection_date:'',location:''}
-            this.$router.push('/admin/devices')
+            this.$router.push('/floormap')
         },
-        async createDevice(){
+        async updateDevice(){
             // 廃棄（status = 4)なら配置場所がないのでlocationを空文字にする
             if(this.device.status == 4){
                 this.device.location = ''
             }
-            await axios.post('/api/createDevice' , this.device)
-            this.device = {id:'',name:'',manufacturer:'',status:1,inspection_date:'',location:''}
-            this.$router.push('/admin/devices')
+            await axios.post('/api/updateDevice' , this.device)
+            this.$router.push('/floormap')
+        }
+
+    },
+    watch:{
+        $route(){
+            this.getDevice()
         }
     },
+    filters :{
+        zeroPadding(value){
+            return ( '000' + value ).slice( -4 );
+        }
+    },
+    created(){
+        this.getDevice()
+    }
 };
 </script>

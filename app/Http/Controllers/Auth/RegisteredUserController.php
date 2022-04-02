@@ -80,7 +80,7 @@ class RegisteredUserController extends Controller
             'employment_date' => $request->employment_date,
             'department' => $request->department,
             'status' =>1,
-            // 'password' => Hash::make($request->password),
+            'password' => Hash::make($request->password),
         ]);
     }
 

@@ -34,6 +34,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/api/getDevicesByLocation', [DeviceController::class ,'getDevicesByLocation']);
     Route::post('/api/createDevice', [DeviceController::class , 'createDevice']);
     Route::post('/api/updateDevice', [DeviceController::class , 'updateDevice']);
+    Route::post('/api/updateLocation', [DeviceController::class , 'updateLocation']);
 
     // spaルーティング
     Route::get('/{any}', function () {

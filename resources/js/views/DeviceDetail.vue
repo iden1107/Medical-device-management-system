@@ -307,6 +307,7 @@ export default {
             }
             if(this.$route.params.id){
                 this.currentLocation = this.device.location.slice()
+                this.device.id = ( '000' + this.device.id ).slice( -4 )
             }
         },
         changeStatus(val){

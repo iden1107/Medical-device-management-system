@@ -5,8 +5,10 @@ import CreateUser from './views/CreateUser.vue'
 import Devices from './views/Devices.vue'
 import DeviceCreate from './views/DeviceCreate.vue'
 import DeviceDetail from './views/DeviceDetail.vue'
+import DeviceDetailEdit from './views/DeviceDetailEdit.vue'
 import FloorMap from './views/FloorMap.vue'
 import EditUser from './views/EditUser.vue'
+import Inventory from './views/Inventory.vue'
 import Login from './views/Login.vue'
 import Setting from './views/Setting.vue'
 import ToolBar from './components/Toolbar.vue'
@@ -68,6 +70,22 @@ export default new Router({
             name: 'floormap',
             components: {
                 default: FloorMap,
+                ToolBar: ToolBar
+            },
+        },
+        {
+            path: '/floormap/DeviceDetailEdit/:id',
+            name: 'DeviceDetailEdit',
+            components: {
+                default: DeviceDetailEdit,
+                ToolBar: ToolBar
+            },
+        },
+        {
+            path: '/inventory',
+            name: 'Inventory',
+            components: {
+                default: Inventory,
                 ToolBar: ToolBar
             },
         },

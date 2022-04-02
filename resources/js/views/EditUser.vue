@@ -116,7 +116,6 @@
                 <v-btn outlined tile text @click="staffUpdate">更新</v-btn>
                 <v-btn outlined tile text @click="staffDelete">削除</v-btn>
             </v-card-actions>
-
         </v-card>
     </v-col>
 </template>

@@ -2,8 +2,7 @@
     <div class="toolbar">
         <v-container>
             <router-link  to="/floormap" active-class="active"><v-icon size="20" :class="activeIcon('/floormap')" class="pb-1 pr-1">mdi-map-marker</v-icon>配置図</router-link>
-            <router-link  to="/admin/user" active-class="active"><v-icon size="20" :class="activeIcon('/admin/user')" class="pb-1 pr-1">mdi-account-circle</v-icon>職員管理</router-link>
-            <router-link  to="/admin/setting" active-class="active"><v-icon :class="activeIcon('/admin/setting')">mdi-account-cog</v-icon> 設定</router-link>
+            <router-link  to="/inventory" active-class="active"><v-icon size="20" :class="activeIcon('/inventory')" class="pb-1 pr-1">mdi-barcode</v-icon>在庫管理</router-link>
         </v-container>
     </div>
 </template>

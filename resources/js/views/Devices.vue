@@ -2,10 +2,10 @@
     <div>
         <v-row>
             <v-col cols="12">
-                <v-card outlined height="80vh">
+                <v-card outlined >
                     <v-card-title>機器管理台帳 <v-spacer></v-spacer> <v-btn tile elevation="1" to="/admin/devices/create">台帳追加</v-btn></v-card-title>
                     <v-card-text>
-                        <v-simple-table dense fixed-header>
+                        <v-simple-table dense fixed-header height="75vh">
                             <template v-slot:default >
                                 <thead>
                                     <tr>
@@ -42,7 +42,12 @@
 </template>
 
 <style scoped lang="scss">
-
+.v-card__text{
+    overflow: auto;
+}
+.v-data-table{
+    min-width: 700px;
+}
 </style>
 
 <script>
