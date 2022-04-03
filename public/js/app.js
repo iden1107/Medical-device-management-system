@@ -4531,13 +4531,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Inventory",
   data: function data() {
@@ -4642,12 +4635,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       var reader = new FileReader();
 
       reader.onload = function (e) {
-        var s1 = e.target.result.split(/\n/);
+        var step1 = e.target.result.split(/\n/);
 
-        for (var i = 0; i < s1.length - 1; i++) {
-          var s2 = s1[i].split(",");
-          var key = s2.slice(0, 1);
-          var val = s2.slice(1).map(Number);
+        for (var i = 0; i < step1.length - 1; i++) {
+          var step2 = step1[i].split(",");
+          var key = step2.slice(0, 1);
+          var val = step2.slice(1).map(Number);
           obj[key] = val;
         }
 
@@ -29774,11 +29767,7 @@ var render = function () {
                 "v-card",
                 { attrs: { outlined: "" } },
                 [
-                  _c(
-                    "v-card-title",
-                    [_vm._v("機器管理台帳\n            "), _c("v-spacer")],
-                    1
-                  ),
+                  _c("v-card-title", [_vm._v("機器管理台帳")]),
                   _vm._v(" "),
                   _c(
                     "v-card-text",
@@ -30008,9 +29997,9 @@ var render = function () {
                   "div",
                   { staticClass: "d-flex justify-center" },
                   [
-                    _c("div", { staticClass: "space" }),
+                    _c("div", { staticClass: "space d-none d-sm-block" }),
                     _vm._v(" "),
-                    _c("v-spacer"),
+                    _c("v-spacer", { staticClass: "d-none d-sm-block" }),
                     _vm._v(" "),
                     _c(
                       "div",
@@ -30246,14 +30235,10 @@ var render = function () {
         1
       ),
       _vm._v(" "),
-      _c(
-        "v-sheet",
-        { staticClass: "mb-6 pa-4", attrs: { "max-width": "469" } },
-        [
-          _c("p", [_vm._v("このサイトはポートフォリオのサンプルアプリです")]),
-          _vm._v("\n        管理者ログイン\n    "),
-        ]
-      ),
+      _c("div", { staticClass: "mb-6 pa-4", attrs: { width: "500" } }, [
+        _c("p", [_vm._v("このサイトはポートフォリオのサンプルアプリです")]),
+        _vm._v("\n        管理者ログイン\n    "),
+      ]),
     ],
     1
   )

@@ -28,10 +28,10 @@
                 <v-btn tile elevation="1" @click="login"> ログイン </v-btn>
             </v-card-actions>
         </v-card>
-        <v-sheet class="mb-6 pa-4" max-width="469">
+        <div class="mb-6 pa-4" width="500">
             <p>このサイトはポートフォリオのサンプルアプリです</p>
             管理者ログイン
-        </v-sheet>
+        </div>
 
     </v-sheet>
 </template>

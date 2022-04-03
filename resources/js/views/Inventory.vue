@@ -3,11 +3,7 @@
         <v-row>
         <v-col cols="12">
             <v-card outlined>
-            <v-card-title
-                >機器管理台帳
-                <v-spacer></v-spacer>
-
-            </v-card-title>
+            <v-card-title>機器管理台帳</v-card-title>
             <v-card-text>
                 <a href="/sample20220322.csv" download class="mr-4">サンプル1のcsvファイルをダウンロード</a>
                 <a href="/sample20220405.csv" download>サンプル2のcsvファイルをダウンロード</a>
@@ -90,9 +86,6 @@
 .enter {
     border: 2px dashed gray;
     opacity: 0.7;
-}
-.leave{
-
 }
 </style>
 
@@ -179,12 +172,12 @@ export default {
             let obj = {};
             const reader = new FileReader()
             reader.onload = function (e) {
-                let s1 = e.target.result.split(/\n/);
-                for (let i = 0; i < s1.length - 1 ; i++) {
-                    let s2 = s1[i].split(",")
-                let key = s2.slice(0, 1)
-                let val = s2.slice(1).map(Number)
-                obj[key] = val;
+                let step1 = e.target.result.split(/\n/);
+                for (let i = 0; i < step1.length - 1 ; i++) {
+                    let step2 = step1[i].split(",")
+                    let key = step2.slice(0, 1)
+                    let val = step2.slice(1).map(Number)
+                    obj[key] = val;
                 }
                 self.updateData = obj;
             };

@@ -5,8 +5,8 @@
         <v-app-bar app  height="30" color="#20C4AF">
             <v-container>
                 <div class="d-flex justify-center">
-                    <div class="space"></div>
-                    <v-spacer></v-spacer>
+                    <div class="space d-none d-sm-block"></div>
+                    <v-spacer class="d-none d-sm-block"></v-spacer>
                     <div class="white--text text-center mt-1" height="100%"  v-show="(this.user.name ) ? true :  false">ログイン名：{{user.name}}</div>
                     <v-spacer></v-spacer>
                     <v-btn height="26" tile text class="py-0 px-1 d-sm-none icon" v-show="(this.user.name ) ? true :  false" @click="logout"> <v-icon>mdi-logout</v-icon></v-btn>
@@ -84,7 +84,7 @@ export default {
                 return 'd-sm-block'
             }else{
                 return ''
-            } 
+            }
         }
     },
     mounted(){
