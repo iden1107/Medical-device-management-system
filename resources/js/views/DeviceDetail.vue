@@ -321,7 +321,6 @@ export default {
             if(this.device.status == 4){
                 this.device.location = ''
             }
-            console.log(this.device)
             await axios.post('/api/updateDevice' , this.device)
             this.$router.push('/admin/devices')
         }
