@@ -2894,10 +2894,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   inspection_date: '',
                   location: ''
                 };
+                _this.src = '';
 
                 _this.$router.push('/admin/devices');
 
-              case 5:
+              case 6:
               case "end":
                 return _context.stop();
             }

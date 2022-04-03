@@ -301,6 +301,7 @@ export default {
             }
             await axios.post('/api/createDevice' , this.device)
             this.device = {id:'',name:'',manufacturer:'',status:1,inspection_date:'',location:''}
+            this.src = ''
             this.$router.push('/admin/devices')
         }
     },
