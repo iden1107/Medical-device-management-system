@@ -3288,13 +3288,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
                   _this2.device.location = '';
                 }
 
-                _context2.next = 3;
+                console.log(_this2.device);
+                _context2.next = 4;
                 return axios.post('/api/updateDevice', _this2.device);
 
-              case 3:
+              case 4:
                 _this2.$router.push('/admin/devices');
 
-              case 4:
+              case 5:
               case "end":
                 return _context2.stop();
             }
