@@ -4531,6 +4531,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "Inventory",
   data: function data() {
@@ -4970,6 +4971,10 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
+//
+//
+//
+//
 //
 //
 //
@@ -5594,7 +5599,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".drop_area[data-v-81f8c566] {\n  margin: 30px auto;\n  color: gray;\n  font-weight: bold;\n  font-size: 1.2em;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  width: 50%;\n  height: 15vh;\n  border: 2px solid gray;\n}\n.enter[data-v-81f8c566] {\n  border: 2px dashed gray;\n  opacity: 0.7;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".drop_area[data-v-81f8c566] {\n  margin: 30px auto;\n  color: gray;\n  font-weight: bold;\n  font-size: 1.2em;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  height: 15vh;\n  border: 2px solid gray;\n}\n.enter[data-v-81f8c566] {\n  border: 2px dashed gray;\n  opacity: 0.7;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -5618,7 +5623,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, ".v-input[data-v-13d8fa81] {\n  border-radius: 0px;\n  padding: 0px;\n}\n.v-subheader[data-v-13d8fa81] {\n  padding: 0;\n}\n.col[data-v-13d8fa81] {\n  padding-top: 0;\n  padding-bottom: 0;\n}", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, ".v-input[data-v-13d8fa81] {\n  border-radius: 0px;\n  padding: 0px;\n}\n.v-subheader[data-v-13d8fa81] {\n  padding: 0;\n}\n.col[data-v-13d8fa81] {\n  padding-top: 0;\n  padding-bottom: 0;\n}\n.col-4[data-v-13d8fa81] {\n  margin: 0;\n  padding-right: 0;\n}", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
@@ -29952,11 +29957,12 @@ var render = function () {
                       ),
                       _vm._v(" "),
                       _c(
-                        "div",
+                        "v-col",
                         {
                           staticClass: "drop_area",
                           class: { enter: _vm.isEnter },
                           style: _vm.backgroundColor,
+                          attrs: { cols: "12", md: "6" },
                           on: {
                             dragenter: _vm.dragEnter,
                             dragleave: _vm.dragLeave,
@@ -30447,14 +30453,14 @@ var render = function () {
                         [
                           _c(
                             "v-col",
-                            { attrs: { cols: "2" } },
+                            { attrs: { cols: "4", md: "2" } },
                             [_c("v-subheader", [_vm._v("自動ログアウト")])],
                             1
                           ),
                           _vm._v(" "),
                           _c(
                             "v-col",
-                            { attrs: { cols: "3" } },
+                            { attrs: { cols: "8", md: "3" } },
                             [
                               _c("v-text-field", {
                                 attrs: {
@@ -30466,7 +30472,7 @@ var render = function () {
                                   type: "number",
                                   "hide-spin-buttons": "",
                                   suffix: "分",
-                                  hint: "1から120の値で設定してください",
+                                  hint: "1〜120の値で設定してください。画面上をクリックしてから設定した時間経が経過すると自動でログアウトします。",
                                   "persistent-hint": "",
                                 },
                                 on: { blur: _vm.postSetting },

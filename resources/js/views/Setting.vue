@@ -6,10 +6,10 @@
                 <v-card-title>設定</v-card-title>
                 <v-card-text>
                 <v-row>
-                    <v-col cols="2">
+                    <v-col cols="4" md="2">
                     <v-subheader>自動ログアウト</v-subheader>
                     </v-col>
-                    <v-col cols="3">
+                    <v-col cols="8" md="3">
                         <v-text-field
                         height="10"
                         single-line
@@ -21,7 +21,7 @@
                         type="number"
                         hide-spin-buttons
                         suffix="分"
-                        hint="1から120の値で設定してください"
+                        hint="1〜120の値で設定してください。画面上をクリックしてから設定した時間経が経過すると自動でログアウトします。"
                         persistent-hint
                     ></v-text-field>
                     </v-col>
@@ -48,6 +48,10 @@
 .col{
     padding-top: 0;
     padding-bottom: 0;
+}
+.col-4{
+    margin: 0;
+    padding-right: 0;
 }
 </style>
 

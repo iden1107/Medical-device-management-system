@@ -7,7 +7,9 @@
             <v-card-text>
                 <a href="/sample20220322.csv" download class="mr-4">サンプル1のcsvファイルをダウンロード</a>
                 <a href="/sample20220405.csv" download>サンプル2のcsvファイルをダウンロード</a>
-                <div class="drop_area"
+                <v-col class="drop_area"
+                    cols="12"
+                    md="6"
                     :class="{enter: isEnter}"
                     @dragenter="dragEnter"
                     @dragleave="dragLeave"
@@ -16,7 +18,7 @@
                     :style="backgroundColor"
                 >
                     {{fileName}}
-                </div>
+                </v-col>
                 <div class="pb-3 d-flex justify-end">
                     <v-btn
                     tile
@@ -79,7 +81,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50%;
     height: 15vh;
     border: 2px solid gray;
 }
