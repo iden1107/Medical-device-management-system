@@ -1,5 +1,5 @@
 <template>
-    <v-sheet height="90vh" class="d-flex flex-column align-center justify-center" >
+    <v-sheet height="90vh" class="d-flex flex-column align-center " >
         <v-card outlined  class="mb-6 pa-4" color="#20C4AF" max-width="500">
             <v-card-text>
                 <div class="d-flex">
@@ -27,10 +27,10 @@
                 <v-btn tile elevation="1" @click="login"> ログイン </v-btn>
             </v-card-actions>
         </v-card>
-        <div class="mb-6 pa-4" width="500">
+        <div class="mb-6 message">
             <p class="mb-1">このサイトはポートフォリオのデモアプリケーションです</p>
-            <p class="mb-1">画像は無料のデザインツール<a href="https://www.design-ac.net/">「デザインAC」</a>より</p>
-            <p>アイコンは<a href="https://materialdesignicons.com/">「Material Design Icons」</a>より使用しました</p>
+            <p >画像は無料のデザインツール<a href="https://www.design-ac.net/">「デザインAC」</a>より、アイコンは<a href="https://materialdesignicons.com/">「Material Design Icons」</a>より使用しました</p>
+            <br>
             <p class="mb-1">管理者ログイン</p>
             <li>職員番号：9999</li>
             <li class="mb-2">パスワード：9999</li>
@@ -60,6 +60,11 @@ input:focus {
 }
 h2{
     color: #FFF;
+}
+.message{
+    max-width: 500px;
+    padding: 20px;
+    /* border: 1px solid black; */
 }
 </style>
 
