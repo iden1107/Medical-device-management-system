@@ -20,7 +20,7 @@
         <v-main>
             <v-container>
                 <keep-alive>
-                    <router-view :settingMinutes="settingMinutes" @input="settingMinutes = $event"></router-view>
+                    <router-view @child-emit="setLogoutTime"></router-view>
                 </keep-alive>
             </v-container>
         </v-main>
@@ -59,7 +59,7 @@ export default {
             user:'',
             autoLogoutFunctionId:'',
             timeOutMinutes:60000 ,
-            settingMinutes:10,
+            settingMinutes:'',
         };
     },
     methods: {
@@ -69,7 +69,7 @@ export default {
                 return
             }else{
                 clearTimeout(this.autoLogoutFunctionId);
-                this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes);
+                this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes)
             }
         },
         logout(){
@@ -77,6 +77,18 @@ export default {
             axios.post('/logout')
             location.href = '/login'
         },
+        async setLogoutTime(){
+            // 起動してから10分間で自動ログアウト
+            if(this.$route.path === '/login'){
+                return
+            }else{
+                await axios.get('/api/setting')
+                    .then(response => {
+                        this.settingMinutes  = response.data.setting_minutes
+                    })
+                this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes)
+            }
+        }
     },
     computed:{
         showLogoutText(){
@@ -88,12 +100,7 @@ export default {
         }
     },
     mounted(){
-        // 起動してから10分間で自動ログアウト
-        if(this.$route.path === '/login'){
-            return
-        }else{
-            this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes);
-        }
+        this.setLogoutTime()
     },
     created(){
         // ログインユーザーの取得

@@ -1,11 +1,32 @@
 <template>
 <div>
     <v-row>
-        <v-col cols="12" md="8" class="col">
+        <v-col cols="12"  class="col">
             <v-card outlined >
+                <v-card-title>設定</v-card-title>
                 <v-card-text>
-                    <input type="text" :value="settingMinutes" @blur="$emit('input', $event.target.value)">
-                </v-card-text>
+                <v-row>
+                    <v-col cols="2">
+                    <v-subheader>自動ログアウト</v-subheader>
+                    </v-col>
+                    <v-col cols="3">
+                        <v-text-field
+                        height="10"
+                        single-line
+                        outlined
+                        dense
+                        color="#959595"
+                        v-model="setting.minutes"
+                        @blur="postSetting"
+                        type="number"
+                        hide-spin-buttons
+                        suffix="分"
+                        hint="1から120の値で設定してください"
+                        persistent-hint
+                    ></v-text-field>
+                    </v-col>
+                </v-row>
+            </v-card-text>
             </v-card>
         </v-col>
     </v-row>
@@ -17,32 +38,38 @@
 </template>
 
 <style scoped lang="scss">
-
-
+.v-input{
+    border-radius: 0px;
+    padding: 0px;
+}
+.v-subheader{
+    padding: 0;
+}
+.col{
+    padding-top: 0;
+    padding-bottom: 0;
+}
 </style>
 
 <script>
 export default {
     name: "login",
-    props:['settingMinutes'],
     data() {
         return {
-            formData:{
-                id: "",
-                name: "",
-                kana: "",
-                department: "",
-                employment_date	: "",
-                password: "",
-                remember: false,
-            },
-            staff:[],
-            autoLogoutFunctionId:'',
-            flag:true,
+            setting:{minutes:''}
         };
     },
     methods: {
-        
+        async postSetting(){
+            await axios.post('/api/updateSetting',this.setting)
+            this.$emit('child-emit')
+        }
+    },
+    created(){
+        axios.get('/api/setting')
+            .then(response => {
+                this.setting.minutes  = response.data.setting_minutes
+            })
     }
 };
 </script>
