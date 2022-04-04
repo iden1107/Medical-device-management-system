@@ -29943,16 +29943,14 @@ var render = function () {
                         "a",
                         {
                           staticClass: "mr-4",
-                          attrs: { href: "/sample20220322.csv", download: "" },
+                          attrs: { href: "/sample1.csv", download: "" },
                         },
                         [_vm._v("サンプル1のcsvファイルをダウンロード")]
                       ),
                       _vm._v(" "),
                       _c(
                         "a",
-                        {
-                          attrs: { href: "/sample20220405.csv", download: "" },
-                        },
+                        { attrs: { href: "/sample2.csv", download: "" } },
                         [_vm._v("サンプル2のcsvファイルをダウンロード")]
                       ),
                       _vm._v(" "),

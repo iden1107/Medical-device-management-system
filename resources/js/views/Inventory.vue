@@ -5,8 +5,8 @@
             <v-card outlined>
             <v-card-title>機器管理台帳</v-card-title>
             <v-card-text>
-                <a href="/sample20220322.csv" download class="mr-4">サンプル1のcsvファイルをダウンロード</a>
-                <a href="/sample20220405.csv" download>サンプル2のcsvファイルをダウンロード</a>
+                <a href="/sample1.csv" download class="mr-4">サンプル1のcsvファイルをダウンロード</a>
+                <a href="/sample2.csv" download>サンプル2のcsvファイルをダウンロード</a>
                 <v-col class="drop_area"
                     cols="12"
                     md="6"
