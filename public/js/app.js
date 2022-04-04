@@ -4903,6 +4903,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "login",
   data: function data() {
@@ -30397,8 +30404,53 @@ var render = function () {
       ),
       _vm._v(" "),
       _c("div", { staticClass: "mb-6 pa-4", attrs: { width: "500" } }, [
-        _c("p", [_vm._v("このサイトはポートフォリオのサンプルアプリです")]),
-        _vm._v("\n        管理者ログイン\n    "),
+        _c("p", { staticClass: "mb-1" }, [
+          _vm._v("このサイトはポートフォリオのデモアプリケーションです"),
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "mb-1" }, [
+          _vm._v("画像は無料のデザインツール"),
+          _c("a", { attrs: { href: "https://www.design-ac.net/" } }, [
+            _vm._v("「デザインAC」"),
+          ]),
+          _vm._v("より"),
+        ]),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v("アイコンは"),
+          _c("a", { attrs: { href: "https://materialdesignicons.com/" } }, [
+            _vm._v("「Material Design Icons」"),
+          ]),
+          _vm._v("より使用しました"),
+        ]),
+        _vm._v(" "),
+        _c("p", { staticClass: "mb-1" }, [_vm._v("管理者ログイン")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("職員番号：9999")]),
+        _vm._v(" "),
+        _c("li", { staticClass: "mb-2" }, [_vm._v("パスワード：9999")]),
+        _vm._v(" "),
+        _c("p", { staticClass: "mb-1" }, [_vm._v("職員ログイン")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("職員番号：0001")]),
+        _vm._v(" "),
+        _c("li", [_vm._v("パスワード：1111")]),
+        _vm._v(" "),
+        _c("br"),
+        _vm._v(" "),
+        _c("p", [
+          _vm._v("ソースコードは"),
+          _c(
+            "a",
+            {
+              attrs: {
+                href: "https://github.com/iden1107/Medical-device-management-system",
+              },
+            },
+            [_vm._v("こちら")]
+          ),
+          _vm._v("のGitHubで公開してます"),
+        ]),
       ]),
     ],
     1

@@ -23,16 +23,23 @@
                     <input type="password" v-model="formData.password"  />
                 </label>
             </v-card-text>
-
             <v-card-actions>
                 <v-btn tile elevation="1" @click="login"> ログイン </v-btn>
             </v-card-actions>
         </v-card>
         <div class="mb-6 pa-4" width="500">
-            <p>このサイトはポートフォリオのサンプルアプリです</p>
-            管理者ログイン
+            <p class="mb-1">このサイトはポートフォリオのデモアプリケーションです</p>
+            <p class="mb-1">画像は無料のデザインツール<a href="https://www.design-ac.net/">「デザインAC」</a>より</p>
+            <p>アイコンは<a href="https://materialdesignicons.com/">「Material Design Icons」</a>より使用しました</p>
+            <p class="mb-1">管理者ログイン</p>
+            <li>職員番号：9999</li>
+            <li class="mb-2">パスワード：9999</li>
+            <p class="mb-1">職員ログイン</p>
+            <li>職員番号：0001</li>
+            <li>パスワード：1111</li>
+            <br>
+            <p>ソースコードは<a href="https://github.com/iden1107/Medical-device-management-system">こちら</a>のGitHubで公開してます</p>
         </div>
-
     </v-sheet>
 </template>
 
