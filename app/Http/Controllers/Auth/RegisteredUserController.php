@@ -54,7 +54,7 @@ class RegisteredUserController extends Controller
             // 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required'],
         ]);
-        $user = User::create([
+        User::create([
             'id' => $request->id,
             'name' => $request->name,
             'kana' => $request->kana,
@@ -80,7 +80,7 @@ class RegisteredUserController extends Controller
             'employment_date' => $request->employment_date,
             'department' => $request->department,
             'status' =>1,
-            'password' => Hash::make($request->password),
+            // 'password' => Hash::make($request->password),
         ]);
     }
 

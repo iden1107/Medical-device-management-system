@@ -17,7 +17,6 @@ use App\Http\Controllers\SettingController;
 */
 
 // ログイン画面のみ認証外
-
 Route::middleware('guest')->group(function () {
     Route::get('/', function () {
         return view('layouts.app');
@@ -41,12 +40,10 @@ Route::group(['middleware' => 'auth'], function () {
     // 設定関連
     Route::get('/api/setting', [SettingController::class, 'getSetting']);
     Route::post('/api/updateSetting', [SettingController::class, 'updateSetting']);
-
     // spaルーティング
     Route::get('/{any}', function () {
         return view('layouts.app');
     })->where('any', '.*');
 });
-
 
 require __DIR__.'/auth.php';
