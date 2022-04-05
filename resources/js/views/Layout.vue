@@ -59,13 +59,13 @@ export default {
             user:'',
             autoLogoutFunctionId:'',
             timeOutMinutes:60000 ,
-            settingMinutes:'',
+            settingMinutes:10,
         };
     },
     methods: {
         autoLogout(){
             // 画面上をクリックしてから10分間を再設定して自動ログアウト
-            if(this.$route.path === '/login'){
+            if(this.$route.path === '/'){
                 return
             }else{
                 clearTimeout(this.autoLogoutFunctionId);
@@ -75,11 +75,11 @@ export default {
         logout(){
             // ログアウトする関数
             axios.post('/logout')
-            location.href = '/login'
+            location.href = '/'
         },
         async setLogoutTime(){
             // 起動してから10分間で自動ログアウト
-            if(this.$route.path === '/login'){
+            if(this.$route.path === '/'){
                 return
             }else{
                 await axios.get('/api/setting')
@@ -102,9 +102,10 @@ export default {
     mounted(){
         this.setLogoutTime()
     },
+
     created(){
         // ログインユーザーの取得
-        if(this.$route.path === '/login'){
+        if(this.$route.path === '/'){
             return
         }else{
             axios.get('/api/authUser')

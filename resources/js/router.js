@@ -9,6 +9,7 @@ import DeviceDetailEdit from './views/DeviceDetailEdit.vue'
 import FloorMap from './views/FloorMap.vue'
 import EditUser from './views/EditUser.vue'
 import Inventory from './views/Inventory.vue'
+import NotFound from './views/NotFound.vue'
 import Login from './views/Login.vue'
 import Setting from './views/Setting.vue'
 import ToolBar from './components/Toolbar.vue'
@@ -61,9 +62,9 @@ export default new Router({
             },
         },
         {
-            path: '/login',
+            path: '/',
             name: 'login',
-            component: Login
+            component: Login,
         },
         {
             path: '/floormap',
@@ -89,6 +90,10 @@ export default new Router({
                 ToolBar: ToolBar
             },
         },
-
+        {
+            path: '*',
+            name: 'NotFound',
+            component: NotFound
+        },
     ]
 });
