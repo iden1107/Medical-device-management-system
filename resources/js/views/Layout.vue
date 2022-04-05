@@ -59,7 +59,7 @@ export default {
             user:'',
             autoLogoutFunctionId:'',
             timeOutMinutes:60000 ,
-            settingMinutes:10,
+            settingMinutes:'',
         };
     },
     methods: {
@@ -70,6 +70,7 @@ export default {
             }else{
                 clearTimeout(this.autoLogoutFunctionId);
                 this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes)
+            console.log(this.settingMinutes)
             }
         },
         logout(){

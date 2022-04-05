@@ -4753,7 +4753,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       user: '',
       autoLogoutFunctionId: '',
       timeOutMinutes: 60000,
-      settingMinutes: 10
+      settingMinutes: ''
     };
   },
   methods: {
@@ -4764,6 +4764,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       } else {
         clearTimeout(this.autoLogoutFunctionId);
         this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes);
+        console.log(this.settingMinutes);
       }
     },
     logout: function logout() {
