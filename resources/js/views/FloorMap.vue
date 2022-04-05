@@ -163,7 +163,6 @@ p{
     left: 80.8%;
     bottom: 10%;
 }
-
 // 点検項目のフラッシュアニメーション
 @keyframes flash {
     0% {
@@ -176,12 +175,11 @@ p{
         opacity: 0;
     }
 }
-
 </style>
 
 <script>
 export default {
-    name: "login",
+    name: "FloorMap",
     data() {
         return {
             status:[
@@ -193,9 +191,6 @@ export default {
             ],
             devices:[],
         };
-    },
-    computed:{
-
     },
     methods: {
         logout(){

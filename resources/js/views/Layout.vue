@@ -1,34 +1,33 @@
 <template>
-<!-- App.vue -->
-<div @click="autoLogout">
-    <v-app>
-        <v-app-bar app  height="30" color="#20C4AF">
-            <v-container>
-                <div class="d-flex justify-center">
-                    <div class="space d-none d-sm-block"></div>
-                    <v-spacer class="d-none d-sm-block"></v-spacer>
-                    <div class="white--text text-center mt-1" height="100%"  v-show="(this.user.name ) ? true :  false">ログイン名：{{user.name}}</div>
-                    <v-spacer></v-spacer>
-                    <v-btn height="26" tile text class="py-0 px-1 d-sm-none icon" v-show="(this.user.name ) ? true :  false" @click="logout"> <v-icon>mdi-logout</v-icon></v-btn>
-                    <v-btn height="26" tile text class="py-0 px-1 d-none" :class="showLogoutText" @click="logout">ログアウト</v-btn>
-                </div>
-            </v-container>
-        </v-app-bar>
-        <!-- ツールバー 名前付きビューで切替 -->
-        <router-view name="AdminToolBar"></router-view>
-        <router-view name="ToolBar"></router-view>
-        <v-main>
-            <v-container>
-                <keep-alive>
-                    <router-view @child-emit="setLogoutTime"></router-view>
-                </keep-alive>
-            </v-container>
-        </v-main>
-        <v-footer app color="#20C4AF">
-        </v-footer>
-    </v-app>
-</div>
+    <div @click="autoLogout">
+        <v-app>
+            <v-app-bar app  height="30" color="#20C4AF">
+                <v-container>
+                    <div class="d-flex justify-center">
+                        <div class="space d-none d-sm-block"></div>
+                        <v-spacer class="d-none d-sm-block"></v-spacer>
+                        <div class="white--text text-center mt-1" height="100%"  v-show="(this.user.name ) ? true :  false">ログイン名：{{user.name}}</div>
+                        <v-spacer></v-spacer>
+                        <v-btn height="26" tile text class="py-0 px-1 d-sm-none icon" v-show="(this.user.name ) ? true :  false" @click="logout"> <v-icon>mdi-logout</v-icon></v-btn>
+                        <v-btn height="26" tile text class="py-0 px-1 d-none" :class="showLogoutText" @click="logout">ログアウト</v-btn>
+                    </div>
+                </v-container>
+            </v-app-bar>
+            <router-view name="AdminToolBar"></router-view>
+            <router-view name="ToolBar"></router-view>
+            <v-main>
+                <v-container>
+                    <keep-alive>
+                        <router-view @child-emit="setLogoutTime"></router-view>
+                    </keep-alive>
+                </v-container>
+            </v-main>
+            <v-footer app color="#20C4AF">
+            </v-footer>
+        </v-app>
+    </div>
 </template>
+
 <style scoped>
 .container{
     max-width: 1500px;
@@ -51,9 +50,10 @@
     background-color: #20C4AF;
 }
 </style>
+
 <script>
 export default {
-    name: "login",
+    name: "Layout",
     data() {
         return {
             user:'',
@@ -70,7 +70,6 @@ export default {
             }else{
                 clearTimeout(this.autoLogoutFunctionId);
                 this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes)
-            console.log(this.settingMinutes)
             }
         },
         logout(){
@@ -103,7 +102,6 @@ export default {
     mounted(){
         this.setLogoutTime()
     },
-
     created(){
         // ログインユーザーの取得
         if(this.$route.path === '/'){

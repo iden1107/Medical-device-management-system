@@ -191,7 +191,7 @@ export default {
     },
     watch: {
         $route() {
-        this.getDevices();
+            this.getDevices();
         },
     },
     filters: {

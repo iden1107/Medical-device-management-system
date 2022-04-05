@@ -136,7 +136,7 @@
 
 <script>
 export default {
-    name: "login",
+    name: "EditUser",
     data() {
         return {
             user:{},

@@ -2470,11 +2470,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "login",
+  name: "CreateUser",
   data: function data() {
     return {
       formData: {
@@ -2552,8 +2549,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
-//
 //
 //
 //
@@ -3205,10 +3200,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "login",
+  name: "DeviceDetail",
   data: function data() {
     return {
       src: '',
@@ -3618,31 +3611,103 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "login",
+  name: "DeviceDetailEdit",
   data: function data() {
     return {
-      src: '',
+      src: "",
       device: {},
       status: [{
-        label: '稼働中',
-        color: '#80E368'
+        label: "稼働中",
+        color: "#80E368"
       }, {
-        label: '待機中',
-        color: '#6B9CE4'
+        label: "待機中",
+        color: "#6B9CE4"
       }, {
-        label: '点検中',
-        color: '#E3DD68'
+        label: "点検中",
+        color: "#E3DD68"
       }, {
-        label: '修理中',
-        color: '#E36868'
+        label: "修理中",
+        color: "#E36868"
       }, {
-        label: '廃棄',
-        color: 'gray'
+        label: "廃棄",
+        color: "gray"
       }],
-      currentLocation: '',
-      location: ['臨床工学室', '整形外科', '眼科', '内視鏡センター', '生理検査室', '皮膚科', '産婦人科', 'リハビリテーション室', '外科', '処置室', '内科', '泌尿器科', '小児科'],
-      color: ['#80E368', '#6B9CE4', '#E3DD68', '#E36868', 'gray']
+      currentLocation: "",
+      location: ["臨床工学室", "整形外科", "眼科", "内視鏡センター", "生理検査室", "皮膚科", "産婦人科", "リハビリテーション室", "外科", "処置室", "内科", "泌尿器科", "小児科"],
+      color: ["#80E368", "#6B9CE4", "#E3DD68", "#E36868", "gray"]
     };
   },
   methods: {
@@ -3654,22 +3719,22 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           while (1) {
             switch (_context.prev = _context.next) {
               case 0:
-                _this.src = '';
+                _this.src = "";
                 _context.next = 3;
-                return axios.get('/api/getDevice/' + _this.$route.params.id).then(function (res) {
+                return axios.get("/api/getDevice/" + _this.$route.params.id).then(function (res) {
                   _this.device = res.data;
                 });
 
               case 3:
-                if (_this.device.name === '点滴ポンプ') {
-                  _this.src = '/img/device1.jpeg';
+                if (_this.device.name === "点滴ポンプ") {
+                  _this.src = "/img/device1.jpeg";
                 } else {
-                  _this.src = '/img/device2.jpeg';
+                  _this.src = "/img/device2.jpeg";
                 }
 
                 if (_this.$route.params.id) {
                   _this.currentLocation = _this.device.location.slice();
-                  _this.device.id = ('000' + _this.device.id).slice(-4);
+                  _this.device.id = ("000" + _this.device.id).slice(-4);
                 }
 
               case 5:
@@ -3684,7 +3749,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       this.device.status = val;
     },
     cancel: function cancel() {
-      this.$router.push('/floormap');
+      this.$router.push("/floormap");
     },
     updateDevice: function updateDevice() {
       var _this2 = this;
@@ -3696,14 +3761,14 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 // 廃棄（status = 4)なら配置場所がないのでlocationを空文字にする
                 if (_this2.device.status == 4) {
-                  _this2.device.location = '';
+                  _this2.device.location = "";
                 }
 
                 _context2.next = 3;
-                return axios.post('/api/updateDevice', _this2.device);
+                return axios.post("/api/updateDevice", _this2.device);
 
               case 3:
-                _this2.$router.push('/floormap');
+                _this2.$router.push("/floormap");
 
               case 4:
               case "end":
@@ -3721,7 +3786,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   },
   filters: {
     zeroPadding: function zeroPadding(value) {
-      return ('000' + value).slice(-4);
+      return ("000" + value).slice(-4);
     }
   },
   created: function created() {
@@ -3795,7 +3860,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "login",
+  name: "Devices",
   data: function data() {
     return {
       devices: [],
@@ -4002,7 +4067,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "login",
+  name: "EditUser",
   data: function data() {
     return {
       user: {}
@@ -4308,10 +4373,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "login",
+  name: "FloorMap",
   data: function data() {
     return {
       status: [{
@@ -4333,7 +4396,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       devices: []
     };
   },
-  computed: {},
   methods: {
     logout: function logout() {
       axios.post('/logout');
@@ -4747,7 +4809,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "login",
+  name: "Layout",
   data: function data() {
     return {
       user: '',
@@ -4764,7 +4826,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       } else {
         clearTimeout(this.autoLogoutFunctionId);
         this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes);
-        console.log(this.settingMinutes);
       }
     },
     logout: function logout() {
@@ -4990,14 +5051,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   name: "NotFound",
   data: function data() {
@@ -5046,10 +5099,6 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
-//
-//
-//
-//
 //
 //
 //
@@ -5204,13 +5253,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
-  name: "login",
+  name: "User",
   data: function data() {
     return {
       formData: {
@@ -25238,7 +25282,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _NotFound_vue_vue_type_template_id_5dcdfd0e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NotFound.vue?vue&type=template&id=5dcdfd0e&scoped=true& */ "./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e&scoped=true&");
+/* harmony import */ var _NotFound_vue_vue_type_template_id_5dcdfd0e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./NotFound.vue?vue&type=template&id=5dcdfd0e& */ "./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e&");
 /* harmony import */ var _NotFound_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./NotFound.vue?vue&type=script&lang=js& */ "./resources/js/views/NotFound.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
@@ -25250,11 +25294,11 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _NotFound_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _NotFound_vue_vue_type_template_id_5dcdfd0e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _NotFound_vue_vue_type_template_id_5dcdfd0e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _NotFound_vue_vue_type_template_id_5dcdfd0e___WEBPACK_IMPORTED_MODULE_0__.render,
+  _NotFound_vue_vue_type_template_id_5dcdfd0e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "5dcdfd0e",
+  null,
   null
   
 )
@@ -25318,7 +25362,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _User_vue_vue_type_template_id_499c242c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./User.vue?vue&type=template&id=499c242c&scoped=true& */ "./resources/js/views/User.vue?vue&type=template&id=499c242c&scoped=true&");
+/* harmony import */ var _User_vue_vue_type_template_id_499c242c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./User.vue?vue&type=template&id=499c242c& */ "./resources/js/views/User.vue?vue&type=template&id=499c242c&");
 /* harmony import */ var _User_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./User.vue?vue&type=script&lang=js& */ "./resources/js/views/User.vue?vue&type=script&lang=js&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
@@ -25330,11 +25374,11 @@ __webpack_require__.r(__webpack_exports__);
 ;
 var component = (0,_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
   _User_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
-  _User_vue_vue_type_template_id_499c242c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render,
-  _User_vue_vue_type_template_id_499c242c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
+  _User_vue_vue_type_template_id_499c242c___WEBPACK_IMPORTED_MODULE_0__.render,
+  _User_vue_vue_type_template_id_499c242c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns,
   false,
   null,
-  "499c242c",
+  null,
   null
   
 )
@@ -25959,19 +26003,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e&scoped=true&":
-/*!************************************************************************************!*\
-  !*** ./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e&scoped=true& ***!
-  \************************************************************************************/
+/***/ "./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e&":
+/*!************************************************************************!*\
+  !*** ./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e& ***!
+  \************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_template_id_5dcdfd0e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_template_id_5dcdfd0e_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_template_id_5dcdfd0e___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_template_id_5dcdfd0e___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_template_id_5dcdfd0e_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NotFound.vue?vue&type=template&id=5dcdfd0e&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NotFound_vue_vue_type_template_id_5dcdfd0e___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./NotFound.vue?vue&type=template&id=5dcdfd0e& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e&");
 
 
 /***/ }),
@@ -25993,19 +26037,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/js/views/User.vue?vue&type=template&id=499c242c&scoped=true&":
-/*!********************************************************************************!*\
-  !*** ./resources/js/views/User.vue?vue&type=template&id=499c242c&scoped=true& ***!
-  \********************************************************************************/
+/***/ "./resources/js/views/User.vue?vue&type=template&id=499c242c&":
+/*!********************************************************************!*\
+  !*** ./resources/js/views/User.vue?vue&type=template&id=499c242c& ***!
+  \********************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_template_id_499c242c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.render),
-/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_template_id_499c242c_scoped_true___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
+/* harmony export */   "render": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_template_id_499c242c___WEBPACK_IMPORTED_MODULE_0__.render),
+/* harmony export */   "staticRenderFns": () => (/* reexport safe */ _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_template_id_499c242c___WEBPACK_IMPORTED_MODULE_0__.staticRenderFns)
 /* harmony export */ });
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_template_id_499c242c_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./User.vue?vue&type=template&id=499c242c&scoped=true& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=template&id=499c242c&scoped=true&");
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_User_vue_vue_type_template_id_499c242c___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib/index.js??vue-loader-options!./User.vue?vue&type=template&id=499c242c& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=template&id=499c242c&");
 
 
 /***/ }),
@@ -28485,7 +28529,7 @@ var render = function () {
                                                       _vm.device.location ===
                                                       "臨床工学室",
                                                     expression:
-                                                      "device.location ==='臨床工学室'",
+                                                      "device.location === '臨床工学室'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28519,7 +28563,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "整形外科",
                                                     expression:
-                                                      "this.device.location ==='整形外科'",
+                                                      "this.device.location === '整形外科'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28554,7 +28598,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "眼科",
                                                     expression:
-                                                      "this.device.location ==='眼科'",
+                                                      "this.device.location === '眼科'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28586,7 +28630,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "内視鏡センター",
                                                     expression:
-                                                      "this.device.location ==='内視鏡センター'",
+                                                      "this.device.location === '内視鏡センター'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28621,7 +28665,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "生理検査室",
                                                     expression:
-                                                      "this.device.location ==='生理検査室'",
+                                                      "this.device.location === '生理検査室'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28655,7 +28699,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "皮膚科",
                                                     expression:
-                                                      "this.device.location ==='皮膚科'",
+                                                      "this.device.location === '皮膚科'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28687,7 +28731,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "産婦人科",
                                                     expression:
-                                                      "this.device.location ==='産婦人科'",
+                                                      "this.device.location === '産婦人科'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28722,7 +28766,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "リハビリテーション室",
                                                     expression:
-                                                      "this.device.location ==='リハビリテーション室'",
+                                                      "\n                                    this.device.location === 'リハビリテーション室'\n                                ",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28754,7 +28798,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "外科",
                                                     expression:
-                                                      "this.device.location ==='外科'",
+                                                      "this.device.location === '外科'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28789,7 +28833,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "処置室",
                                                     expression:
-                                                      "this.device.location ==='処置室'",
+                                                      "this.device.location === '処置室'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28824,7 +28868,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "内科",
                                                     expression:
-                                                      "this.device.location ==='内科'",
+                                                      "this.device.location === '内科'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28856,7 +28900,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "泌尿器科",
                                                     expression:
-                                                      "this.device.location ==='泌尿器科'",
+                                                      "this.device.location === '泌尿器科'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -28888,7 +28932,7 @@ var render = function () {
                                                       this.device.location ===
                                                       "小児科",
                                                     expression:
-                                                      "this.device.location ==='小児科'",
+                                                      "this.device.location === '小児科'",
                                                   },
                                                 ],
                                                 attrs: {
@@ -30607,10 +30651,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e&scoped=true&":
-/*!***************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e&scoped=true& ***!
-  \***************************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e&":
+/*!***************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/NotFound.vue?vue&type=template&id=5dcdfd0e& ***!
+  \***************************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -30758,10 +30802,10 @@ render._withStripped = true
 
 /***/ }),
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=template&id=499c242c&scoped=true&":
-/*!***********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=template&id=499c242c&scoped=true& ***!
-  \***********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=template&id=499c242c&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib/index.js??vue-loader-options!./resources/js/views/User.vue?vue&type=template&id=499c242c& ***!
+  \***********************************************************************************************************************************************************************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";

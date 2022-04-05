@@ -52,7 +52,7 @@
 
 <script>
 export default {
-    name: "login",
+    name: "Devices",
     data() {
         return {
             devices:[],

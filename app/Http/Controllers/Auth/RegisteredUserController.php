@@ -32,12 +32,12 @@ class RegisteredUserController extends Controller
      * @throws \Illuminate\Validation\ValidationException
      */
 
-    public function getUsers(Request $request)
+    public function getUsers()
     {
         return User::where('id', '!=', 9999)->where('status', 1)->orderBy('employment_date', 'asc')->get();
     }
 
-    public function getUser(Request $request,$id)
+    public function getUser($id)
     {
         return User::where('id', $id)->where('status', 1)->first();
     }
@@ -51,7 +51,6 @@ class RegisteredUserController extends Controller
     {
         $request->validate([
             'name' => ['required', 'string', 'max:255'],
-            // 'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required'],
         ]);
         User::create([
@@ -80,7 +79,7 @@ class RegisteredUserController extends Controller
             'employment_date' => $request->employment_date,
             'department' => $request->department,
             'status' =>1,
-            // 'password' => Hash::make($request->password),
+            'password' => Hash::make($request->password),
         ]);
     }
 

@@ -115,13 +115,10 @@
                     ></v-text-field>
                     </v-col>
                 </v-row>
-
-
             </v-card-text>
             <v-card-actions>
                 <v-btn outlined tile text @click="staffStore">登録</v-btn>
             </v-card-actions>
-
         </v-card>
     </v-col>
 </template>
@@ -142,7 +139,7 @@
 
 <script>
 export default {
-    name: "login",
+    name: "CreateUser",
     data() {
         return {
             formData:{
@@ -156,8 +153,6 @@ export default {
             },
         };
     },
-
-
     methods: {
         getStaff(){
             axios.get('/api/user').then((res)=>{
