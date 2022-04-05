@@ -154,14 +154,9 @@ export default {
         };
     },
     methods: {
-        getStaff(){
-            axios.get('/api/user').then((res)=>{
-                this.staff = res.data
-            })
-        },
         async staffStore(){
             await axios.post('/api/register',this.formData)
-            this.getStaff()
+            await this.$emit('emitGetStaff')
             this.formData = {
                 id: "",
                 name: "",

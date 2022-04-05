@@ -23,7 +23,6 @@ Route::middleware('guest')->group(function () {
     })->where('any', '.*');
 });
 
-
 Route::group(['middleware' => 'auth'], function () {
     // ユーザー関連
     Route::get('/api/user', [RegisteredUserController::class, 'getUsers']);
