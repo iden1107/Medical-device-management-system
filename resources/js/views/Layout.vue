@@ -72,9 +72,9 @@ export default {
                 this.autoLogoutFunctionId = setTimeout(this.logout, this.timeOutMinutes * this.settingMinutes)
             }
         },
-        logout(){
+        async logout(){
             // ログアウトする関数
-            axios.post('/logout')
+            await axios.post('/logout')
             location.href = '/'
         },
         async setLogoutTime(){
