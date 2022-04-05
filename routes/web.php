@@ -17,11 +17,10 @@ use App\Http\Controllers\SettingController;
 */
 
 // ログイン画面のみ認証外
-Route::middleware('guest')->group(function () {
     Route::get('/', function () {
         return view('layouts.app');
     })->where('any', '.*');
-});
+
 
 Route::group(['middleware' => 'auth'], function () {
     // ユーザー関連
@@ -47,3 +46,4 @@ Route::group(['middleware' => 'auth'], function () {
 });
 
 require __DIR__.'/auth.php';
+
