@@ -52,5 +52,5 @@
 
 
 ## ER図
-![スクリーンショット 2022-05-03 19 58 04](https://user-images.githubusercontent.com/96964613/166441726-c1b938d1-03af-49dd-a8f2-b0041aa09a16.png)
+![スクリーンショット 2022-05-03 19 58 04](https://user-images.githubusercontent.com/96964613/166441726-c1b938d1-03af-49dd-a8f2-b0041aa09a16.png)<br>
 テーブル間のリレーションはありません。
